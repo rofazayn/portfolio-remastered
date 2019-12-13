@@ -1,11 +1,17 @@
 import React from 'react';
 import './App.css';
+import Wrapper from './components/Wrapper/Wrapper';
+import Navbar from './components/Navbar/Navbar';
+import Container from './components/Container/Container';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Hello World!</h1>
-    </div>
+    <Wrapper>
+      <Container>
+        <Navbar />
+      </Container>
+      {/* <h1>Hello world</h1> */}
+    </Wrapper>
   );
 }
 
