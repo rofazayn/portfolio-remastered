@@ -6,6 +6,7 @@ const SWrapper = styled.div`
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
+  position: relative;
 `;
 
 const Wrapper = ({ children }) => {

@@ -4,6 +4,7 @@ import Status from '../Status/Status';
 import Social from '../Social/Social';
 
 const SFooter = styled.footer`
+  z-index: 100;
   margin-bottom: 2%;
   height: 50px;
   width: 100%;

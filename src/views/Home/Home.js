@@ -5,14 +5,16 @@ import Button from '../../components/Button/Button';
 import HeroImage from '../../assets/images/hero.jpg';
 
 const SHome = styled.main`
+  z-index: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   .text {
     display: flex;
     flex-direction: column;
     width: 100%;
-
+    align-items: flex-start;
     h1 {
       max-width: 480px;
       font-size: 3rem;
@@ -26,19 +28,39 @@ const SHome = styled.main`
       margin-bottom: 30px;
       color: gray;
     }
-
-    align-items: flex-start;
   }
   .images {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    z-index: 0;
     width: 100%;
+    max-width: 570px;
+    display: grid;
+    grid-gap: 50px;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    place-items: center;
+    justify-items: center;
     .image {
-      width: 550px;
-      height: 550px;
-      background: gray;
       display: flex;
+      object-fit: cover;
+      width: 100%;
+      max-width: 280px;
+      height: 100%;
+      max-height: 280px;
+      overflow: hidden;
+      &.one {
+        justify-content: flex-end;
+        transform: scaleX(-1);
+      }
+      &.two {
+        top: 0;
+        left: 200px;
+        background: blue;
+      }
+      &.three {
+        transform: scaleX(-1) scaleY(-1);
+      }
+      &.four {
+        transform: scaleY(-1);
+      }
       img {
         object-fit: cover;
         width: 100%;
@@ -67,7 +89,16 @@ const Home = () => {
         </Button>
       </div>
       <div className='images'>
-        <div className='image'>
+        <div className='image one'>
+          <img src={HeroImage} alt='Hero' />
+        </div>
+        <div className='image two'>
+          <img src={HeroImage} alt='Hero' />
+        </div>
+        <div className='image three'>
+          <img src={HeroImage} alt='Hero' />
+        </div>
+        <div className='image four'>
           <img src={HeroImage} alt='Hero' />
         </div>
       </div>
