@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SButton = styled.div`
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;

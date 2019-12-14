@@ -10,7 +10,6 @@ const SNavOptions = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
   .icons {
     display: flex;
     .icon {

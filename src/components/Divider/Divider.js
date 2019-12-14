@@ -6,6 +6,7 @@ const SDivider = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 1rem;
   .line {
     width: ${({ vertical }) => (vertical ? '1px' : '40px')};
     height: ${({ vertical }) => (vertical ? '20px' : '1px')};
