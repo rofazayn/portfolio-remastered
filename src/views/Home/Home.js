@@ -32,7 +32,7 @@ const SHome = styled.main`
   .images {
     z-index: 0;
     width: 100%;
-    max-width: 570px;
+    max-width: 650px;
     display: grid;
     grid-gap: 50px;
     grid-template: 1fr 1fr / 1fr 1fr;
@@ -41,19 +41,15 @@ const SHome = styled.main`
     .image {
       display: flex;
       object-fit: cover;
-      width: 100%;
-      max-width: 280px;
-      height: 100%;
-      max-height: 280px;
+      width: 300px;
+      height: 300px;
       overflow: hidden;
       &.one {
         justify-content: flex-end;
         transform: scaleX(-1);
       }
       &.two {
-        top: 0;
-        left: 200px;
-        background: blue;
+        transform: scaleX(1);
       }
       &.three {
         transform: scaleX(-1) scaleY(-1);

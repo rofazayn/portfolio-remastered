@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <SNavbar>
       <Logo />
-      <Pagination />
+      {/* <Pagination /> */}
       <NavOptions />
     </SNavbar>
   );
