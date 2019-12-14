@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SDivider = styled.a`
+const SDivider = styled.div`
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -14,9 +14,9 @@ const SDivider = styled.a`
   }
 `;
 
-const Divider = () => {
+const Divider = props => {
   return (
-    <SDivider>
+    <SDivider {...props}>
       <span className='line'></span>
     </SDivider>
   );
