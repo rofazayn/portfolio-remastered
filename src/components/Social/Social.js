@@ -11,6 +11,7 @@ const SSocial = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  color: gray;
   .icons {
     display: flex;
     .icon {
@@ -23,7 +24,7 @@ const SSocial = styled.div`
       }
       &:hover {
         svg {
-          color: gray;
+          color: white;
         }
       }
     }

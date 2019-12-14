@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 const SStatus = styled.div`
   font-size: 14px;
+  color: gray;
   span {
-    color: green;
+    color: white;
     font-weight: 700;
   }
 `;
