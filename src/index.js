@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import theme from './assets/theming/theme';
+import { ThemeProvider } from 'styled-components';
 
 const root = (
-  <>
+  <ThemeProvider theme={theme}>
     <App />
-  </>
+  </ThemeProvider>
 );
 
 const manifest = document.getElementById('root');
