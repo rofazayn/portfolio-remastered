@@ -4,6 +4,7 @@ import Button from '../Button/Button';
 import { ReactComponent as SquareIcon } from '../../assets/icons/square.svg';
 import { ReactComponent as SunIcon } from '../../assets/icons/sun.svg';
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
+import { ReactComponent as XIcon } from '../../assets/icons/x.svg';
 import Divider from '../Divider/Divider';
 import Menu from '../Menu/Menu';
 import { Link, withRouter } from 'react-router-dom';
@@ -84,7 +85,7 @@ const NavOptions = ({ history }) => {
 
     setTimeout(() => {
       setMenuDisabled(false);
-    }, 1200);
+    }, 800);
   };
   return (
     <SNavOptions>
@@ -106,7 +107,7 @@ const NavOptions = ({ history }) => {
           disabled={menuDisabled}
           onClick={handleMenuActions}
         >
-          <MenuIcon />
+          {state.isMenuOpen ? <XIcon /> : <MenuIcon />}
         </button>
       </div>
       <Menu toggler={state} />
