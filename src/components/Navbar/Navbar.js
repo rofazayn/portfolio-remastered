@@ -5,7 +5,8 @@ import Pagination from '../Pagination/Pagination';
 import NavOptions from '../NavOptions/NavOptions';
 
 const SNavbar = styled.nav`
-  z-index: 100;
+  position: relative;
+  z-index: 1000;
   margin-top: 2%;
   height: 50px;
   width: 100%;

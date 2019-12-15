@@ -7,6 +7,9 @@ import Wrapper from './components/Wrapper/Wrapper';
 import Home from './views/Home/Home';
 import Footer from './components/Footer/Footer';
 import BackgroundText from './components/BackgroundText/BackgroundText';
+import Menu from './components/Menu/Menu';
+import Resume from './views/Resume/Resume';
+import Contact from './views/Contact/Contact';
 
 function App() {
   return (
@@ -15,10 +18,13 @@ function App() {
       <Wrapper>
         <Container>
           <Navbar />
+          <Menu />
         </Container>
         <Container>
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route exact path='/resume' component={Resume} />
+            <Route exact path='/contact' component={Contact} />
             <Redirect to='/' />
           </Switch>
         </Container>
