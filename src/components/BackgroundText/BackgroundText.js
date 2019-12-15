@@ -18,7 +18,7 @@ const SBackgroundText = styled.div`
     text-transform: uppercase;
     font-weight: 700;
     color: white;
-    opacity: 2%;
+    opacity: 1%;
     line-height: 0.85;
     &.one {
       transform: translateX(3300px);
