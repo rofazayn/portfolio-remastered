@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
 
 const SMenu = styled.div`
+  display: none;
   position: relative;
-  /* display: none; */
   position: fixed;
   width: 100%;
   height: 100%;
@@ -13,7 +13,7 @@ const SMenu = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: -1;
   .menu-secondary-background {
     background: white;
     position: fixed;
@@ -53,9 +53,24 @@ const SMenu = styled.div`
   }
 `;
 
-const Menu = () => {
+const Menu = ({ toggler }) => {
+  let myMenu = useRef(null);
+
+  useEffect(() => {
+    if (toggler.isClicked === false) {
+      // Close it gordon
+      myMenu.style.display = 'none';
+    } else if (
+      toggler.isClicked === true ||
+      (toggler.isClicked && toggler.initial === null)
+    ) {
+      // Open it gordon
+      myMenu.style.display = 'block';
+    }
+  });
+
   return (
-    <SMenu>
+    <SMenu ref={el => (myMenu = el)}>
       <div className='menu-secondary-background'></div>
       <div className='menu-layer'>
         <Container>
