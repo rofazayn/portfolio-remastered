@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Button from '../Button/Button';
 import { ReactComponent as SquareIcon } from '../../assets/icons/square.svg';
@@ -6,6 +6,7 @@ import { ReactComponent as SunIcon } from '../../assets/icons/sun.svg';
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
 import Divider from '../Divider/Divider';
 import Menu from '../Menu/Menu';
+import { Link, withRouter } from 'react-router-dom';
 
 const SNavOptions = styled.div`
   display: flex;
@@ -32,7 +33,7 @@ const SNavOptions = styled.div`
   }
 `;
 
-const NavOptions = () => {
+const NavOptions = ({ history }) => {
   const [state, setState] = useState({
     initial: false,
     isClicked: null,
@@ -40,6 +41,17 @@ const NavOptions = () => {
   });
 
   const [menuDisabled, setMenuDisabled] = useState(false);
+
+  // Listen for routes change
+
+  useEffect(() => {
+    history.listen(() => {
+      setState({
+        isClicked: false,
+        isMenuOpen: false
+      });
+    });
+  });
 
   // Handle user actions on the menu icon
   const handleMenuActions = () => {
@@ -76,12 +88,14 @@ const NavOptions = () => {
   };
   return (
     <SNavOptions>
-      <Button>
-        <div className='icon'>
-          <SquareIcon />
-        </div>
-        Hire me
-      </Button>
+      <Link to='/hire'>
+        <Button>
+          <div className='icon'>
+            <SquareIcon />
+          </div>
+          Hire me
+        </Button>
+      </Link>
       <Divider />
       <div className='icons'>
         <div className='icon'>
@@ -100,4 +114,4 @@ const NavOptions = () => {
   );
 };
 
-export default NavOptions;
+export default withRouter(NavOptions);

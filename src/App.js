@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 import BackgroundText from './components/BackgroundText/BackgroundText';
 import Resume from './views/Resume/Resume';
 import Contact from './views/Contact/Contact';
+import Hire from './views/Hire/Hire';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route exact path='/resume' component={Resume} />
             <Route exact path='/contact' component={Contact} />
+            <Route exact path='/hire' component={Hire} />
             <Redirect to='/' />
           </Switch>
         </Container>

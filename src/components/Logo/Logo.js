@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const SLogo = styled.a`
   font-weight: 700;
@@ -9,7 +10,11 @@ const SLogo = styled.a`
 `;
 
 const Logo = () => {
-  return <SLogo href='/'>rofazayn.</SLogo>;
+  return (
+    <Link to='/'>
+      <SLogo>rofazayn.</SLogo>
+    </Link>
+  );
 };
 
 export default Logo;
