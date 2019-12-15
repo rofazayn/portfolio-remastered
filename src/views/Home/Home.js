@@ -32,9 +32,9 @@ const SHome = styled.main`
   .images {
     z-index: 0;
     width: 100%;
-    max-width: 650px;
+    max-width: 640px;
     display: grid;
-    grid-gap: 50px;
+    grid-gap: 40px;
     grid-template: 1fr 1fr / 1fr 1fr;
     place-items: center;
     justify-items: center;
