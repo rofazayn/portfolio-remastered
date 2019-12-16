@@ -24,14 +24,13 @@ export const SMenu = styled.div`
   }
   .menu-layer {
     position: relative;
-    background: red;
+    background: #59440d;
     height: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
     .menu-links {
-      position: absolute;
       width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
       ul {
         display: flex;
         flex-direction: column;

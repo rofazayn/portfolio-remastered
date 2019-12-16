@@ -4,7 +4,11 @@ import Status from '../Status/Status';
 import Social from '../Social/Social';
 
 const SFooter = styled.footer`
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 2rem;
   z-index: 999;
   margin-bottom: 2%;
   height: 50px;

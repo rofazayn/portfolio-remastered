@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Container from '../Container/Container';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { gsap } from 'gsap';
 import {
   staggerMenuReveal,
@@ -57,34 +57,34 @@ const Menu = ({ toggler }) => {
           <nav className='menu-links'>
             <ul>
               <li>
-                <Link
+                <NavLink
                   to='/'
                   ref={el => (line1 = el)}
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}
                 >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to='/resume'
                   ref={el => (line2 = el)}
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}
                 >
                   Resume
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to='/contact'
                   ref={el => (line3 = el)}
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}
                 >
                   Contact
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </nav>

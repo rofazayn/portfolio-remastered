@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SBackgroundText = styled.div`
+  user-select: none;
   position: fixed;
   width: 100%;
   height: 100%;

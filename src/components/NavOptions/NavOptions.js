@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Button from '../Button/Button';
 import { ReactComponent as SquareIcon } from '../../assets/icons/square.svg';
@@ -7,7 +7,7 @@ import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
 import { ReactComponent as XIcon } from '../../assets/icons/x.svg';
 import Divider from '../Divider/Divider';
 import Menu from '../Menu/Menu';
-import { Link, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 const SNavOptions = styled.div`
   display: flex;
@@ -35,6 +35,9 @@ const SNavOptions = styled.div`
 `;
 
 const NavOptions = ({ history }) => {
+  let xIcon = useRef(null),
+    menuIcon = useRef(null);
+
   const [state, setState] = useState({
     initial: false,
     isClicked: null,
@@ -89,14 +92,14 @@ const NavOptions = ({ history }) => {
   };
   return (
     <SNavOptions>
-      <Link to='/hire'>
+      <NavLink to='/hire'>
         <Button>
           <div className='icon'>
             <SquareIcon />
           </div>
           Hire me
         </Button>
-      </Link>
+      </NavLink>
       <Divider />
       <div className='icons'>
         <div className='icon'>
@@ -107,7 +110,11 @@ const NavOptions = ({ history }) => {
           disabled={menuDisabled}
           onClick={handleMenuActions}
         >
-          {state.isMenuOpen ? <XIcon /> : <MenuIcon />}
+          {state.isMenuOpen ? (
+            <XIcon ref={element => (element = xIcon)} />
+          ) : (
+            <MenuIcon ref={element => (element = menuIcon)} />
+          )}
         </button>
       </div>
       <Menu toggler={state} />

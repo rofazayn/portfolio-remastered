@@ -1,6 +1,6 @@
 import React from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
-import './App.css';
+import { Redirect, Route } from 'react-router-dom';
+import './App.scss';
 import Container from './components/Container/Container';
 import Navbar from './components/Navbar/Navbar';
 import Wrapper from './components/Wrapper/Wrapper';
@@ -10,30 +10,47 @@ import BackgroundText from './components/BackgroundText/BackgroundText';
 import Resume from './views/Resume/Resume';
 import Contact from './views/Contact/Contact';
 import Hire from './views/Hire/Hire';
+import { CSSTransition } from 'react-transition-group';
+import { withRouter } from 'react-router-dom';
+
+const routes = [
+  { path: '/', name: 'Home', Component: Home },
+  { path: '/resume', name: 'Resume', Component: Resume },
+  { path: '/contact', name: 'Contact', Component: Contact },
+  { path: '/hire', name: 'Hire', Component: Hire }
+];
 
 function App() {
   return (
     <>
       <BackgroundText />
+      <Navbar />
       <Wrapper>
         <Container>
-          <Navbar />
-        </Container>
-        <Container>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/resume' component={Resume} />
-            <Route exact path='/contact' component={Contact} />
-            <Route exact path='/hire' component={Hire} />
-            <Redirect to='/' />
-          </Switch>
-        </Container>
-        <Container>
-          <Footer />
+          {routes.map(({ name, path, Component }) => (
+            <Route exact path={path} key={name}>
+              {({ match }) => (
+                <CSSTransition
+                  in={match != null}
+                  timeout={1200}
+                  classNames='page'
+                  // onExit={onExit}
+                  // onEntering={onEnter}
+                  unmountOnExit
+                >
+                  <div className='page'>
+                    <Component />
+                  </div>
+                </CSSTransition>
+              )}
+            </Route>
+          ))}
+          <Redirect to='/' />
         </Container>
       </Wrapper>
+      <Footer />
     </>
   );
 }
 
-export default App;
+export default withRouter(App);
