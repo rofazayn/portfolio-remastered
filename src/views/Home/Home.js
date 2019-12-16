@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import HeroImage from '../../assets/images/hero.jpg';
+import HeroImage from '../../assets/images/hero.webp';
 import Hero from '../../components/Hero/Hero';
 
 const SHome = styled.div`
