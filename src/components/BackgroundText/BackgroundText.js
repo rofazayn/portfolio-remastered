@@ -13,7 +13,6 @@ const SBackgroundText = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  opacity: 0;
   span {
     font-size: 400px;
     white-space: nowrap;

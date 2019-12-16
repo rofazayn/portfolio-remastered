@@ -2,7 +2,7 @@
   "name": "portfolio-remastered",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/rofazayn/portfolio-remastered",
+  "homepage": "https://rofazayn.github.com/portfolio-remastered",
   "dependencies": {
     "@material-ui/core": "^4.7.2",
     "@testing-library/jest-dom": "^4.2.4",

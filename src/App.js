@@ -22,7 +22,10 @@ const routes = [
 
 function App() {
   useEffect(() => {
-    gsap.to(['.App', '.background-text'], 1, {
+    gsap.to('.App', {
+      visibility: 'visible'
+    });
+    gsap.to(['.App'], 1, {
       opacity: 1,
       delay: 1,
       ease: 'power3.inOut'
