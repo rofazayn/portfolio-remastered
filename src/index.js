@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import App from './App';
 import theme from './assets/theming/theme';
@@ -8,11 +8,11 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 const root = (
-  <Router>
+  <HashRouter basename='/'>
     <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>
-  </Router>
+  </HashRouter>
 );
 
 const manifest = document.getElementById('root');

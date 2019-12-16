@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Redirect, Route, withRouter } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import './App.scss';
+import BackgroundText from './components/BackgroundText/BackgroundText';
 import Container from './components/Container/Container';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
@@ -11,7 +12,6 @@ import Contact from './views/Contact/Contact';
 import Hire from './views/Hire/Hire';
 import Home from './views/Home/Home';
 import Resume from './views/Resume/Resume';
-import BackgroundText from './components/BackgroundText/BackgroundText';
 
 const routes = [
   { path: '/resume', name: 'Resume', Component: Resume },
@@ -22,11 +22,15 @@ const routes = [
 
 function App() {
   useEffect(() => {
-    gsap.to('.App', 1, { opacity: 1, delay: 1, ease: 'power3.inOut' });
+    gsap.to(['.App', '.background-text'], 1, {
+      opacity: 1,
+      delay: 1,
+      ease: 'power3.inOut'
+    });
   });
   return (
     <div className='App'>
-      <BackgroundText />
+      <BackgroundText className='background-text' />
       <Navbar />
       <Wrapper>
         <Container>

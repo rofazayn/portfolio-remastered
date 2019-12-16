@@ -13,13 +13,13 @@ const SBackgroundText = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  opacity: 0;
   span {
     font-size: 400px;
     white-space: nowrap;
     text-transform: uppercase;
     font-weight: 700;
-    color: white;
-    opacity: 1%;
+    color: #030303;
     line-height: 0.85;
     &.one {
       transform: translateX(3300px);
@@ -33,9 +33,9 @@ const SBackgroundText = styled.div`
   }
 `;
 
-const BackgroundText = () => {
+const BackgroundText = props => {
   return (
-    <SBackgroundText>
+    <SBackgroundText {...props}>
       <span className='one'>Beauty is in the eye of the beholder</span>
       <span className='two'>Beauty is in the eye of the beholder</span>
       <span className='three'>Beauty is in the eye of the beholder</span>
