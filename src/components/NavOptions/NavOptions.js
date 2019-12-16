@@ -102,9 +102,9 @@ const NavOptions = ({ history }) => {
       </NavLink>
       <Divider />
       <div className='icons'>
-        <div className='icon'>
+        {/* <div className='icon'>
           <SunIcon />
-        </div>
+        </div> */}
         <button
           className='icon'
           disabled={menuDisabled}

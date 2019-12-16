@@ -6,7 +6,7 @@ const SResume = styled.div``;
 
 const Resume = () => {
   const line1 = `Years of experience`;
-  const line2 = `at your service`;
+  const line2 = `at your service.`;
   const paragraph = `Hi. My name is Abderraouf. I am a front-end web developer from the Chawi
   Amazigh lands. Please take a look around and discover what I can offer
   for you, you business or your company.`;
