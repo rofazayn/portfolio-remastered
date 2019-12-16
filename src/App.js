@@ -13,15 +13,15 @@ import Home from './views/Home/Home';
 import Resume from './views/Resume/Resume';
 
 const routes = [
-  { path: '/', name: 'Home', Component: Home },
   { path: '/resume', name: 'Resume', Component: Resume },
   { path: '/contact', name: 'Contact', Component: Contact },
-  { path: '/hire', name: 'Hire', Component: Hire }
+  { path: '/hire', name: 'Hire', Component: Hire },
+  { path: '/', name: 'Home', Component: Home }
 ];
 
 function App() {
   useEffect(() => {
-    gsap.to('.App', 2, { opacity: 1, delay: 1, ease: 'power3.Out' });
+    gsap.to('.App', 1, { opacity: 1, delay: 1, ease: 'power3.inOut' });
   });
   return (
     <div className='App'>
@@ -29,11 +29,11 @@ function App() {
       <Wrapper>
         <Container>
           {routes.map(({ name, path, Component }) => (
-            <Route exact path={path} key={name}>
+            <Route path={path} exact key={name}>
               {({ match }) => (
                 <CSSTransition
                   in={match != null}
-                  timeout={3000}
+                  timeout={1300}
                   classNames='page'
                   unmountOnExit
                 >

@@ -33,9 +33,10 @@ const SHero = styled.div`
       position: relative;
       overflow: hidden;
       .text {
-        max-width: 540px;
+        max-width: 450px;
         line-height: 2.2;
         margin-bottom: 30px;
+        letter-spacing: 0.5px;
         color: gray;
       }
     }
@@ -69,14 +70,16 @@ const Hero = ({ line1, line2, paragraph, buttonText, buttonPath }) => {
           <div className='text'>{paragraph && paragraph}</div>
         </div>
       </p>
-      <Link to={buttonPath}>
-        <Button>
-          <div className='icon'>
-            <SquareIcon />
-          </div>{' '}
-          {buttonText && buttonText}
-        </Button>
-      </Link>
+      {buttonText && (
+        <Link to={buttonPath}>
+          <Button>
+            <div className='icon'>
+              <SquareIcon />
+            </div>{' '}
+            {buttonText && buttonText}
+          </Button>
+        </Link>
+      )}
     </SHero>
   );
 };

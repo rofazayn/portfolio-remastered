@@ -10,10 +10,9 @@ const SFooter = styled.footer`
   width: 100%;
   padding: 0 2rem;
   z-index: 1000;
-  margin-bottom: 2%;
+  margin-bottom: 1.5rem;
   height: 50px;
   width: 100%;
-  /* background-color: pink; */
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -10,7 +10,7 @@ const SNavbar = styled.nav`
   width: 100%;
   padding: 0 2rem;
   z-index: 1000;
-  margin-top: 2%;
+  margin-top: 1.5rem;
   height: 50px;
   width: 100%;
   display: flex;

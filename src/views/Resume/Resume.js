@@ -5,12 +5,10 @@ import Hero from '../../components/Hero/Hero';
 const SResume = styled.div``;
 
 const Resume = () => {
-  const line1 = `Years of experience`;
+  const line1 = `Years of exp`;
   const line2 = `at your service.`;
-  const paragraph = `Hi. My name is Abderraouf. I am a front-end web developer from the Chawi
-  Amazigh lands. Please take a look around and discover what I can offer
-  for you, you business or your company.`;
-  const buttonText = `Get in touch`;
+  const paragraph = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.`;
+  const buttonText = `Are you hiring?`;
 
   return (
     <SResume>
@@ -19,7 +17,7 @@ const Resume = () => {
         line2={line2}
         paragraph={paragraph}
         buttonText={buttonText}
-        buttonPath={'/contact'}
+        buttonPath={'/hire'}
       />
     </SResume>
   );

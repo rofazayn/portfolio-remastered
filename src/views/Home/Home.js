@@ -51,12 +51,12 @@ const SHome = styled.div`
 
 const Home = () => {
   // Page content
-  const line1 = `Welcome to my tiny`;
-  const line2 = `place on the internet.`;
+  const line1 = `Welcome to my`;
+  const line2 = `personal portfolio.`;
   const paragraph = `Hi. My name is Abderraouf. I am a front-end web developer from the Chawi
   Amazigh lands. Please take a look around and discover what I can offer
   for you, your business or your company.`;
-  const buttonText = `Check my resume`;
+  const buttonText = `Have a look at my resume`;
 
   return (
     <SHome>

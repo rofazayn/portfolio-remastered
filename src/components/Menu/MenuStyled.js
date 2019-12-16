@@ -46,7 +46,7 @@ export const SMenu = styled.div`
             color: white;
             opacity: 1;
             &:hover {
-              color: red;
+              color: tomato;
             }
           }
         }

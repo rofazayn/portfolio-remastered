@@ -37,13 +37,28 @@ const Social = () => {
       <p>Follow me</p>
       <Divider vertical />
       <div className='icons'>
-        <a href='/' target='_blank' className='icon'>
+        <a
+          href='https://twitter.com/rofazayn'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='icon'
+        >
           <TwitterIcon />
         </a>
-        <a href='/' target='_blank' className='icon'>
+        <a
+          href='https://github.com/rofazayn/portfolio-remastered'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='icon'
+        >
           <GithubIcon />
         </a>
-        <a href='/' target='_blank' className='icon'>
+        <a
+          href='https://www.linkedin.com/in/abderraouf-zine-906642192/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='icon'
+        >
           <LinkedInIcon />
         </a>
       </div>
