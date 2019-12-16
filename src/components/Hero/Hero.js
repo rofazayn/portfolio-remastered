@@ -12,6 +12,7 @@ const SHero = styled.div`
   align-items: flex-start;
   .title {
     margin-bottom: 30px;
+    user-select: none;
     .line-wrapper {
       position: relative;
       overflow: hidden;
@@ -27,6 +28,7 @@ const SHero = styled.div`
   }
 
   .paragraph {
+    user-select: none;
     .text-wrapper {
       position: relative;
       overflow: hidden;

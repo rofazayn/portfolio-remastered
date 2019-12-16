@@ -1,17 +1,16 @@
-import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import gsap from 'gsap';
+import React, { useEffect } from 'react';
+import { Redirect, Route, withRouter } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 import './App.scss';
 import Container from './components/Container/Container';
+import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import Wrapper from './components/Wrapper/Wrapper';
-import Home from './views/Home/Home';
-import Footer from './components/Footer/Footer';
-import BackgroundText from './components/BackgroundText/BackgroundText';
-import Resume from './views/Resume/Resume';
 import Contact from './views/Contact/Contact';
 import Hire from './views/Hire/Hire';
-import { CSSTransition } from 'react-transition-group';
-import { withRouter } from 'react-router-dom';
+import Home from './views/Home/Home';
+import Resume from './views/Resume/Resume';
 
 const routes = [
   { path: '/', name: 'Home', Component: Home },
@@ -21,9 +20,11 @@ const routes = [
 ];
 
 function App() {
+  useEffect(() => {
+    gsap.to('.App', 2, { opacity: 1, delay: 1, ease: 'power3.Out' });
+  });
   return (
-    <>
-      <BackgroundText />
+    <div className='App'>
       <Navbar />
       <Wrapper>
         <Container>
@@ -32,10 +33,8 @@ function App() {
               {({ match }) => (
                 <CSSTransition
                   in={match != null}
-                  timeout={1200}
+                  timeout={3000}
                   classNames='page'
-                  // onExit={onExit}
-                  // onEntering={onEnter}
                   unmountOnExit
                 >
                   <div className='page'>
@@ -49,7 +48,7 @@ function App() {
         </Container>
       </Wrapper>
       <Footer />
-    </>
+    </div>
   );
 }
 

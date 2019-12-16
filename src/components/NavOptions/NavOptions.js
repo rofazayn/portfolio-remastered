@@ -22,12 +22,13 @@ const SNavOptions = styled.div`
       cursor: pointer;
       color: white;
       svg {
+        transition: all ease-in-out 250ms;
         width: 20px;
         height: 20px;
       }
       &:hover {
         svg {
-          color: gray;
+          color: red;
         }
       }
     }
@@ -102,9 +103,9 @@ const NavOptions = ({ history }) => {
       </NavLink>
       <Divider />
       <div className='icons'>
-        {/* <div className='icon'>
+        <div className='icon'>
           <SunIcon />
-        </div> */}
+        </div>
         <button
           className='icon'
           disabled={menuDisabled}

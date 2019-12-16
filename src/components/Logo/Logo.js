@@ -9,12 +9,19 @@ const SLogo = styled.span`
   padding: 0.5rem 0;
   width: 30%;
   letter-spacing: 0.1rem;
+  mix-blend-mode: difference;
+  color: white;
+  span {
+    color: red;
+  }
 `;
 
 const Logo = () => {
   return (
     <Link to='/'>
-      <SLogo>rofazayn.</SLogo>
+      <SLogo>
+        rofazayn<span>.</span>
+      </SLogo>
     </Link>
   );
 };

@@ -9,7 +9,7 @@ const SFooter = styled.footer`
   left: 0;
   width: 100%;
   padding: 0 2rem;
-  z-index: 999;
+  z-index: 1000;
   margin-bottom: 2%;
   height: 50px;
   width: 100%;

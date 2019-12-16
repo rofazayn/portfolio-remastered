@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SButton = styled.div`
-  padding: 0.5rem 0;
+  user-select: none;
+  padding: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +12,7 @@ const SButton = styled.div`
   font-weight: 500;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: all ease-in-out 250ms;
   .icon {
     margin-inline-end: 1rem;
     transform: rotate(45deg) translateY(1px);
@@ -20,7 +22,7 @@ const SButton = styled.div`
     }
   }
   &:hover {
-    color: gray;
+    color: red;
   }
 `;
 

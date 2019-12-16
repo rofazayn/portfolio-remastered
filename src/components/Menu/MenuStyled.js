@@ -24,7 +24,7 @@ export const SMenu = styled.div`
   }
   .menu-layer {
     position: relative;
-    background: #59440d;
+    background: black;
     height: 100%;
     overflow: hidden;
     display: flex;
@@ -46,7 +46,7 @@ export const SMenu = styled.div`
             color: white;
             opacity: 1;
             &:hover {
-              color: black;
+              color: red;
             }
           }
         }
