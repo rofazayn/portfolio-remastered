@@ -3,9 +3,10 @@ import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import {
-  staggerRevealClose,
-  staggerReveal,
-  staggerText,
+  staggerMenuReveal,
+  staggerMenuHide,
+  staggerTextReveal,
+  staggerTextHide,
   handleHoverExit,
   handleHover
 } from '../../helpers/Animations';
@@ -24,23 +25,24 @@ const Menu = ({ toggler }) => {
     // If the menu is open and we click the menu button to close it.
     if (toggler.isClicked === false) {
       // If menu is closed and we want to open it.
-      staggerRevealClose(reveal2, reveal1);
+      staggerTextHide(line1, line2, line3);
+      staggerMenuHide(reveal2, reveal1);
       // Set menu to display none
-      gsap.to(myMenu, { duration: 1, css: { display: 'none' } });
+      gsap.to(myMenu, { duration: 1.5, css: { display: 'none' } });
     } else if (
       toggler.isClicked === true ||
       (toggler.isClicked === true && toggler.initial === null)
     ) {
       // Set menu to display block
       gsap.to(myMenu, { duration: 0, css: { display: 'block' } });
-      //Allow menu to have height of 100%
+      // Allow menu to have height of 100%
       gsap.to([reveal1, reveal2], {
         duration: 0,
         opacity: 1,
         height: '100%'
       });
-      staggerReveal(reveal1, reveal2);
-      staggerText(line1, line2, line3);
+      staggerMenuReveal(reveal1, reveal2);
+      staggerTextReveal(line1, line2, line3);
     }
   }, [toggler]);
 

@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 
-// OPEN MENU
-export const staggerReveal = (...nodes) => {
+// Reveal Menu
+export const staggerMenuReveal = (...nodes) => {
   gsap.from([...nodes], {
     duration: 0.8,
     height: 0,
@@ -14,11 +14,12 @@ export const staggerReveal = (...nodes) => {
   });
 };
 
-// CLOSE MENU
-export const staggerRevealClose = (...nodes) => {
+// Hide menu
+export const staggerMenuHide = (...nodes) => {
   gsap.to([...nodes], {
     duration: 0.8,
     height: 0,
+    delay: 0.5,
     ease: 'power3.inOut',
     stagger: {
       amount: 0.07
@@ -26,12 +27,30 @@ export const staggerRevealClose = (...nodes) => {
   });
 };
 
-export const staggerText = (...nodes) => {
+export const staggerTextReveal = (...nodes) => {
   gsap.from([...nodes], {
     duration: 0.8,
     y: 135,
+    delay: 0.4,
+    ease: 'power3.inOut',
+    stagger: {
+      amount: 0.3
+    }
+  });
+  gsap.to([...nodes], {
+    duration: 0.8,
+    opacity: 1,
+    ease: 'power3.inOut',
+    stagger: {
+      amount: 0.3
+    }
+  });
+};
+
+export const staggerTextHide = (...nodes) => {
+  gsap.to([...nodes], {
+    duration: 0.8,
     opacity: 0,
-    delay: 0.5,
     ease: 'power3.inOut',
     stagger: {
       amount: 0.3
