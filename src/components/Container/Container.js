@@ -10,7 +10,6 @@ const SContainer = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  background: ${({ pageContainer }) => pageContainer && 'red'};
   @media (max-width: 1440px) {
     max-width: 1240px;
   }

@@ -21,8 +21,15 @@ const SButton = styled.div`
       height: 14px;
     }
   }
+  color: tomato;
   &:hover {
-    color: red;
+    color: white;
+  }
+  &.nav-button {
+    color: white !important;
+    &:hover {
+      color: tomato;
+    }
   }
 `;
 

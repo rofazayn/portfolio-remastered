@@ -12,7 +12,7 @@ export const SMenu = styled.div`
   display: none;
   z-index: -1;
   .menu-secondary-background {
-    background: white;
+    background: tomato;
     position: fixed;
     width: 100%;
     height: 100%;

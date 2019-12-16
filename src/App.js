@@ -11,6 +11,7 @@ import Contact from './views/Contact/Contact';
 import Hire from './views/Hire/Hire';
 import Home from './views/Home/Home';
 import Resume from './views/Resume/Resume';
+import BackgroundText from './components/BackgroundText/BackgroundText';
 
 const routes = [
   { path: '/resume', name: 'Resume', Component: Resume },
@@ -25,6 +26,7 @@ function App() {
   });
   return (
     <div className='App'>
+      <BackgroundText />
       <Navbar />
       <Wrapper>
         <Container>

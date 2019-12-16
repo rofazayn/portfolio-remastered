@@ -84,7 +84,7 @@ const Menu = ({ toggler }) => {
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}
                 >
-                  Hire
+                  Hire me
                 </NavLink>
               </li>
               <li>

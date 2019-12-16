@@ -12,7 +12,7 @@ const SLogo = styled.span`
   mix-blend-mode: difference;
   color: white;
   span {
-    color: red;
+    color: tomato;
   }
 `;
 

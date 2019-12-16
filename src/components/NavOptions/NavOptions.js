@@ -28,7 +28,7 @@ const SNavOptions = styled.div`
       }
       &:hover {
         svg {
-          color: red;
+          color: tomato;
         }
       }
     }
@@ -94,7 +94,7 @@ const NavOptions = ({ history }) => {
   return (
     <SNavOptions>
       <NavLink to='/hire'>
-        <Button>
+        <Button className='nav-button'>
           <div className='icon'>
             <SquareIcon />
           </div>

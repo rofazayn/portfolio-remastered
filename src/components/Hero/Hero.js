@@ -33,10 +33,9 @@ const SHero = styled.div`
       position: relative;
       overflow: hidden;
       .text {
-        max-width: 450px;
+        max-width: 550px;
         line-height: 2.2;
         margin-bottom: 30px;
-        letter-spacing: 0.5px;
         color: gray;
       }
     }
