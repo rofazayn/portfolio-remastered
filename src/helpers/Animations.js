@@ -1,8 +1,8 @@
 import gsap from 'gsap';
 
 // OPEN MENU
-export const staggerReveal = (node1, node2) => {
-  gsap.from([node1, node2], {
+export const staggerReveal = (...nodes) => {
+  gsap.from([...nodes], {
     duration: 0.8,
     height: 0,
     transformOrigin: 'right top',
@@ -15,8 +15,8 @@ export const staggerReveal = (node1, node2) => {
 };
 
 // CLOSE MENU
-export const staggerRevealClose = (node1, node2) => {
-  gsap.to([node1, node2], {
+export const staggerRevealClose = (...nodes) => {
+  gsap.to([...nodes], {
     duration: 0.8,
     height: 0,
     ease: 'power3.inOut',
@@ -26,12 +26,12 @@ export const staggerRevealClose = (node1, node2) => {
   });
 };
 
-// STAGGER THE LINKS TO APPEAR
-export const staggerText = (node1, node2, node3) => {
-  gsap.from([node1, node2, node3], {
+export const staggerText = (...nodes) => {
+  gsap.from([...nodes], {
     duration: 0.8,
-    y: 100,
-    delay: 0.1,
+    y: 135,
+    opacity: 0,
+    delay: 0.5,
     ease: 'power3.inOut',
     stagger: {
       amount: 0.3

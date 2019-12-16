@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import styled from 'styled-components';
 import Container from '../Container/Container';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
@@ -9,62 +8,8 @@ import {
   staggerText,
   handleHoverExit,
   handleHover
-} from './MenuAnimations';
-
-const SMenu = styled.div`
-  position: relative;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: none;
-  z-index: -1;
-  .menu-secondary-background {
-    background: white;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-  .menu-layer {
-    position: relative;
-    background: #303952;
-    height: 100%;
-    overflow: hidden;
-    .menu-links {
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-      ul {
-        display: flex;
-        flex-direction: column;
-        li {
-          position: relative;
-          list-style: none;
-          font-size: 6rem;
-          font-weight: 700;
-          height: 135px;
-          overflow: hidden;
-          a {
-            position: absolute;
-            color: white;
-            &:hover {
-              color: black;
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+} from '../../helpers/Animations';
+import { SMenu } from './MenuStyled';
 
 const Menu = ({ toggler }) => {
   // Elements to animate
@@ -79,7 +24,6 @@ const Menu = ({ toggler }) => {
     // If the menu is open and we click the menu button to close it.
     if (toggler.isClicked === false) {
       // If menu is closed and we want to open it.
-
       staggerRevealClose(reveal2, reveal1);
       // Set menu to display none
       gsap.to(myMenu, { duration: 1, css: { display: 'none' } });

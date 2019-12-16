@@ -85,7 +85,7 @@ const NavOptions = ({ history }) => {
 
     setTimeout(() => {
       setMenuDisabled(false);
-    }, 800);
+    }, 1200);
   };
   return (
     <SNavOptions>
