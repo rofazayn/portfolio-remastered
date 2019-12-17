@@ -52,7 +52,7 @@ function App({ history, location }) {
               {({ match }) => (
                 <CSSTransition
                   in={match != null}
-                  timeout={1400}
+                  timeout={2000}
                   classNames='page'
                   unmountOnExit
                 >

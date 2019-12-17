@@ -20,14 +20,14 @@ const SPage = styled.div`
   }
   &.page-enter-active {
     opacity: 1;
-    transition: opacity 450ms ease-in-out 450ms;
+    transition: opacity 650ms ease-in 650ms;
   }
   &.page-exit {
     opacity: 1;
   }
   &.page-exit-active {
     opacity: 0;
-    transition: opacity 450ms ease-in-out;
+    transition: opacity 650ms ease-out;
   }
 `;
 
