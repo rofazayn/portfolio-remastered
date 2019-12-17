@@ -12,7 +12,6 @@ const SPage = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  // justify-content: center;
   align-items: center;
   padding: 0 2rem;
 
@@ -21,15 +20,14 @@ const SPage = styled.div`
   }
   &.page-enter-active {
     opacity: 1;
-    transition: opacity 400ms;
-    transition-delay: 600ms;
+    transition: opacity 450ms ease-in-out 450ms;
   }
   &.page-exit {
     opacity: 1;
   }
   &.page-exit-active {
     opacity: 0;
-    transition: opacity 400ms;
+    transition: opacity 450ms ease-in-out;
   }
 `;
 

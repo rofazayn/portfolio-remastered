@@ -80,7 +80,7 @@ export const handleHoverExit = e => {
 
 export const revealHeadings = (...nodes) => {
   gsap.from([...nodes], 0.8, {
-    delay: 0.8,
+    delay: 0.85,
     ease: 'power3.out',
     y: 55,
     stagger: {
