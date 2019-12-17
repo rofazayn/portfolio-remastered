@@ -33,10 +33,11 @@ const SHero = styled.div`
       position: relative;
       overflow: hidden;
       .text {
+        color: #7d7d7d;
         max-width: 550px;
         line-height: 2.2;
         margin-bottom: 30px;
-        color: gray;
+        font-weight: 500;
       }
     }
   }

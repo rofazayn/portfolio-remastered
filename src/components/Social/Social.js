@@ -10,17 +10,25 @@ const SSocial = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  color: gray;
+  p {
+    font-size: 12px;
+    color: gray;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-inline-end: 0.5rem;
+  }
   .icons {
     display: flex;
     .icon {
+      color: gray;
       display: flex;
       padding: 0.5rem;
       cursor: pointer;
       svg {
         width: 18px;
         height: 18px;
+        transition: all ease-in-out 250ms;
       }
       &:hover {
         svg {
@@ -34,7 +42,7 @@ const SSocial = styled.div`
 const Social = () => {
   return (
     <SSocial>
-      <p>Follow me</p>
+      <p>Find me</p>
       <Divider vertical />
       <div className='icons'>
         <a

@@ -2,8 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SStatus = styled.div`
-  font-size: 14px;
+  font-size: 12px;
   color: gray;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   span {
     color: white;
     font-weight: 700;
