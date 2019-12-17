@@ -12,6 +12,7 @@ import Contact from './views/Contact/Contact';
 import Hire from './views/Hire/Hire';
 import Home from './views/Home/Home';
 import Resume from './views/Resume/Resume';
+import Page from './components/Page/Page';
 
 const routes = [
   { path: '/resume', name: 'Resume', Component: Resume },
@@ -20,9 +21,9 @@ const routes = [
   { path: '/home', name: 'Home', Component: Home }
 ];
 
-function App() {
+function App({ history, location }) {
   useEffect(() => {
-    gsap.to('.App', {
+    gsap.set('.App', {
       visibility: 'visible'
     });
     gsap.to(['.App'], 0.5, {
@@ -30,10 +31,16 @@ function App() {
       delay: 1,
       ease: 'power3.inOut'
     });
+  });
+
+  useEffect(() => {
     setTimeout(() => {
-      window.location.href = '/#/home';
-    }, 1400);
-  }, []);
+      if (location.pathname === '/') {
+        history.push('/home');
+      }
+    }, 2000);
+  });
+
   return (
     <div className='App'>
       <BackgroundText className='background-text' />
@@ -49,9 +56,9 @@ function App() {
                   classNames='page'
                   unmountOnExit
                 >
-                  <div className='page'>
+                  <Page>
                     <Component />
-                  </div>
+                  </Page>
                 </CSSTransition>
               )}
             </Route>
