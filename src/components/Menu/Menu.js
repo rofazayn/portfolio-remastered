@@ -59,7 +59,7 @@ const Menu = ({ toggler }) => {
             <ul>
               <li>
                 <NavLink
-                  to='/'
+                  to='/home'
                   ref={el => (line1 = el)}
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}

@@ -18,7 +18,7 @@ const SLogo = styled.span`
 
 const Logo = () => {
   return (
-    <Link to='/'>
+    <Link to='/home'>
       <SLogo>
         rofazayn<span>.</span>
       </SLogo>

@@ -88,3 +88,18 @@ export const revealHeadings = (...nodes) => {
     }
   });
 };
+
+export const staggerRevealImages = (...nodes) => {
+  gsap.to([...nodes], 1, {
+    opacity: 1,
+    x: 0,
+    skewY: -5,
+    delay: 1,
+    ease: 'power3.out',
+    stagger: {
+      amount: 0.2
+    }
+  });
+};
+
+export const revealParagraph = (...nodes) => {};

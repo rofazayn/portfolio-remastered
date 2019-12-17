@@ -17,7 +17,7 @@ const routes = [
   { path: '/resume', name: 'Resume', Component: Resume },
   { path: '/contact', name: 'Contact', Component: Contact },
   { path: '/hire', name: 'Hire', Component: Hire },
-  { path: '/', name: 'Home', Component: Home }
+  { path: '/home', name: 'Home', Component: Home }
 ];
 
 function App() {
@@ -25,12 +25,15 @@ function App() {
     gsap.to('.App', {
       visibility: 'visible'
     });
-    gsap.to(['.App'], 1, {
+    gsap.to(['.App'], 0.5, {
       opacity: 1,
       delay: 1,
       ease: 'power3.inOut'
     });
-  });
+    setTimeout(() => {
+      window.location.href = '/#/home';
+    }, 1400);
+  }, []);
   return (
     <div className='App'>
       <BackgroundText className='background-text' />

@@ -17,12 +17,17 @@ const SHero = styled.div`
       position: relative;
       overflow: hidden;
       height: 55px;
+      @media (max-width: 1440px) {
+        height: 45px;
+      }
       .line {
         max-width: 480px;
         font-size: 2.5rem;
         font-weight: 700;
-
         line-height: 135%;
+        @media (max-width: 1440px) {
+          font-size: 2rem;
+        }
       }
     }
   }
@@ -38,6 +43,10 @@ const SHero = styled.div`
         line-height: 2.2;
         margin-bottom: 30px;
         font-weight: 500;
+        @media (max-width: 1440px) {
+          font-size: 0.9rem;
+          max-width: 480px;
+        }
       }
     }
   }
@@ -53,7 +62,7 @@ const Hero = ({ line1, line2, paragraph, buttonText, buttonPath }) => {
 
   return (
     <SHero>
-      <h1 className='title'>
+      <div className='title'>
         <div className='line-wrapper'>
           <div className='line' ref={el => (heading1 = el)}>
             {line2 && line1}
@@ -64,12 +73,12 @@ const Hero = ({ line1, line2, paragraph, buttonText, buttonPath }) => {
             {line2 && line2}
           </div>
         </div>
-      </h1>
-      <p className='paragraph'>
+      </div>
+      <div className='paragraph'>
         <div className='text-wrapper'>
           <div className='text'>{paragraph && paragraph}</div>
         </div>
-      </p>
+      </div>
       {buttonText && (
         <Link to={buttonPath}>
           <Button>

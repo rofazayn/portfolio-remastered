@@ -7,7 +7,7 @@ const SResume = styled.div``;
 const Resume = () => {
   const line1 = `Years of exp`;
   const line2 = `at your service.`;
-  const paragraph = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.`;
+  const paragraph = `I provide product design services, from wireframing and prototyping, to UI design and front-end development. With more than 5 years of experience working for individuals, startups and established companies to improve their products.`;
   const buttonText = `Are you hiring?`;
 
   return (

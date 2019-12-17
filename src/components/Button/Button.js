@@ -12,6 +12,9 @@ const SButton = styled.div`
   font-weight: 500;
   letter-spacing: 1px;
   cursor: pointer;
+  @media (max-width: 1440px) {
+    font-size: 12px;
+  }
   transition: all ease-in-out 250ms;
   .icon {
     margin-inline-end: 1rem;

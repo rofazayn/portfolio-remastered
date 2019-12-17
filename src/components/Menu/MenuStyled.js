@@ -37,10 +37,14 @@ export const SMenu = styled.div`
         li {
           position: relative;
           list-style: none;
-          font-size: 6rem;
+          font-size: 5rem;
           font-weight: 700;
           height: 135px;
           overflow: hidden;
+          @media (max-width: 1440px) {
+            font-size: 4rem;
+            height: 95px;
+          }
           a {
             position: absolute;
             color: white;
