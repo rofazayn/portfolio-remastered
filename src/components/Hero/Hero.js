@@ -3,7 +3,11 @@ import styled from 'styled-components';
 import { ReactComponent as SquareIcon } from '../../assets/icons/square.svg';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
-import { revealHeadings } from '../../helpers/Animations';
+import {
+  revealHeadings,
+  revealParagraph,
+  revealButtons
+} from '../../helpers/Animations';
 
 const SHero = styled.div`
   display: flex;
@@ -34,15 +38,17 @@ const SHero = styled.div`
 
   .paragraph {
     user-select: none;
+    margin-bottom: 30px;
     .text-wrapper {
       position: relative;
       overflow: hidden;
+      height: 110px;
+      display: flex;
+      width: 100%;
       .text {
         color: #7d7d7d;
         max-width: 550px;
         line-height: 2.2;
-        margin-bottom: 30px;
-        font-weight: 500;
         @media (max-width: 1440px) {
           font-size: 0.9rem;
           max-width: 480px;
@@ -55,10 +61,14 @@ const SHero = styled.div`
 const Hero = ({ line1, line2, paragraph, buttonText, buttonPath }) => {
   let heading1 = useRef(null);
   let heading2 = useRef(null);
+  let text = useRef(null);
+  let button = useRef(null);
 
   useEffect(() => {
     revealHeadings(heading1, heading2);
-  }, [heading1, heading2]);
+    revealParagraph(text);
+    revealButtons(button);
+  }, [heading1, heading2, text, button]);
 
   return (
     <SHero>
@@ -76,12 +86,14 @@ const Hero = ({ line1, line2, paragraph, buttonText, buttonPath }) => {
       </div>
       <div className='paragraph'>
         <div className='text-wrapper'>
-          <div className='text'>{paragraph && paragraph}</div>
+          <div className='text' ref={el => (text = el)}>
+            {paragraph && paragraph}
+          </div>
         </div>
       </div>
       {buttonText && (
         <Link to={buttonPath}>
-          <Button>
+          <Button ref={el => (button = el)}>
             <div className='icon'>
               <SquareIcon />
             </div>{' '}

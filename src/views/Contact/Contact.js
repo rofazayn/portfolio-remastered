@@ -8,7 +8,7 @@ const Contact = () => {
   const line1 = `Feel free to contact`;
   const line2 = `me at anytime.`;
   const paragraph = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.`;
-  // const buttonText = `See if I am available`;
+  const buttonText = `Back to home`;
 
   return (
     <SContact>
@@ -16,8 +16,8 @@ const Contact = () => {
         line1={line1}
         line2={line2}
         paragraph={paragraph}
-        // buttonText={buttonText}
-        // buttonPath={'/contact'}
+        buttonText={buttonText}
+        buttonPath={'/'}
       />
     </SContact>
   );

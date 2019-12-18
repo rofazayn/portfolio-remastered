@@ -94,7 +94,7 @@ const NavOptions = ({ history }) => {
   return (
     <SNavOptions>
       <NavLink to='/hire'>
-        <Button className='nav-button'>
+        <Button navButton>
           <div className='icon'>
             <SquareIcon />
           </div>

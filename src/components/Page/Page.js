@@ -1,9 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import gsap from 'gsap';
-
 const SPage = styled.div`
-  visibility: hidden;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -32,9 +29,6 @@ const SPage = styled.div`
 `;
 
 const Page = ({ children, ...otherProps }) => {
-  useEffect(() => {
-    gsap.set('.page', { visibility: 'visible' });
-  });
   return (
     <SPage className='page' {...otherProps}>
       {children}

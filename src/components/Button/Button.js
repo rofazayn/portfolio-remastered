@@ -2,42 +2,61 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SButton = styled.div`
-  user-select: none;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
-  cursor: pointer;
-  @media (max-width: 1440px) {
-    font-size: 12px;
+  position: relative;
+  /* overflow: hidden; */
+  .background-layer {
+    position: absolute;
+    top: 0;
+    left: -40px;
+    margin: 0 auto;
+    width: 150%;
+    height: 100%;
+    z-index: 3;
+    background: tomato;
   }
-  transition: all ease-in-out 250ms;
-  .icon {
-    margin-inline-end: 1rem;
-    transform: rotate(45deg) translateY(1px);
-    svg {
-      width: 14px;
-      height: 14px;
+  .button-layer {
+    white-space: nowrap;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    overflow: hidden;
+    cursor: pointer;
+    @media (max-width: 1440px) {
+      font-size: 12px;
     }
-  }
-  color: tomato;
-  &:hover {
-    color: white;
-  }
-  &.nav-button {
-    color: white !important;
+    transition: all ease-in-out 250ms;
+    .icon {
+      margin-inline-end: 1rem;
+      transform: rotate(45deg) translateY(1px);
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+    color: tomato;
     &:hover {
-      color: tomato;
+      color: white;
     }
   }
 `;
 
-const Button = ({ children }) => {
-  return <SButton>{children}</SButton>;
-};
+const Button = React.forwardRef((props, ref) => {
+  return (
+    <SButton {...props}>
+      {props.navButton ? null : (
+        <div className='background-layer' ref={ref}></div>
+      )}
+      <div className='button-layer'>{props.children}</div>
+    </SButton>
+  );
+});
 
 export default Button;

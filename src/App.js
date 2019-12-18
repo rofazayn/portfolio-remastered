@@ -26,19 +26,12 @@ function App({ history, location }) {
     gsap.set('.App', {
       visibility: 'visible'
     });
-    gsap.to(['.App'], 0.5, {
-      opacity: 1,
-      delay: 1,
-      ease: 'power3.inOut'
-    });
   });
 
   useEffect(() => {
-    setTimeout(() => {
-      if (location.pathname === '/') {
-        history.push('/home');
-      }
-    }, 2000);
+    if (location.pathname === '/') {
+      history.push('/home');
+    }
   });
 
   return (
