@@ -1,8 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import Hero from '../../components/Hero/Hero';
+import Image from '../../components/Image/Image';
 
-const SResume = styled.div``;
+const SResume = styled.div`
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
 
 const Resume = () => {
   const line1 = `Years of exp`;
@@ -19,6 +26,7 @@ const Resume = () => {
         buttonText={buttonText}
         buttonPath={'/hire'}
       />
+      <Image />
     </SResume>
   );
 };

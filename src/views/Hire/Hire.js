@@ -1,8 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import Hero from '../../components/Hero/Hero';
+import Image from '../../components/Image/Image';
 
-const SHire = styled.main``;
+const SHire = styled.main`
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
 
 const Hire = () => {
   const line1 = `Looking to hire?`;
@@ -19,6 +26,7 @@ const Hire = () => {
         buttonText={buttonText}
         buttonPath={'/contact'}
       />
+      <Image />
     </SHire>
   );
 };
