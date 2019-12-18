@@ -13,12 +13,19 @@ const SNavOptions = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  @media (max-width: 1200px) {
+    .hire-button {
+      display: none;
+    }
+  }
   .icons {
     display: flex;
     .icon {
       display: flex;
       padding: 1rem;
+      @media (max-width: 1200px) {
+        padding: 0.5rem;
+      }
       cursor: pointer;
       color: white;
       svg {
@@ -93,7 +100,7 @@ const NavOptions = ({ history }) => {
   };
   return (
     <SNavOptions>
-      <NavLink to='/hire'>
+      <NavLink to='/hire' className='hire-button'>
         <Button navButton>
           <div className='icon'>
             <SquareIcon />

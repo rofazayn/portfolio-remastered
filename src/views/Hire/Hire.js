@@ -7,10 +7,8 @@ import Container from '../../components/Container/Container';
 const SHire = styled.main`
   position: absolute;
   width: 100%;
-  top: 100px;
+  top: 150px;
   left: 0;
-  right: 0;
-  margin: 0 auto;
   .top {
     display: flex;
     align-items: center;
@@ -28,7 +26,7 @@ const Hire = () => {
   const buttonText = `Send me an email`;
 
   return (
-    <SHire>
+    <SHire className='page'>
       <Container>
         <div className='top'>
           <Hero

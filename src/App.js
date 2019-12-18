@@ -10,7 +10,6 @@ import Contact from './views/Contact/Contact';
 import Hire from './views/Hire/Hire';
 import Home from './views/Home/Home';
 import Resume from './views/Resume/Resume';
-import Page from './components/Page/Page';
 
 const routes = [
   { path: '/resume', name: 'Resume', Component: Resume },
@@ -35,6 +34,7 @@ function App({ history, location }) {
   return (
     <div className='App'>
       <Navbar />
+
       <Wrapper>
         {routes.map(({ name, path, Component }) => (
           <Route path={path} exact key={name}>
@@ -45,9 +45,7 @@ function App({ history, location }) {
                 classNames='page'
                 unmountOnExit
               >
-                <Page>
-                  <Component />
-                </Page>
+                <Component />
               </CSSTransition>
             )}
           </Route>

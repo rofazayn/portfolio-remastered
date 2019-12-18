@@ -34,7 +34,7 @@ const SHero = styled.div`
         font-weight: 700;
         line-height: 135%;
         @media (max-width: 1440px) {
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
       }
     }

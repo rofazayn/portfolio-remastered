@@ -17,6 +17,9 @@ const SSocial = styled.div`
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-inline-end: 0.5rem;
+    @media (max-width: 1200px) {
+      display: none;
+    }
   }
   .icons {
     display: flex;
@@ -25,6 +28,9 @@ const SSocial = styled.div`
       display: flex;
       padding: 0.5rem;
       cursor: pointer;
+      @media (max-width: 1200px) {
+        padding: 0.3rem;
+      }
       svg {
         width: 18px;
         height: 18px;

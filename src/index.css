@@ -8,10 +8,16 @@
 }
 
 html,
-body {
+body,
+#root {
   background-color: black;
   color: white;
-  min-height: 100%l;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 body {

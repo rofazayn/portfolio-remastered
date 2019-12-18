@@ -7,9 +7,14 @@ const SStatus = styled.div`
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
-  span {
+  .status {
     color: white;
     font-weight: 700;
+  }
+  .text {
+    @media (max-width: 1200px) {
+      display: none;
+    }
   }
 `;
 
@@ -17,7 +22,8 @@ const Status = () => {
   return (
     <SStatus>
       <p>
-        Status - <span>Recruitable</span>
+        <span className='text'>Status - </span>
+        <span className='status'>Recruitable</span>
       </p>
     </SStatus>
   );

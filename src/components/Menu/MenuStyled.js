@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const SMenu = styled.div`
-  position: relative;
   position: fixed;
   width: 100%;
   top: 0;
@@ -9,7 +8,7 @@ export const SMenu = styled.div`
   right: 0;
   bottom: 0;
   display: none;
-  z-index: 10000;
+  z-index: -1;
   .menu-secondary-background {
     background: tomato;
     position: fixed;
@@ -41,13 +40,14 @@ export const SMenu = styled.div`
           height: 135px;
           overflow: hidden;
           @media (max-width: 1440px) {
-            font-size: 4rem;
-            height: 95px;
+            font-size: 2rem;
+            height: 55px;
           }
           a {
             position: absolute;
             color: white;
             opacity: 1;
+
             &:hover {
               color: tomato;
             }

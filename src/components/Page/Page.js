@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
 const SPage = styled.div`
+  height: 100%;
   &.page-enter {
     opacity: 0;
   }

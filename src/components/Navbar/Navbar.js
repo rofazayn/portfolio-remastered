@@ -4,9 +4,13 @@ import Logo from '../Logo/Logo';
 import NavOptions from '../NavOptions/NavOptions';
 
 const SNavbar = styled.nav`
-  padding: 0 2rem;
-  margin-top: 1.5rem;
-  height: 50px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

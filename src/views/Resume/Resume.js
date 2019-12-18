@@ -7,10 +7,8 @@ import Container from '../../components/Container/Container';
 const SResume = styled.div`
   position: absolute;
   width: 100%;
-  top: 100px;
+  top: 150px;
   left: 0;
-  right: 0;
-  margin: 0 auto;
   .top {
     display: flex;
     align-items: center;
@@ -28,7 +26,7 @@ const Resume = () => {
   const buttonText = `Are you hiring?`;
 
   return (
-    <SResume>
+    <SResume className='page'>
       <Container>
         <div className='top'>
           <Hero

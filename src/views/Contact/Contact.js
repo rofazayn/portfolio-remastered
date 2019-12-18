@@ -7,10 +7,8 @@ import Container from '../../components/Container/Container';
 const SContact = styled.main`
   position: absolute;
   width: 100%;
-  top: 100px;
+  top: 150px;
   left: 0;
-  right: 0;
-  margin: 0 auto;
   .top {
     display: flex;
     align-items: center;
@@ -28,7 +26,7 @@ const Contact = () => {
   const buttonText = `Back to the homepage`;
 
   return (
-    <SContact>
+    <SContact className='page'>
       <Container>
         <div className='top'>
           <Hero
