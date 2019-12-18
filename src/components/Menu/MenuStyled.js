@@ -4,13 +4,12 @@ export const SMenu = styled.div`
   position: relative;
   position: fixed;
   width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   display: none;
-  z-index: -1;
+  z-index: 10000;
   .menu-secondary-background {
     background: tomato;
     position: fixed;

@@ -1,10 +1,8 @@
 import gsap from 'gsap';
 import React, { useEffect } from 'react';
-import { Redirect, Route, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import './App.scss';
-import BackgroundText from './components/BackgroundText/BackgroundText';
-import Container from './components/Container/Container';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import Wrapper from './components/Wrapper/Wrapper';
@@ -36,28 +34,24 @@ function App({ history, location }) {
 
   return (
     <div className='App'>
-      <BackgroundText className='background-text' />
       <Navbar />
       <Wrapper>
-        <Container>
-          {routes.map(({ name, path, Component }) => (
-            <Route path={path} exact key={name}>
-              {({ match }) => (
-                <CSSTransition
-                  in={match != null}
-                  timeout={2000}
-                  classNames='page'
-                  unmountOnExit
-                >
-                  <Page>
-                    <Component />
-                  </Page>
-                </CSSTransition>
-              )}
-            </Route>
-          ))}
-          <Redirect to='/' />
-        </Container>
+        {routes.map(({ name, path, Component }) => (
+          <Route path={path} exact key={name}>
+            {({ match }) => (
+              <CSSTransition
+                in={match != null}
+                timeout={2000}
+                classNames='page'
+                unmountOnExit
+              >
+                <Page>
+                  <Component />
+                </Page>
+              </CSSTransition>
+            )}
+          </Route>
+        ))}
       </Wrapper>
       <Footer />
     </div>

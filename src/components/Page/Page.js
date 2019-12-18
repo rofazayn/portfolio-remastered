@@ -1,17 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 const SPage = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
-
   &.page-enter {
     opacity: 0;
   }

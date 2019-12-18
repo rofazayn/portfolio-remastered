@@ -10,9 +10,13 @@ import {
 } from '../../helpers/Animations';
 
 const SHero = styled.div`
+  @media (max-width: 1200px) {
+    margin-bottom: 3rem;
+  }
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 100%;
   align-items: flex-start;
   .title {
     margin-bottom: 30px;
