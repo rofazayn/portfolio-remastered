@@ -42,7 +42,6 @@ const SHero = styled.div`
     .text-wrapper {
       position: relative;
       overflow: hidden;
-      height: 110px;
       display: flex;
       width: 100%;
       .text {

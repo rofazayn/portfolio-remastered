@@ -7,9 +7,9 @@ const SButton = styled.div`
   .background-layer {
     position: absolute;
     top: 0;
-    left: -40px;
+    right: -10%;
     margin: 0 auto;
-    width: 150%;
+    width: 120%;
     height: 100%;
     z-index: 3;
     background: tomato;
