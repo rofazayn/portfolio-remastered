@@ -24,7 +24,7 @@ const SNavOptions = styled.div`
       display: flex;
       padding: 1rem;
       @media (max-width: 1200px) {
-        padding: 0.5rem;
+        padding: 0.76rem;
       }
       cursor: pointer;
       color: white;
