@@ -47,6 +47,30 @@ export const SMenu = styled.div`
             position: absolute;
             color: white;
             opacity: 1;
+            &::before {
+              position: absolute;
+              content: '';
+              bottom: 0;
+              left: 0;
+              height: 100%;
+              width: 0%;
+              z-index: -1;
+              background: tomato;
+              transition: all ease-in-out 300ms;
+            }
+            &.active {
+              color: black;
+
+              &::before {
+                width: 100%;
+              }
+              &:hover {
+                color: black;
+                &::before {
+                  height: 80%;
+                }
+              }
+            }
 
             &:hover {
               color: tomato;
