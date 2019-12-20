@@ -7,7 +7,8 @@ import Container from '../../components/Container/Container';
 const SContact = styled.main`
   position: absolute;
   width: 100%;
-  top: 150px;
+  top: calc(1rem + 100px);
+  padding-bottom: calc(1rem + 100px);
   left: 0;
   .top {
     display: flex;
@@ -15,6 +16,11 @@ const SContact = styled.main`
     justify-content: space-between;
     @media (max-width: 1200px) {
       flex-direction: column;
+      & > div {
+        &:first-of-type {
+          margin-bottom: 40px;
+        }
+      }
     }
   }
 `;

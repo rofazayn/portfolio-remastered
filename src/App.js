@@ -29,12 +29,11 @@ function App({ history, location }) {
     if (location.pathname === '/') {
       history.push('/home');
     }
-  });
+  }, [location, history]);
 
   return (
     <div className='App'>
       <Navbar />
-
       <Wrapper>
         {routes.map(({ name, path, Component }) => (
           <Route path={path} exact key={name}>

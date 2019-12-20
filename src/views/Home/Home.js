@@ -7,7 +7,8 @@ import Container from '../../components/Container/Container';
 const SHome = styled.div`
   position: absolute;
   width: 100%;
-  top: 150px;
+  top: calc(1rem + 100px);
+  padding-bottom: calc(1rem + 100px);
   left: 0;
   .top {
     display: flex;
@@ -15,6 +16,12 @@ const SHome = styled.div`
     justify-content: space-between;
     @media (max-width: 1200px) {
       flex-direction: column;
+      align-items: flex-start;
+      & > div {
+        &:first-of-type {
+          margin-bottom: 40px;
+        }
+      }
     }
   }
 `;

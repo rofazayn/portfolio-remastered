@@ -9,11 +9,14 @@ const SFooter = styled.footer`
   bottom: 0;
   left: 0;
   width: 100%;
-  background: black;
-  padding: 1.5rem 2rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: black;
+  @media (max-width: 1200px) {
+    padding: 1rem 1rem;
+  }
 `;
 
 const Footer = () => {

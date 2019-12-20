@@ -13,6 +13,7 @@ const SNavOptions = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   @media (max-width: 1200px) {
     .hire-button {
       display: none;
@@ -24,7 +25,7 @@ const SNavOptions = styled.div`
       display: flex;
       padding: 1rem;
       @media (max-width: 1200px) {
-        padding: 0.76rem;
+        padding: 0.75rem;
       }
       cursor: pointer;
       color: white;

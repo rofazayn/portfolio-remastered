@@ -7,8 +7,13 @@ const SLogo = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  svg {
-    height: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  @media (max-width: 1200px) {
+    padding-left: 0.75rem;
+  }
+  span {
+    color: tomato;
   }
 `;
 
@@ -16,7 +21,7 @@ const Logo = () => {
   return (
     <Link to='/home'>
       <SLogo>
-        <LogoSvg />
+        rofazayn<span>.</span>
       </SLogo>
     </Link>
   );

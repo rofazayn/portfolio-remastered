@@ -7,9 +7,9 @@ const SButton = styled.div`
   .background-layer {
     position: absolute;
     top: 0;
-    right: -20%;
+    right: 0;
     margin: 0 auto;
-    width: 120%;
+    width: 100%;
     height: 100%;
     z-index: 3;
     background: tomato;
@@ -30,7 +30,8 @@ const SButton = styled.div`
     overflow: hidden;
     cursor: pointer;
     @media (max-width: 1440px) {
-      font-size: 12px;
+      font-size: 0.7rem;
+      padding: 0.5rem 0;
     }
     transition: all ease-in-out 250ms;
     .icon {

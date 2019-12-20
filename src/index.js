@@ -6,9 +6,11 @@ import App from './App';
 import theme from './assets/theming/theme';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+import ScrollToTop from './helpers/ScrollToTop';
 
 const root = (
   <HashRouter basename='/'>
+    <ScrollToTop />
     <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>

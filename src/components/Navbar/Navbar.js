@@ -10,7 +10,7 @@ const SNavbar = styled.nav`
   left: 0;
   width: 100%;
   background: black;
-  padding: 1.5rem 2rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

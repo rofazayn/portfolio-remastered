@@ -5,7 +5,9 @@ import { revealImage } from '../../helpers/Animations';
 
 const SImage = styled.div`
   width: 100%;
+  max-width: 600px;
   height: 500px;
+  background: black;
   position: relative;
   overflow: hidden;
   .background-layer1 {

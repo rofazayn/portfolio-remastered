@@ -10,6 +10,9 @@ const SStatus = styled.div`
   .status {
     color: white;
     font-weight: 700;
+    @media (max-width: 1200px) {
+      font-size: 0.7rem;
+    }
   }
   .text {
     @media (max-width: 1200px) {

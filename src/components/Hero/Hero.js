@@ -10,9 +10,6 @@ import {
 } from '../../helpers/Animations';
 
 const SHero = styled.div`
-  @media (max-width: 1200px) {
-    margin-bottom: 3rem;
-  }
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -20,19 +17,17 @@ const SHero = styled.div`
   align-items: flex-start;
   .title {
     margin-bottom: 30px;
-    user-select: none;
+    @media (max-width: 1440px) {
+      margin-bottom: 20px;
+    }
     .line-wrapper {
       position: relative;
       overflow: hidden;
-      height: 55px;
-      @media (max-width: 1440px) {
-        height: 45px;
-      }
       .line {
         max-width: 480px;
         font-size: 2.5rem;
         font-weight: 700;
-        line-height: 135%;
+        line-height: 1.3;
         @media (max-width: 1440px) {
           font-size: 1.5rem;
         }
@@ -41,8 +36,10 @@ const SHero = styled.div`
   }
 
   .paragraph {
-    user-select: none;
     margin-bottom: 30px;
+    @media (max-width: 1440px) {
+      margin-bottom: 20px;
+    }
     .text-wrapper {
       position: relative;
       overflow: hidden;
@@ -51,10 +48,10 @@ const SHero = styled.div`
       .text {
         color: #7d7d7d;
         max-width: 550px;
-        line-height: 2.2;
+        line-height: 2;
         @media (max-width: 1440px) {
-          font-size: 0.9rem;
-          max-width: 480px;
+          max-width: 380px;
+          font-size: 0.8rem;
         }
       }
     }
