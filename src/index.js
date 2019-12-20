@@ -7,13 +7,17 @@ import { lightTheme, darkTheme } from './assets/theming/theme';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import ScrollToTop from './helpers/ScrollToTop';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 const root = (
   <HashRouter basename='/'>
-    <ScrollToTop />
-    <ThemeProvider theme={darkTheme}>
-      <App />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ScrollToTop />
+      <ThemeProvider theme={lightTheme}>
+        <App />
+      </ThemeProvider>
+    </Provider>
   </HashRouter>
 );
 

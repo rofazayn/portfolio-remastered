@@ -9,6 +9,7 @@ import Contact from './views/Contact/Contact';
 import Hire from './views/Hire/Hire';
 import Home from './views/Home/Home';
 import Resume from './views/Resume/Resume';
+import { connect } from 'react-redux';
 
 const routes = [
   { path: '/home', name: 'Home', Component: Home },
@@ -17,11 +18,12 @@ const routes = [
   { path: '/hire', name: 'Hire', Component: Hire }
 ];
 
-function App({ history, location }) {
+function App({ isDarkTheme, history, location }) {
   useEffect(() => {
     gsap.set('.App', {
       visibility: 'visible'
     });
+    console.log(isDarkTheme);
   });
 
   useEffect(() => {
@@ -49,4 +51,8 @@ function App({ history, location }) {
   );
 }
 
-export default withRouter(App);
+const mstp = state => ({
+  isDarkTheme: state.ui.isDarkTheme
+});
+
+export default connect(mstp, null)(withRouter(App));

@@ -34,8 +34,8 @@ const SButton = styled.div`
       navButton ? theme.colors.primary : theme.colors.primary};
     cursor: pointer;
     @media (max-width: 1440px) {
-      font-size: 0.7rem;
-      padding: 0.5rem 0;
+      padding: ${({ navButton }) => (navButton ? '.25rem' : '.8rem 1rem')};
+      font-size: 12px;
     }
     transition: all ease-in-out 250ms;
     .icon {
