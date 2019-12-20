@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 const SStatus = styled.div`
   font-size: 12px;
-  color: gray;
+  color: ${({ theme }) => theme.colors.secondary};
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   .status {
-    color: white;
+    color: ${({ theme }) => theme.colors.primary};
     font-weight: 700;
     @media (max-width: 1200px) {
       font-size: 0.7rem;

@@ -9,11 +9,9 @@ const SLogo = styled.span`
   justify-content: center;
   font-weight: 700;
   letter-spacing: 1px;
-  @media (max-width: 1200px) {
-    padding-left: 0.75rem;
-  }
+  color: ${({ theme }) => theme.colors.primary};
   span {
-    color: tomato;
+    color: ${({ theme }) => theme.colors.vein};
   }
 `;
 

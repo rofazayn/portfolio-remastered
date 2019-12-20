@@ -1,7 +1,19 @@
-const theme = {
+export const darkTheme = {
   colors: {
-    primary: 'red'
+    vein: 'tomato',
+    primary: 'white',
+    secondary: '#7d7d7d',
+    background: 'black',
+    test: 'red'
   }
 };
 
-export default theme;
+export const lightTheme = {
+  colors: {
+    vein: '#ff7259',
+    primary: 'black',
+    secondary: '#404040',
+    background: 'white',
+    test: 'red'
+  }
+};

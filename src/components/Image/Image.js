@@ -7,12 +7,12 @@ const SImage = styled.div`
   width: 100%;
   max-width: 600px;
   height: 500px;
-  background: black;
+  background: ${({ theme }) => theme.colors.background};
   position: relative;
   overflow: hidden;
   .background-layer1 {
     position: absolute;
-    background: black;
+    background: ${({ theme }) => theme.colors.background};
     top: 0;
     right: 0;
     width: 100%;
@@ -21,7 +21,7 @@ const SImage = styled.div`
   }
   .background-layer2 {
     position: absolute;
-    background: tomato;
+    background: ${({ theme }) => theme.colors.vein};
     top: 0;
     right: 0;
     width: 100%;

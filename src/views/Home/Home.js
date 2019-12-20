@@ -6,6 +6,11 @@ import Hero from '../../components/Hero/Hero';
 
 const SHome = styled.div`
   width: 100%;
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 `;
 
 const Home = () => {

@@ -10,7 +10,7 @@ export const SMenu = styled.div`
   display: none;
   z-index: -1;
   .menu-secondary-background {
-    background: tomato;
+    background: ${({ theme }) => theme.colors.vein};
     position: fixed;
     width: 100%;
     height: 100%;
@@ -22,7 +22,7 @@ export const SMenu = styled.div`
   }
   .menu-layer {
     position: relative;
-    background: black;
+    background: ${({ theme }) => theme.colors.background};
     height: 100%;
     overflow: hidden;
     display: flex;
@@ -45,7 +45,7 @@ export const SMenu = styled.div`
           }
           a {
             position: absolute;
-            color: white;
+            color: ${({ theme }) => theme.colors.primary};
             opacity: 1;
             &::before {
               position: absolute;
@@ -55,17 +55,17 @@ export const SMenu = styled.div`
               height: 100%;
               width: 0%;
               z-index: -1;
-              background: tomato;
+              background: ${({ theme }) => theme.colors.vein};
               transition: all ease-in-out 300ms;
             }
             &.active {
-              color: black;
+              color: ${({ theme }) => theme.colors.background};
 
               &::before {
                 width: 100%;
               }
               &:hover {
-                color: black;
+                color: ${({ theme }) => theme.colors.background};
                 &::before {
                   height: 80%;
                 }
@@ -73,7 +73,7 @@ export const SMenu = styled.div`
             }
 
             &:hover {
-              color: tomato;
+              color: ${({ theme }) => theme.colors.vein};
             }
           }
         }

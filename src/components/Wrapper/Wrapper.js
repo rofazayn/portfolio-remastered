@@ -5,7 +5,7 @@ const SWrapper = styled.div`
   padding: 200px 0;
   min-height: 100vh;
   position: relative;
-  background: black;
+  background: ${({ theme }) => theme.colors.background};
   display: flex;
 `;
 

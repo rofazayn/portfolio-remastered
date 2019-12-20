@@ -28,7 +28,7 @@ const SNavOptions = styled.div`
         padding: 0.75rem;
       }
       cursor: pointer;
-      color: white;
+      color: ${({ theme }) => theme.colors.primary};
       svg {
         transition: all ease-in-out 250ms;
         width: 20px;
@@ -36,7 +36,7 @@ const SNavOptions = styled.div`
       }
       &:hover {
         svg {
-          color: tomato;
+          color: ${({ theme }) => theme.colors.vein};
         }
       }
     }

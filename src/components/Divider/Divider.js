@@ -13,7 +13,7 @@ const SDivider = styled.div`
   .line {
     width: ${({ vertical }) => (vertical ? '1px' : '40px')};
     height: ${({ vertical }) => (vertical ? '20px' : '1px')};
-    background: white;
+    background: ${({ theme }) => theme.colors.primary};
     opacity: 25%;
   }
 `;

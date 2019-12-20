@@ -9,7 +9,7 @@ const SNavbar = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  background: black;
+  background: ${({ theme }) => theme.colors.background};
   padding: 1rem;
   display: flex;
   align-items: center;

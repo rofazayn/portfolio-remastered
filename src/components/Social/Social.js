@@ -24,7 +24,7 @@ const SSocial = styled.div`
   .icons {
     display: flex;
     .icon {
-      color: gray;
+      color: ${({ theme }) => theme.colors.secondary};
       display: flex;
       padding: 0.5rem;
       cursor: pointer;

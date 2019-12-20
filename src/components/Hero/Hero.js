@@ -17,6 +17,7 @@ const SHero = styled.div`
   align-items: flex-start;
   .title {
     margin-bottom: 30px;
+    color: ${({ theme }) => theme.colors.primary};
     @media (max-width: 1440px) {
       margin-bottom: 20px;
     }
@@ -26,7 +27,7 @@ const SHero = styled.div`
       .line {
         max-width: 480px;
         font-size: 2.5rem;
-        font-weight: 700;
+        font-weight: 900;
         line-height: 1.3;
         @media (max-width: 1440px) {
           font-size: 1.5rem;
@@ -37,6 +38,7 @@ const SHero = styled.div`
 
   .paragraph {
     margin-bottom: 30px;
+    color: ${({ theme }) => theme.colors.secondary};
     @media (max-width: 1440px) {
       margin-bottom: 20px;
     }
@@ -46,7 +48,6 @@ const SHero = styled.div`
       display: flex;
       width: 100%;
       .text {
-        color: #7d7d7d;
         max-width: 550px;
         line-height: 2;
         @media (max-width: 1440px) {
