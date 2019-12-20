@@ -1,7 +1,6 @@
 import gsap from 'gsap';
 import React, { useEffect } from 'react';
-import { Route, withRouter } from 'react-router-dom';
-import { CSSTransition } from 'react-transition-group';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import './App.scss';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
@@ -12,10 +11,10 @@ import Home from './views/Home/Home';
 import Resume from './views/Resume/Resume';
 
 const routes = [
+  { path: '/home', name: 'Home', Component: Home },
   { path: '/resume', name: 'Resume', Component: Resume },
   { path: '/contact', name: 'Contact', Component: Contact },
-  { path: '/hire', name: 'Hire', Component: Hire },
-  { path: '/home', name: 'Home', Component: Home }
+  { path: '/hire', name: 'Hire', Component: Hire }
 ];
 
 function App({ history, location }) {
@@ -26,6 +25,7 @@ function App({ history, location }) {
   });
 
   useEffect(() => {
+    // Redirect to home when component mounts and path is /
     if (location.pathname === '/') {
       history.push('/home');
     }
@@ -35,20 +35,14 @@ function App({ history, location }) {
     <div className='App'>
       <Navbar />
       <Wrapper>
-        {routes.map(({ name, path, Component }) => (
-          <Route path={path} exact key={name}>
-            {({ match }) => (
-              <CSSTransition
-                in={match != null}
-                timeout={2000}
-                classNames='page'
-                unmountOnExit
-              >
-                <Component />
-              </CSSTransition>
-            )}
-          </Route>
-        ))}
+        <Switch>
+          {routes.map(({ name, path, Component }) => (
+            <Route path={path} exact key={name}>
+              <Component />
+            </Route>
+          ))}
+          <Redirect to='/' />
+        </Switch>
       </Wrapper>
       <Footer />
     </div>

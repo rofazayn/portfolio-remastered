@@ -1,28 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Hero from '../../components/Hero/Hero';
-import Image from '../../components/Image/Image';
+// import Image from '../../components/Image/Image';
 import Container from '../../components/Container/Container';
+import Hero from '../../components/Hero/Hero';
 
 const SHire = styled.main`
-  position: absolute;
   width: 100%;
-  top: calc(1rem + 100px);
-  padding-bottom: calc(1rem + 100px);
-  left: 0;
-  .top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @media (max-width: 1200px) {
-      flex-direction: column;
-      & > div {
-        &:first-of-type {
-          margin-bottom: 40px;
-        }
-      }
-    }
-  }
 `;
 
 const Hire = () => {
@@ -42,7 +25,7 @@ const Hire = () => {
             buttonText={buttonText}
             buttonPath={'/contact'}
           />
-          <Image />
+          {/* <Image /> */}
         </div>
       </Container>
     </SHire>
