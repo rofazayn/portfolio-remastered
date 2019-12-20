@@ -5,6 +5,8 @@
   margin: 0;
   padding: 0;
   user-select: none;
+  transition: color ease 400ms;
+  transition: background-color ease 400ms;
 }
 
 html,

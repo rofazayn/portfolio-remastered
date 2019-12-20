@@ -3,11 +3,14 @@ import styled from 'styled-components';
 import Button from '../Button/Button';
 import { ReactComponent as SquareIcon } from '../../assets/icons/square.svg';
 import { ReactComponent as SunIcon } from '../../assets/icons/sun.svg';
+import { ReactComponent as MoonIcon } from '../../assets/icons/moon.svg';
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
 import { ReactComponent as XIcon } from '../../assets/icons/x.svg';
 import Divider from '../Divider/Divider';
 import Menu from '../Menu/Menu';
 import { NavLink, withRouter } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleTheme } from '../../redux/actions/ui.actions';
 
 const SNavOptions = styled.div`
   display: flex;
@@ -99,6 +102,18 @@ const NavOptions = ({ history }) => {
       setMenuDisabled(false);
     }, 1500);
   };
+
+  // Set dispatch
+  const dispatch = useDispatch();
+
+  // Check theme
+  const isDarkTheme = useSelector(state => state.ui.isDarkTheme);
+
+  // Toggle theme on button click
+  const handleThemeToggle = () => {
+    dispatch(toggleTheme());
+  };
+
   return (
     <SNavOptions>
       <NavLink to='/hire' className='hire-button'>
@@ -111,8 +126,8 @@ const NavOptions = ({ history }) => {
       </NavLink>
       <Divider />
       <div className='icons'>
-        <div className='icon'>
-          <SunIcon />
+        <div className='icon' onClick={() => handleThemeToggle()}>
+          {isDarkTheme ? <SunIcon /> : <MoonIcon />}
         </div>
         <button
           className='icon'

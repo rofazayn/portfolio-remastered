@@ -9,7 +9,9 @@ import Contact from './views/Contact/Contact';
 import Hire from './views/Hire/Hire';
 import Home from './views/Home/Home';
 import Resume from './views/Resume/Resume';
-import { connect } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme } from './assets/theming/theme.js';
+import { useSelector } from 'react-redux';
 
 const routes = [
   { path: '/home', name: 'Home', Component: Home },
@@ -18,12 +20,11 @@ const routes = [
   { path: '/hire', name: 'Hire', Component: Hire }
 ];
 
-function App({ isDarkTheme, history, location }) {
+function App({ history, location }) {
   useEffect(() => {
     gsap.set('.App', {
       visibility: 'visible'
     });
-    console.log(isDarkTheme);
   });
 
   useEffect(() => {
@@ -33,26 +34,26 @@ function App({ isDarkTheme, history, location }) {
     }
   }, [location, history]);
 
+  const isDarkTheme = useSelector(state => state.ui.isDarkTheme);
+
   return (
-    <div className='App'>
-      <Navbar />
-      <Wrapper>
-        <Switch>
-          {routes.map(({ name, path, Component }) => (
-            <Route path={path} exact key={name}>
-              <Component />
-            </Route>
-          ))}
-          <Redirect to='/' />
-        </Switch>
-      </Wrapper>
-      <Footer />
-    </div>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <div className='App'>
+        <Navbar />
+        <Wrapper>
+          <Switch>
+            {routes.map(({ name, path, Component }) => (
+              <Route path={path} exact key={name}>
+                <Component />
+              </Route>
+            ))}
+            <Redirect to='/' />
+          </Switch>
+        </Wrapper>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
-const mstp = state => ({
-  isDarkTheme: state.ui.isDarkTheme
-});
-
-export default connect(mstp, null)(withRouter(App));
+export default withRouter(App);
