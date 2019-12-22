@@ -10,18 +10,25 @@ const SNavbar = styled.nav`
   left: 0;
   width: 100%;
   background: ${({ theme }) => theme.colors.background};
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+  .navbar {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
 `;
 
 const Navbar = () => {
   return (
     <SNavbar>
-      <Logo />
-      {/* <Pagination /> */}
-      <NavOptions />
+      <div className='navbar'>
+        <Logo />
+        {/* <Pagination /> */}
+        <NavOptions />
+      </div>
     </SNavbar>
   );
 };

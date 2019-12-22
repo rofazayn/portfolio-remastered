@@ -10,6 +10,8 @@ const SFooter = styled.footer`
   align-items: center;
   justify-content: space-between;
   background: ${({ theme }) => theme.colors.background};
+  max-width: 1500px;
+  margin: 0 auto;
 `;
 
 const Footer = () => {
