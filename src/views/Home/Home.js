@@ -11,12 +11,12 @@ const SHome = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 100%;
     @media (max-width: 1200px) {
       flex-direction: column;
+      align-items: flex-start;
     }
     .image {
-      display: flex;
-      justify-content: flex-start;
       width: 100%;
       max-width: 450px;
       padding: 1rem;
@@ -35,8 +35,8 @@ const Home = () => {
   const line1 = `Welcome to my`;
   const line2 = `personal portfolio.`;
   const paragraph = `Hi. My name is Abderraouf. I am a front-end web developer from the Chawi
-  Amazigh lands. Please take a look around and discover what I can offer
-  for you, your business or your company.`;
+  Amazigh lands. Have a look around and discover what I can offer
+  for you or your business.`;
   const buttonText = `Some projects I've built`;
 
   return (

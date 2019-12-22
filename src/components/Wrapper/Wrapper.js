@@ -7,6 +7,9 @@ const SWrapper = styled.div`
   position: relative;
   background: ${({ theme }) => theme.colors.background};
   display: flex;
+  @media (max-width: 800px) {
+    padding: 100px 0;
+  }
 `;
 
 const Wrapper = ({ children, ...otherProps }) => {
