@@ -13,7 +13,7 @@ const SHome = styled.div`
     justify-content: flex-start;
     width: 100%;
     @media (max-width: 1200px) {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: flex-start;
     }
     .image {
@@ -21,7 +21,7 @@ const SHome = styled.div`
       max-width: 450px;
       padding: 1rem;
       @media (max-width: 1200px) {
-        margin-top: 2rem;
+        margin-bottom: 2rem;
       }
       img {
         width: 100%;
