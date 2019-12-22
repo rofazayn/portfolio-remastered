@@ -5,20 +5,25 @@ import Social from '../Social/Social';
 
 const SFooter = styled.footer`
   width: 100%;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
   background: ${({ theme }) => theme.colors.background};
-  max-width: 1500px;
-  margin: 0 auto;
+  .footer {
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+  }
 `;
 
 const Footer = () => {
   return (
     <SFooter>
-      <Status />
-      <Social />
+      <div className='footer'>
+        <Status />
+        <Social />
+      </div>
     </SFooter>
   );
 };
