@@ -30,11 +30,11 @@ export const staggerMenuHide = (...nodes) => {
 export const staggerTextReveal = (...nodes) => {
   gsap.from([...nodes], {
     duration: 0.8,
-    y: 135,
+    y: 90,
     delay: 0.4,
     ease: 'power3.inOut',
     stagger: {
-      amount: 0.3
+      amount: 0.4
     }
   });
   gsap.to([...nodes], {

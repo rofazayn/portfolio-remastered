@@ -20,7 +20,7 @@ const Home = () => {
   const paragraph = `Hi. My name is Abderraouf. I am a front-end web developer from the Chawi
   Amazigh lands. Please take a look around and discover what I can offer
   for you, your business or your company.`;
-  const buttonText = `Have a look at my resume`;
+  const buttonText = `Some projects I've built`;
 
   return (
     <SHome className='page'>
@@ -31,7 +31,7 @@ const Home = () => {
             line2={line2}
             paragraph={paragraph}
             buttonText={buttonText}
-            buttonPath={'/resume'}
+            buttonPath={'/projects'}
           />
           {/* <Image /> */}
         </div>

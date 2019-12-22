@@ -66,7 +66,11 @@ const Hero = ({ line1, line2, paragraph, buttonText, buttonPath }) => {
   let button = useRef(null);
 
   useEffect(() => {
-    revealHeadings(heading1, heading2);
+    if (heading2 === null) {
+      revealHeadings(heading1);
+    } else {
+      revealHeadings(heading1, heading2);
+    }
     revealParagraph(text);
     revealButtons(button);
   }, [heading1, heading2, text, button]);
@@ -76,7 +80,7 @@ const Hero = ({ line1, line2, paragraph, buttonText, buttonPath }) => {
       <div className='title'>
         <div className='line-wrapper'>
           <div className='line' ref={el => (heading1 = el)}>
-            {line2 && line1}
+            {line1 && line1}
           </div>
         </div>
         <div className='line-wrapper'>

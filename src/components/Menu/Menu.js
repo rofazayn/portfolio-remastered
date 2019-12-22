@@ -20,13 +20,14 @@ const Menu = ({ toggler }) => {
     line1 = useRef(null),
     line2 = useRef(null),
     line3 = useRef(null),
-    line4 = useRef(null);
+    line4 = useRef(null),
+    line5 = useRef(null);
 
   useEffect(() => {
     // If the menu is open and we click the menu button to close it.
     if (toggler.isClicked === false) {
       // If menu is closed and we want to open it.
-      staggerTextHide(line1, line2, line3, line4);
+      staggerTextHide(line1, line2, line3, line4, line5);
       staggerMenuHide(reveal2, reveal1);
       // Set menu to display none
       gsap.to(myMenu, { duration: 1.5, css: { display: 'none' } });
@@ -43,7 +44,7 @@ const Menu = ({ toggler }) => {
         height: '100%'
       });
       staggerMenuReveal(reveal1, reveal2);
-      staggerTextReveal(line1, line2, line3, line4);
+      staggerTextReveal(line1, line2, line3, line4, line5);
     }
   }, [toggler]);
 
@@ -69,8 +70,18 @@ const Menu = ({ toggler }) => {
               </li>
               <li>
                 <NavLink
-                  to='/resume'
+                  to='/projects'
                   ref={el => (line2 = el)}
+                  onMouseEnter={e => handleHover(e)}
+                  onMouseOut={e => handleHoverExit(e)}
+                >
+                  Projects
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to='/resume'
+                  ref={el => (line3 = el)}
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}
                 >
@@ -80,7 +91,7 @@ const Menu = ({ toggler }) => {
               <li>
                 <NavLink
                   to='/hire'
-                  ref={el => (line3 = el)}
+                  ref={el => (line4 = el)}
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}
                 >
@@ -90,7 +101,7 @@ const Menu = ({ toggler }) => {
               <li>
                 <NavLink
                   to='/contact'
-                  ref={el => (line4 = el)}
+                  ref={el => (line5 = el)}
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}
                 >

@@ -35,9 +35,9 @@ export const SMenu = styled.div`
         li {
           position: relative;
           list-style: none;
-          font-size: 5rem;
+          font-size: 3.5rem;
           font-weight: 700;
-          height: 135px;
+          height: 90px;
           overflow: hidden;
           @media (max-width: 1440px) {
             font-size: 2rem;
