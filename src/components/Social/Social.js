@@ -38,7 +38,7 @@ const SSocial = styled.div`
       }
       &:hover {
         svg {
-          color: white;
+          color: ${({ theme }) => theme.colors.vein};
         }
       }
     }
