@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 // import Image from '../../components/Image/Image';
+import homeImage from '../../assets/images/03.png';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
 
@@ -10,6 +11,22 @@ const SHome = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    @media (max-width: 1200px) {
+      flex-direction: column;
+    }
+    .image {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      max-width: 450px;
+      padding: 1rem;
+      @media (max-width: 1200px) {
+        margin-top: 2rem;
+      }
+      img {
+        width: 100%;
+      }
+    }
   }
 `;
 
@@ -33,6 +50,9 @@ const Home = () => {
             buttonText={buttonText}
             buttonPath={'/projects'}
           />
+          <div className='image'>
+            <img src={homeImage} alt='Home' />
+          </div>
           {/* <Image /> */}
         </div>
       </Container>

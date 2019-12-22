@@ -10,8 +10,8 @@ export const darkTheme = {
 
 export const lightTheme = {
   colors: {
-    vein: '#ff7259',
-    primary: 'black',
+    vein: '#ff8378',
+    primary: '#231F20',
     secondary: '#404040',
     background: 'white',
     test: 'red'

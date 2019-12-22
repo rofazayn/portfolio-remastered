@@ -24,7 +24,7 @@ const SContainer = styled.div`
 
   // Extra large devices (large desktops, 1200px and up)
   @media (min-width: 1200px) {
-    max-width: 1100px;
+    max-width: 1200px;
   }
 `;
 
