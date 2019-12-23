@@ -26,12 +26,7 @@ const SHero = styled.div`
       overflow: hidden;
       .line {
         max-width: 480px;
-        font-size: 2.5rem;
         font-weight: 900;
-        line-height: 1.3;
-        @media (max-width: 768px) {
-          font-size: 1.5rem;
-        }
       }
     }
   }
@@ -52,7 +47,6 @@ const SHero = styled.div`
         line-height: 2;
         @media (max-width: 768px) {
           max-width: 380px;
-          font-size: 0.8rem;
         }
       }
     }

@@ -23,7 +23,6 @@ const SButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
@@ -33,9 +32,21 @@ const SButton = styled.div`
     color: ${({ navButton, theme }) =>
       navButton ? theme.colors.primary : theme.colors.primary};
     cursor: pointer;
+    font-size: 0.9rem;
+    @media (max-width: 1200px) {
+      font-size: 0.85rem;
+    }
+    @media (max-width: 992px) {
+      font-size: 0.8rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 0.75rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 0.7rem;
+    }
     @media (max-width: 1440px) {
       padding: ${({ navButton }) => (navButton ? '.25rem' : '.8rem 1rem')};
-      font-size: 12px;
     }
     transition: all ease-in-out 250ms;
     .icon {

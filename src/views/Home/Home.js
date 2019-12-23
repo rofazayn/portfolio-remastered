@@ -19,7 +19,8 @@ const SHome = styled.div`
     .image {
       width: 100%;
       max-width: 450px;
-      padding: 1rem;
+      display: flex;
+      align-items: flex-start;
       @media (max-width: 1200px) {
         margin-bottom: 2rem;
       }
