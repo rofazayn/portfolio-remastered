@@ -1,7 +1,6 @@
 import gsap from 'gsap';
 import React, { useEffect } from 'react';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
-import './App.scss';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import Wrapper from './components/Wrapper/Wrapper';
@@ -13,6 +12,7 @@ import Projects from './views/Projects/Projects';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './assets/theming/theme.js';
 import { useSelector } from 'react-redux';
+import SApp from './AppStyled.js';
 
 const routes = [
   { path: '/home', name: 'Home', Component: Home },
@@ -40,7 +40,7 @@ function App({ history, location }) {
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      <div className='App'>
+      <SApp className='App'>
         <Navbar />
         <Wrapper>
           <Switch>
@@ -53,7 +53,7 @@ function App({ history, location }) {
           </Switch>
         </Wrapper>
         <Footer />
-      </div>
+      </SApp>
     </ThemeProvider>
   );
 }

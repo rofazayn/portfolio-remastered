@@ -18,7 +18,7 @@ const SHero = styled.div`
   .title {
     margin-bottom: 30px;
     color: ${({ theme }) => theme.colors.primary};
-    @media (max-width: 1440px) {
+    @media (max-width: 768px) {
       margin-bottom: 20px;
     }
     .line-wrapper {
@@ -29,7 +29,7 @@ const SHero = styled.div`
         font-size: 2.5rem;
         font-weight: 900;
         line-height: 1.3;
-        @media (max-width: 1440px) {
+        @media (max-width: 768px) {
           font-size: 1.5rem;
         }
       }
@@ -39,7 +39,7 @@ const SHero = styled.div`
   .paragraph {
     margin-bottom: 30px;
     color: ${({ theme }) => theme.colors.secondary};
-    @media (max-width: 1440px) {
+    @media (max-width: 768px) {
       margin-bottom: 20px;
     }
     .text-wrapper {
@@ -50,7 +50,7 @@ const SHero = styled.div`
       .text {
         max-width: 550px;
         line-height: 2;
-        @media (max-width: 1440px) {
+        @media (max-width: 768px) {
           max-width: 380px;
           font-size: 0.8rem;
         }
