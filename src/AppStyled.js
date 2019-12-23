@@ -6,7 +6,6 @@ const SApp = styled.div`
   position: relative;
   z-index: 1;
 
-  h1,
   .title {
     font-size: 2.5rem;
     @media (max-width: 1200px) {
@@ -23,7 +22,6 @@ const SApp = styled.div`
     }
   }
 
-  p,
   .paragraph {
     font-size: 1.1rem;
     @media (max-width: 1200px) {

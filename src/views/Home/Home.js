@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import Image from '../../components/Image/Image';
+import Image from '../../components/Image/Image';
 import homeImage from '../../assets/images/03.png';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
@@ -13,20 +13,14 @@ const SHome = styled.div`
     justify-content: flex-start;
     width: 100%;
     @media (max-width: 1200px) {
+    }
+    @media (max-width: 992px) {
+    }
+    @media (max-width: 768px) {
       flex-direction: column-reverse;
       align-items: flex-start;
     }
-    .image {
-      width: 100%;
-      max-width: 450px;
-      display: flex;
-      align-items: flex-start;
-      @media (max-width: 1200px) {
-        margin-bottom: 2rem;
-      }
-      img {
-        width: 100%;
-      }
+    @media (max-width: 576px) {
     }
   }
 `;
@@ -51,10 +45,10 @@ const Home = () => {
             buttonText={buttonText}
             buttonPath={'/projects'}
           />
-          <div className='image'>
+          {/* <div className='image'>
             <img src={homeImage} alt='Home' />
-          </div>
-          {/* <Image /> */}
+          </div> */}
+          <Image src={homeImage} />
         </div>
       </Container>
     </SHome>

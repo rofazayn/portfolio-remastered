@@ -1,15 +1,35 @@
 import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import HeroImage from '../../assets/images/hero.webp';
 import { revealImage } from '../../helpers/Animations';
 
 const SImage = styled.div`
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   height: 500px;
   background: ${({ theme }) => theme.colors.background};
   position: relative;
   overflow: hidden;
+  @media (max-width: 1200px) {
+    max-width: 475px;
+    height: 475px;
+  }
+  @media (max-width: 992px) {
+    max-width: 450px;
+    height: 450px;
+  }
+  @media (max-width: 768px) {
+    max-width: 425px;
+    height: 425px;
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 576px) {
+    max-width: 400px;
+    height: 400px;
+  }
+  @media (max-width: 420px) {
+    max-width: 350px;
+    height: 350px;
+  }
   .background-layer1 {
     position: absolute;
     background: ${({ theme }) => theme.colors.background};
@@ -29,20 +49,24 @@ const SImage = styled.div`
     z-index: 11;
   }
   .image-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    z-index: 9;
     overflow: hidden;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-      position: absolute;
       object-fit: cover;
       width: 100%;
     }
   }
 `;
 
-const Image = () => {
+const Image = ({ src }) => {
   let background1 = useRef(null);
   let background2 = useRef(null);
   let image = useRef(null);
@@ -56,7 +80,7 @@ const Image = () => {
       <div className='background-layer1' ref={el => (background1 = el)}></div>
       <div className='background-layer2' ref={el => (background2 = el)}></div>
       <div className='image-layer'>
-        <img src={HeroImage} alt='Hero' ref={el => (image = el)} />
+        <img src={src} alt='Hero' ref={el => (image = el)} />
       </div>
     </SImage>
   );

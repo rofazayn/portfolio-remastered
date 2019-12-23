@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Logo from '../Logo/Logo';
 import NavOptions from '../NavOptions/NavOptions';
 
@@ -10,7 +10,6 @@ const SNavbar = styled.nav`
   left: 0;
   width: 100%;
   background: ${({ theme }) => theme.colors.background};
-
   .navbar {
     padding: 1rem;
     display: flex;
