@@ -6,25 +6,17 @@ const SContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  // Large devices (desktops, less than 1200px)
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
+  @media (max-width: 1200px) {
+    max-width: 992px;
+  }
+  @media (max-width: 992px) {
+    max-width: 768px;
+  }
+  @media (max-width: 768px) {
+    max-width: 576px;
+  }
+  @media (max-width: 576px) {
     max-width: 400px;
-  }
-
-  // Medium devices (tablets, 768px and up)
-  @media (min-width: 768px) {
-    max-width: 668px;
-  }
-
-  // Large devices (desktops, 992px and up)
-  @media (min-width: 992px) {
-    max-width: 898px;
-  }
-
-  // Extra large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) {
-    max-width: 1200px;
   }
 `;
 
