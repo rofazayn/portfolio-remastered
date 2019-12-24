@@ -15,6 +15,7 @@ const SHero = styled.div`
   width: 100%;
   min-height: 100%;
   align-items: flex-start;
+  justify-content: center;
 
   .title {
     line-height: 1.25;
