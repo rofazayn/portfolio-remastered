@@ -29,9 +29,7 @@ const Home = () => {
   // Page content
   const line1 = `Welcome to my`;
   const line2 = `personal portfolio.`;
-  const paragraph = `Hi. My name is Abderraouf. I am a front-end web developer from the Chawi
-  Amazigh lands. Have a look around and discover what I can offer
-  for you or your business.`;
+  const paragraph = `Hi. My name is Abderraouf. I am a front-end web developer from Aurès, Algeria. Have a look around and discover what I can offer for you or your business.`;
   const buttonText = `Some projects I've built`;
 
   return (

@@ -28,7 +28,7 @@ const SHire = styled.main`
 const Hire = () => {
   const line1 = `Looking to hire?`;
   const line2 = `let's talk about it!`;
-  const paragraph = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.`;
+  const paragraph = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`;
   const buttonText = `Send me an email`;
 
   return (

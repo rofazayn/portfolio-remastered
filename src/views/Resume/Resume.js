@@ -28,7 +28,7 @@ const SResume = styled.div`
 const Resume = () => {
   const line1 = `Years of exp`;
   const line2 = `at your service.`;
-  const paragraph = `I provide product design services, from wireframing and prototyping, to UI design and front-end development. With more than 5 years of experience working for individuals, startups and established companies to improve their products.`;
+  const paragraph = `I provide web design/development, from UI design to coding. With years of experience working for individuals, startups and established companies.`;
   const buttonText = `Are you hiring?`;
 
   return (
