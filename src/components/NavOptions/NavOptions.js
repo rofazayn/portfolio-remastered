@@ -39,7 +39,7 @@ const SNavOptions = styled.div`
       }
       &:hover {
         svg {
-          color: ${({ theme }) => theme.colors.vein};
+          color: ${({ theme }) => theme.colors.artery};
         }
       }
     }
