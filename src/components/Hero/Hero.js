@@ -31,6 +31,7 @@ const SHero = styled.div`
       .line {
         max-width: 480px;
         font-weight: 900;
+        visibility: hidden;
       }
     }
   }
@@ -49,6 +50,7 @@ const SHero = styled.div`
       .text {
         max-width: 480px;
         line-height: 2;
+        visibility: hidden;
         @media (max-width: 768px) {
           max-width: 380px;
         }

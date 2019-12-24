@@ -79,6 +79,9 @@ export const handleHoverExit = e => {
 };
 
 export const revealHeadings = (...nodes) => {
+  gsap.set([...nodes], {
+    visibility: 'visible'
+  });
   gsap.from([...nodes], {
     duration: 1.4,
     delay: 0.7,
@@ -91,6 +94,9 @@ export const revealHeadings = (...nodes) => {
 };
 
 export const revealParagraph = paragraph => {
+  gsap.set(paragraph, {
+    visibility: 'visible'
+  });
   gsap.from(paragraph, {
     duration: 1.4,
     delay: 0.9,
