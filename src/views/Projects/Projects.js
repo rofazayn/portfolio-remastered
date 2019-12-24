@@ -1,10 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from '../../components/Image/Image';
+import ProjectsImage from '../../assets/images/04.png';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
 
 const SProjects = styled.main`
   width: 100%;
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    @media (max-width: 1200px) {
+    }
+    @media (max-width: 992px) {
+    }
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+    @media (max-width: 576px) {
+    }
+  }
 `;
 
 const Projects = () => {
@@ -24,6 +42,7 @@ const Projects = () => {
             buttonText={buttonText}
             buttonPath={'/resume'}
           />
+          <Image src={ProjectsImage} />
         </div>
       </Container>
     </SProjects>
