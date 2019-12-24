@@ -19,17 +19,17 @@ const SImage = styled.div`
     height: 450px;
   }
   @media (max-width: 768px) {
-    max-width: 425px;
-    height: 425px;
+    max-width: 400px;
+    height: 400px;
     margin-bottom: 2rem;
   }
   @media (max-width: 576px) {
-    max-width: 400px;
-    height: 400px;
+    max-width: 300px;
+    height: 300px;
   }
   @media (max-width: 420px) {
-    max-width: 340px;
-    height: 340px;
+    max-width: 220px;
+    height: 220px;
   }
   .background-layer1 {
     position: absolute;
