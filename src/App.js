@@ -39,7 +39,7 @@ function App({ history, location }) {
   const isDarkTheme = useSelector(state => state.ui.isDarkTheme);
 
   return (
-    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+    <ThemeProvider theme={lightTheme}>
       <SApp className='App'>
         <Navbar />
         <Wrapper>
