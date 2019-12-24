@@ -8,7 +8,9 @@ const SLogo = styled.span`
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  font-family: 'Alegreya';
+  font-size: 1.7rem;
   color: ${({ theme }) => theme.colors.primary};
   span {
     color: ${({ theme }) => theme.colors.vein};
@@ -19,7 +21,8 @@ const Logo = () => {
   return (
     <Link to='/home'>
       <SLogo>
-        rofazayn<span>.</span>
+        RZ
+        {/* <span>.</span> */}
       </SLogo>
     </Link>
   );

@@ -81,7 +81,7 @@ export const handleHoverExit = e => {
 export const revealHeadings = (...nodes) => {
   gsap.from([...nodes], {
     duration: 1.4,
-    delay: 1.4,
+    delay: 0.7,
     ease: 'power3.out',
     y: 55,
     stagger: {
@@ -93,18 +93,23 @@ export const revealHeadings = (...nodes) => {
 export const revealParagraph = paragraph => {
   gsap.from(paragraph, {
     duration: 1.4,
-    delay: 1.6,
+    delay: 0.9,
     y: '100%',
     ease: 'power3.out'
   });
 };
 
 export const revealImage = (background1, background2, image) => {
+  gsap.to([background1.parentElement], {
+    opacity: 1,
+    duration: 1.1,
+    ease: 'power3.inOut'
+  });
   gsap.to([background1, background2], {
     duration: 1.4,
     width: '0%',
     ease: 'power3.inOut',
-    delay: 2.6,
+    delay: 1.3,
     stagger: {
       amount: -0.09
     }
@@ -113,16 +118,23 @@ export const revealImage = (background1, background2, image) => {
     duration: 1.4,
     scale: 1.6,
     ease: 'power3.inOut',
-    delay: 2.8
+    delay: 1.5
   });
 };
 
 export const revealButtons = background => {
+  if (background) {
+    gsap.from([background.parentElement], {
+      opacity: 0,
+      duration: 1.1,
+      ease: 'power3.inOut'
+    });
+  }
   gsap.to([background], {
-    duration: 1.6,
+    duration: 1.3,
     width: '0',
     ease: 'power3.inOut',
-    delay: 2.6,
+    delay: 1.2,
     stagger: {
       amount: -0.09
     }

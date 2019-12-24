@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const SButton = styled.div`
   position: relative;
   /* overflow: hidden; */
+  /* opacity: 0; */
   .background-layer {
     position: absolute;
     top: 0;
@@ -31,6 +32,7 @@ const SButton = styled.div`
       navButton ? 'none' : theme.colors.vein};
     color: ${({ navButton, theme }) =>
       navButton ? theme.colors.primary : theme.colors.primary};
+    font-family: 'Alegreya';
     cursor: pointer;
     font-size: 0.9rem;
     @media (max-width: 1200px) {
@@ -41,9 +43,6 @@ const SButton = styled.div`
     }
     @media (max-width: 768px) {
       font-size: 0.75rem;
-    }
-    @media (max-width: 576px) {
-      font-size: 0.7rem;
     }
     @media (max-width: 1440px) {
       padding: ${({ navButton }) => (navButton ? '.25rem' : '.8rem 1rem')};
@@ -60,7 +59,9 @@ const SButton = styled.div`
     }
     &:hover {
       color: ${({ navButton, theme }) =>
-        navButton ? theme.colors.vein : theme.colors.primary};
+        navButton ? theme.colors.artery : theme.colors.primary};
+      background: ${({ navButton, theme }) =>
+        navButton ? 'none' : theme.colors.artery};
     }
   }
 `;

@@ -9,6 +9,7 @@ const SImage = styled.div`
   background: ${({ theme }) => theme.colors.background};
   position: relative;
   overflow: hidden;
+  opacity: 0;
   @media (max-width: 1200px) {
     max-width: 475px;
     height: 475px;
@@ -27,8 +28,8 @@ const SImage = styled.div`
     height: 400px;
   }
   @media (max-width: 420px) {
-    max-width: 350px;
-    height: 350px;
+    max-width: 340px;
+    height: 340px;
   }
   .background-layer1 {
     position: absolute;

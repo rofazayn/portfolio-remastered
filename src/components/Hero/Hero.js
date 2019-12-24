@@ -15,9 +15,13 @@ const SHero = styled.div`
   width: 100%;
   min-height: 100%;
   align-items: flex-start;
+
   .title {
+    line-height: 1.25;
     margin-bottom: 30px;
+    letter-spacing: 1px;
     color: ${({ theme }) => theme.colors.primary};
+    font-family: 'Alegreya';
     @media (max-width: 768px) {
       margin-bottom: 20px;
     }
@@ -43,7 +47,7 @@ const SHero = styled.div`
       display: flex;
       width: 100%;
       .text {
-        max-width: 550px;
+        max-width: 480px;
         line-height: 2;
         @media (max-width: 768px) {
           max-width: 380px;

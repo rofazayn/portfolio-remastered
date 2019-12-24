@@ -10,7 +10,7 @@ export const SMenu = styled.div`
   display: none;
   z-index: -1;
   .menu-secondary-background {
-    background: ${({ theme }) => theme.colors.vein};
+    background: ${({ theme }) => theme.colors.artery};
     position: fixed;
     width: 100%;
     height: 100%;
@@ -38,6 +38,7 @@ export const SMenu = styled.div`
           font-size: 3.5rem;
           font-weight: 700;
           height: 90px;
+          font-family: 'Alegreya';
           overflow: hidden;
           @media (max-width: 1440px) {
             font-size: 2rem;
@@ -55,7 +56,7 @@ export const SMenu = styled.div`
               height: 100%;
               width: 0%;
               z-index: -1;
-              background: ${({ theme }) => theme.colors.vein};
+              background: ${({ theme }) => theme.colors.artery};
               transition: all ease-in-out 300ms;
             }
             &.active {
@@ -73,7 +74,7 @@ export const SMenu = styled.div`
             }
 
             &:hover {
-              color: ${({ theme }) => theme.colors.vein};
+              color: ${({ theme }) => theme.colors.artery};
             }
           }
         }
