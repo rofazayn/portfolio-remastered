@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const SWrapper = styled.div`
   padding: 200px 0;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   position: relative;
   background: ${({ theme }) => theme.colors.background};
   display: flex;
