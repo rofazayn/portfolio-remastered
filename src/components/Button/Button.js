@@ -60,7 +60,7 @@ const SButton = styled.div`
     }
     &:hover {
       color: ${({ navButton, theme }) =>
-        navButton ? theme.colors.vein : theme.colors.background};
+        navButton ? theme.colors.vein : theme.colors.primary};
     }
   }
 `;

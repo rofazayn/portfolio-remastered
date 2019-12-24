@@ -1,19 +1,17 @@
 export const darkTheme = {
   colors: {
-    vein: 'tomato',
+    vein: '#7289DA',
     primary: 'white',
     secondary: '#7d7d7d',
-    background: 'black',
-    test: 'red'
+    background: '#26262B'
   }
 };
 
 export const lightTheme = {
   colors: {
-    vein: '#ff8378',
+    vein: '#ace6d5',
     primary: '#231F20',
     secondary: '#404040',
-    background: 'white',
-    test: 'red'
+    background: '#f2fffb'
   }
 };
