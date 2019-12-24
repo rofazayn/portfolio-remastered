@@ -18,7 +18,7 @@ const SNavOptions = styled.div`
   align-items: center;
   position: relative;
   @media (max-width: 1200px) {
-    .hire-button {
+    .resume-button {
       display: none;
     }
   }
@@ -116,12 +116,12 @@ const NavOptions = ({ history }) => {
 
   return (
     <SNavOptions>
-      <NavLink to='/hire' className='hire-button'>
+      <NavLink to='/resume' className='resume-button'>
         <Button navButton>
           <div className='icon'>
             <SquareIcon />
           </div>
-          Hire me
+          Resume
         </Button>
       </NavLink>
       <Divider />
