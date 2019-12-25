@@ -13,12 +13,15 @@ const SHome = styled.div`
     justify-content: flex-start;
     width: 100%;
     @media (max-width: 768px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: flex-start;
     }
   }
   .mid {
     padding: 100px 0;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
     .experience {
       display: grid;
       grid-gap: 1.5rem;
@@ -30,13 +33,37 @@ const SHome = styled.div`
       .item {
         .counter {
           font-size: 3rem;
+          @media (max-width: 1200px) {
+            font-size: 2.75rem;
+          }
+          @media (max-width: 992px) {
+            font-size: 2.5rem;
+          }
+          @media (max-width: 768px) {
+            font-size: 2.25rem;
+          }
+          @media (max-width: 576px) {
+            font-size: 2rem;
+          }
           color: ${({ theme }) => theme.colors.artery};
           font-family: 'Alegreya';
         }
         .title {
           font-size: 1.5rem;
+          @media (max-width: 1200px) {
+            font-size: 1.4rem;
+          }
+          @media (max-width: 992px) {
+            font-size: 1.3rem;
+          }
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+          }
+          @media (max-width: 576px) {
+            font-size: 1.1rem;
+          }
           font-family: 'Alegreya';
-          font-weight: 500;
+          font-weight: 900;
           margin-bottom: 1.2rem;
         }
       }
@@ -44,7 +71,7 @@ const SHome = styled.div`
   }
 `;
 
-const Home = () => {
+const Home = ({ pageTitle }) => {
   // Page content
   const line1 = `Welcome to my`;
   const line2 = `personal portfolio.`;
@@ -56,6 +83,7 @@ const Home = () => {
       <Container>
         <div className='top'>
           <Hero
+            pageTitle={pageTitle + '.'}
             line1={line1}
             line2={line2}
             paragraph={paragraph}

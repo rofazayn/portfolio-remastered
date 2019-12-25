@@ -17,6 +17,17 @@ const SHero = styled.div`
   align-items: flex-start;
   justify-content: center;
 
+  .page-title {
+    font-weight: 0.7rem;
+    font-weight: 900;
+    font-family: 'Alegreya';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    /* color: ${({ theme }) => theme.colors.secondary}; */
+    color: gray;
+  }
+
   .title {
     line-height: 1.2;
     margin-bottom: 30px;
@@ -59,7 +70,14 @@ const SHero = styled.div`
   }
 `;
 
-const Hero = ({ line1, line2, paragraph, buttonText, buttonPath }) => {
+const Hero = ({
+  pageTitle,
+  line1,
+  line2,
+  paragraph,
+  buttonText,
+  buttonPath
+}) => {
   let heading1 = useRef(null);
   let heading2 = useRef(null);
   let text = useRef(null);
@@ -77,6 +95,7 @@ const Hero = ({ line1, line2, paragraph, buttonText, buttonPath }) => {
 
   return (
     <SHero>
+      <div className='page-title'>{pageTitle}</div>
       <div className='title'>
         <div className='line-wrapper'>
           <div className='line' ref={el => (heading1 = el)}>

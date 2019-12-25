@@ -25,7 +25,7 @@ const SResume = styled.div`
   }
 `;
 
-const Resume = () => {
+const Resume = ({ pageTitle }) => {
   const line1 = `Years of exp`;
   const line2 = `at your service.`;
   const paragraph = `I provide web design/development, from UI design to coding. With years of experience working for individuals, startups and established companies.`;
@@ -36,6 +36,7 @@ const Resume = () => {
       <Container>
         <div className='top'>
           <Hero
+            pageTitle={pageTitle + '.'}
             line1={line1}
             line2={line2}
             paragraph={paragraph}

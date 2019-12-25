@@ -21,7 +21,7 @@ const SImage = styled.div`
   @media (max-width: 768px) {
     max-width: 400px;
     height: 400px;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
   }
   @media (max-width: 576px) {
     max-width: 300px;

@@ -46,7 +46,7 @@ function App({ history, location }) {
           <Switch>
             {routes.map(({ name, path, Component }) => (
               <Route path={path} exact key={name}>
-                <Component />
+                <Component pageTitle={name} />
               </Route>
             ))}
             <Redirect to='/' />

@@ -18,7 +18,7 @@ const SWrapper = styled.div`
     padding: 120px 0;
   }
   @media (max-width: 576px) {
-    padding: 90px 0;
+    padding: 120px 0;
   }
 `;
 
