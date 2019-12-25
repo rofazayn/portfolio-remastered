@@ -80,7 +80,7 @@ const Home = ({ pageTitle }) => {
   const line1 = `Welcome to my`;
   const line2 = `personal portfolio.`;
   const paragraph = `Hi. My name is Abderraouf. I am a front-end web developer from Aurès, Algeria. Have a look around and discover what I can offer for you or your business.`;
-  const buttonText = `Some projects I've built`;
+  const buttonText = `See some stuff I built`;
 
   useEffect(() => {
     document.title = `rofazayn | ${pageTitle}`;
@@ -104,34 +104,34 @@ const Home = ({ pageTitle }) => {
           <div className='experience'>
             <div className='item'>
               <div className='counter'>9+</div>
-              <div className='title'>Years of experience</div>
+              <div className='title'>Years' experience.</div>
               <div className='text paragraph'>
                 In 2010, 12 yo me wrote his first HTML line. In 2011 I joined
                 codecademy at its earliest starts and became a junior front-end
                 developer with a descent knowledge of HTML, CSS & JavaScript. In
                 2013, I was able to build websites for local businesses and
-                small companies.
+                companies.
               </div>
             </div>
             <div className='item'>
               <div className='counter'>50+</div>
-              <div className='title'>Projects completed</div>
+              <div className='title'>Projects completed.</div>
               <div className='text paragraph'>
                 Through my freelance journey, I delivered more than 50 complete
                 projects, from web design to UI development, I did it all. With
                 more than 5 years of freelancing (Late 2013 - Late 2018), I
-                dealt with impossible deadlines. Get stuff done is a way of life
-                for me.
+                dealt with impossible deadlines. Get stuff done on time is a way
+                of life for me.
               </div>
             </div>
             <div className='item'>
               <div className='counter'>1200+</div>
-              <div className='title'>Github contributions</div>
+              <div className='title'>Github contributions.</div>
               <div className='text paragraph'>
                 I love Git version control. And I show that love by contributing
                 daily to GitHub. Though, I keep my repositories private due to
                 secrecy agreements that I sign with my employers. Still, I have
-                some side projets that you can check in the Projects section.
+                some side projects that you can check in the Projects section.
               </div>
             </div>
           </div>
