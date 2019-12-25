@@ -31,7 +31,7 @@ const SButton = styled.div`
     background: ${({ navButton, theme }) =>
       navButton ? 'none' : theme.colors.vein};
     color: ${({ navButton, theme }) =>
-      navButton ? theme.colors.primary : theme.colors.primary};
+      navButton ? theme.colors.primary : theme.colors.neutral};
     font-family: 'Alegreya';
     cursor: pointer;
     font-size: 0.9rem;

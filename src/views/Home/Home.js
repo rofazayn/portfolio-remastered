@@ -50,6 +50,7 @@ const SHome = styled.div`
         }
         .title {
           font-size: 1.5rem;
+          color: ${({ theme }) => theme.colors.primary};
           @media (max-width: 1200px) {
             font-size: 1.4rem;
           }
@@ -65,6 +66,9 @@ const SHome = styled.div`
           font-family: 'Alegreya';
           font-weight: 900;
           margin-bottom: 1.2rem;
+        }
+        .text {
+          color: ${({ theme }) => theme.colors.secondary};
         }
       }
     }
