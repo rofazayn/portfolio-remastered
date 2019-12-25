@@ -36,16 +36,16 @@ const SButton = styled.div`
     cursor: pointer;
     font-size: 0.9rem;
     @media (max-width: 1200px) {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
     }
     @media (max-width: 992px) {
-      font-size: 0.8rem;
+      font-size: 0.86rem;
     }
     @media (max-width: 768px) {
-      font-size: 0.75rem;
+      font-size: 0.84rem;
     }
     @media (max-width: 1440px) {
-      padding: ${({ navButton }) => (navButton ? '.25rem' : '.8rem 1rem')};
+      padding: ${({ navButton }) => (navButton ? '.25rem' : '.9rem 1.5rem')};
     }
     transition: all ease-in-out 250ms;
     .icon {
