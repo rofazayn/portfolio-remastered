@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Image from '../../components/Image/Image';
 import homeImage from '../../assets/images/03.png';
@@ -77,6 +77,10 @@ const Home = ({ pageTitle }) => {
   const line2 = `personal portfolio.`;
   const paragraph = `Hi. My name is Abderraouf. I am a front-end web developer from Aurès, Algeria. Have a look around and discover what I can offer for you or your business.`;
   const buttonText = `Some projects I've built`;
+
+  useEffect(() => {
+    document.title = `rofazayn | ${pageTitle}`;
+  });
 
   return (
     <SHome className='page'>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Image from '../../components/Image/Image';
 import contactImage from '../../assets/images/06.png';
@@ -30,6 +30,10 @@ const Contact = ({ pageTitle }) => {
   const line2 = `me at anytime.`;
   const paragraph = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`;
   const buttonText = `Back to the homepage`;
+
+  useEffect(() => {
+    document.title = `rofazayn | ${pageTitle}`;
+  });
 
   return (
     <SContact className='page'>

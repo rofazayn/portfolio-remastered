@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Image from '../../components/Image/Image';
 import ProjectsImage from '../../assets/images/04.png';
@@ -30,6 +30,10 @@ const Projects = ({ pageTitle }) => {
   // const line2 = `Here are some for you`;
   const paragraph = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`;
   const buttonText = `Check out my resume`;
+
+  useEffect(() => {
+    document.title = `rofazayn | ${pageTitle}`;
+  });
 
   return (
     <SProjects className='page'>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Image from '../../components/Image/Image';
 import resumeImage from '../../assets/images/05.png';
@@ -30,6 +30,10 @@ const Resume = ({ pageTitle }) => {
   const line2 = `at your service.`;
   const paragraph = `I provide web design/development, from UI design to coding. With years of experience working for individuals, startups and established companies.`;
   const buttonText = `Are you hiring?`;
+
+  useEffect(() => {
+    document.title = `rofazayn | ${pageTitle}`;
+  });
 
   return (
     <SResume className='page'>
