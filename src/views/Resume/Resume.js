@@ -17,7 +17,7 @@ const SResume = styled.div`
     @media (max-width: 992px) {
     }
     @media (max-width: 768px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: flex-start;
     }
     @media (max-width: 576px) {
