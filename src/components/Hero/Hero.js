@@ -17,17 +17,6 @@ const SHero = styled.div`
   align-items: flex-start;
   justify-content: center;
 
-  .page-title {
-    font-weight: 0.7rem;
-    font-weight: 900;
-    font-family: 'Alegreya';
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
-    /* color: ${({ theme }) => theme.colors.secondary}; */
-    color: gray;
-  }
-
   .title {
     line-height: 1.2;
     margin-bottom: 30px;
@@ -63,7 +52,7 @@ const SHero = styled.div`
         max-width: 480px;
         visibility: hidden;
         @media (max-width: 768px) {
-          max-width: 380px;
+          max-width: none;
         }
       }
     }
@@ -118,9 +107,9 @@ const Hero = ({
       {buttonText && (
         <Link to={buttonPath}>
           <Button ref={el => (button = el)}>
-            <div className='icon'>
+            {/* <div className='icon'>
               <SquareIcon />
-            </div>{' '}
+            </div>{' '} */}
             {buttonText && buttonText}
           </Button>
         </Link>
