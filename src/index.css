@@ -18,10 +18,6 @@ body,
   overflow-x: hidden;
 }
 
-*::-webkit-scrollbar {
-  display: none;
-}
-
 body {
   margin: 0;
   font-family: 'Lato', 'Alegreya', -apple-system, BlinkMacSystemFont, 'Segoe UI',
