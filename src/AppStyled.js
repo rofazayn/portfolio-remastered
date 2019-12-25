@@ -24,6 +24,13 @@ const SApp = styled.div`
 
   .paragraph {
     font-size: 1.1rem;
+    line-height: 1.8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
     @media (max-width: 1200px) {
       font-size: 1.05rem;
     }

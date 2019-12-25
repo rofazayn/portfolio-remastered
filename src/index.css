@@ -5,6 +5,8 @@
   margin: 0;
   padding: 0;
   user-select: none;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   transition: color ease 400ms;
   transition: background-color ease 400ms;
 }

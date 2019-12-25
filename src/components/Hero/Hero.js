@@ -18,11 +18,12 @@ const SHero = styled.div`
   justify-content: center;
 
   .title {
-    line-height: 1.25;
+    line-height: 1.2;
     margin-bottom: 30px;
     letter-spacing: 1px;
     color: ${({ theme }) => theme.colors.primary};
     font-family: 'Alegreya';
+    font-weight: 900;
     @media (max-width: 768px) {
       margin-bottom: 20px;
     }
@@ -31,7 +32,6 @@ const SHero = styled.div`
       overflow: hidden;
       .line {
         max-width: 480px;
-        font-weight: 900;
         visibility: hidden;
       }
     }
@@ -50,7 +50,6 @@ const SHero = styled.div`
       width: 100%;
       .text {
         max-width: 480px;
-        line-height: 2;
         visibility: hidden;
         @media (max-width: 768px) {
           max-width: 380px;
