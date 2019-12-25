@@ -26,9 +26,9 @@ const SProjects = styled.main`
 `;
 
 const Projects = ({ pageTitle }) => {
-  const line1 = `Projects, Oh projects!`;
-  // const line2 = `Here are some for you`;
-  const paragraph = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`;
+  const line1 = `Projects, `;
+  const line2 = `Oh projects!`;
+  const paragraph = `Throughout my career, I delivered more than 50 projects to individuals, startups, small businesses and even established companies, here are some simple demonstrations.`;
   const buttonText = `Check out my resume`;
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const Projects = ({ pageTitle }) => {
           <Hero
             pageTitle={pageTitle + '.'}
             line1={line1}
-            // line2={line2}
+            line2={line2}
             paragraph={paragraph}
             buttonText={buttonText}
             buttonPath={'/resume'}

@@ -124,11 +124,10 @@ const Home = ({ pageTitle }) => {
               <div className='counter'>1200+</div>
               <div className='title'>Github contributions</div>
               <div className='text paragraph'>
-                I love Git version controle. And I show that love by
-                contributing daily to GitHub. Though, I keep my repositories
-                private due to secrecy agreements that I sign with my employers.
-                Still, I have some side projets that you can check in the
-                Projects section.
+                I love Git version control. And I show that love by contributing
+                daily to GitHub. Though, I keep my repositories private due to
+                secrecy agreements that I sign with my employers. Still, I have
+                some side projets that you can check in the Projects section.
               </div>
             </div>
           </div>

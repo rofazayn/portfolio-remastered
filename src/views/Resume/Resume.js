@@ -28,7 +28,7 @@ const SResume = styled.div`
 const Resume = ({ pageTitle }) => {
   const line1 = `Years of exp`;
   const line2 = `at your service.`;
-  const paragraph = `I provide web design/development, from UI design to coding. With years of experience working for individuals, startups and established companies.`;
+  const paragraph = `I provide web design and development, from prototyping and wireframing to UI development. I make sure to write good, scalable, clean and easy to maintain code.`;
   const buttonText = `Are you hiring?`;
 
   useEffect(() => {

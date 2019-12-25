@@ -28,8 +28,8 @@ const SImage = styled.div`
     height: 300px;
   }
   @media (max-width: 420px) {
-    max-width: 220px;
-    height: 220px;
+    max-width: 250px;
+    height: 250px;
   }
   .background-layer1 {
     position: absolute;
