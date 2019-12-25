@@ -74,7 +74,8 @@ const SApp = styled.div`
     align-items: center;
     
     @media (max-width: 768px) {
-      flex-direction: column;
+      flex-direction: column-reverse;
+      padding-bottom: 100px;
     }
     .section {
       width: 100%;

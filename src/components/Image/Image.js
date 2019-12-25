@@ -11,7 +11,7 @@ const SImage = styled.div`
   opacity: 0;
   display: flex;
   @media (max-width: 768px) {
-    margin-top: 2rem;
+    margin-bottom: 1.5rem;
   }
   .background-layer1 {
     position: absolute;
@@ -43,8 +43,10 @@ const SImage = styled.div`
     }
     img {
       object-fit: cover;
-      width: calc((40vh + 40vw) / 2);
+      /* width: calc((40vh + 40vw) / 2); */
+      width: 100%;
       max-width: 600px;
+      min-width: 256px;
     }
   }
 `;
