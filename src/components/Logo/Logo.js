@@ -10,7 +10,7 @@ const SLogo = styled.span`
   font-weight: 700;
   letter-spacing: 2px;
   font-family: 'Alegreya';
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.primary};
   span {
     color: ${({ theme }) => theme.colors.vein};

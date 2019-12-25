@@ -7,28 +7,13 @@ import Hero from '../../components/Hero/Hero';
 
 const SProjects = styled.main`
   width: 100%;
-  .top {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    @media (max-width: 1200px) {
-    }
-    @media (max-width: 992px) {
-    }
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    @media (max-width: 576px) {
-    }
-  }
 `;
 
 const Projects = ({ pageTitle }) => {
-  const line1 = `Projects, `;
-  const line2 = `Oh projects!`;
-  const paragraph = `Throughout my career, I delivered more than 50 projects to individuals, startups, small businesses and even established companies, here are some simple demonstrations.`;
+  const line1 = `Hmm
+  .. projects?`;
+  const line2 = `I have done plenty!`;
+  const paragraph = `I delivered more than 50 projects to individuals, startups, small businesses and even established companies, below are some side projects as demonstations of my skills.`;
   const buttonText = `Check out my resume`;
 
   useEffect(() => {
@@ -39,15 +24,19 @@ const Projects = ({ pageTitle }) => {
     <SProjects className='page'>
       <Container>
         <div className='top'>
-          <Hero
-            pageTitle={pageTitle + '.'}
-            line1={line1}
-            line2={line2}
-            paragraph={paragraph}
-            buttonText={buttonText}
-            buttonPath={'/resume'}
-          />
-          <Image src={ProjectsImage} />
+          <div className='section'>
+            <Hero
+              pageTitle={pageTitle + '.'}
+              line1={line1}
+              line2={line2}
+              paragraph={paragraph}
+              buttonText={buttonText}
+              buttonPath={'/resume'}
+            />
+          </div>
+          <div className='section'>
+            <Image src={ProjectsImage} />
+          </div>
         </div>
       </Container>
     </SProjects>

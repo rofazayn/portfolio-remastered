@@ -4,32 +4,14 @@ import { revealImage } from '../../helpers/Animations';
 
 const SImage = styled.div`
   width: 100%;
-  max-width: 500px;
-  height: 500px;
+  height: 100%;
   background: ${({ theme }) => theme.colors.background};
   position: relative;
   overflow: hidden;
   opacity: 0;
-  @media (max-width: 1200px) {
-    max-width: 475px;
-    height: 475px;
-  }
-  @media (max-width: 992px) {
-    max-width: 400px;
-    height: 400px;
-  }
+  display: flex;
   @media (max-width: 768px) {
-    max-width: 350px;
-    height: 350px;
-    margin: 2rem 0;
-  }
-  @media (max-width: 576px) {
-    max-width: 300px;
-    height: 300px;
-  }
-  @media (max-width: 420px) {
-    max-width: 220px;
-    height: 220px;
+    margin-top: 2rem;
   }
   .background-layer1 {
     position: absolute;
@@ -50,19 +32,19 @@ const SImage = styled.div`
     z-index: 11;
   }
   .image-layer {
-    position: absolute;
-    top: 0;
-    right: 0;
     width: 100%;
     height: 100%;
     z-index: 9;
-    overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+    }
     img {
       object-fit: cover;
-      width: 100%;
+      width: calc((40vh + 40vw) / 2);
+      max-width: 600px;
     }
   }
 `;

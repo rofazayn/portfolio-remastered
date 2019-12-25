@@ -5,7 +5,7 @@ const SContainer = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 4rem;
   @media (max-width: 1200px) {
     max-width: 992px;
   }
@@ -14,6 +14,7 @@ const SContainer = styled.div`
   }
   @media (max-width: 768px) {
     max-width: 576px;
+    padding: 0 2rem;
   }
   @media (max-width: 576px) {
     max-width: 400px;

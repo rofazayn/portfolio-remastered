@@ -7,22 +7,6 @@ import Hero from '../../components/Hero/Hero';
 
 const SContact = styled.main`
   width: 100%;
-  .top {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    @media (max-width: 1200px) {
-    }
-    @media (max-width: 992px) {
-    }
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    @media (max-width: 576px) {
-    }
-  }
 `;
 
 const Contact = ({ pageTitle }) => {
@@ -39,15 +23,19 @@ const Contact = ({ pageTitle }) => {
     <SContact className='page'>
       <Container>
         <div className='top'>
-          <Hero
-            pageTitle={pageTitle + '.'}
-            line1={line1}
-            line2={line2}
-            paragraph={paragraph}
-            buttonText={buttonText}
-            buttonPath={'/'}
-          />
-          <Image src={contactImage} />
+          <div className='section'>
+            <Hero
+              pageTitle={pageTitle + '.'}
+              line1={line1}
+              line2={line2}
+              paragraph={paragraph}
+              buttonText={buttonText}
+              buttonPath={'/'}
+            />
+          </div>
+          <div className='section'>
+            <Image src={contactImage} />
+          </div>
         </div>
       </Container>
     </SContact>

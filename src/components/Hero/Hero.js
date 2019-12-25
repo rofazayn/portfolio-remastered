@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { ReactComponent as SquareIcon } from '../../assets/icons/square.svg';
+// import { ReactComponent as SquareIcon } from '../../assets/icons/square.svg';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 import {
@@ -13,7 +13,6 @@ const SHero = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100%;
   align-items: flex-start;
   justify-content: center;
 
@@ -49,10 +48,9 @@ const SHero = styled.div`
       display: flex;
       width: 100%;
       .text {
-        max-width: 480px;
-        visibility: hidden;
+        max-width: 450px;
         @media (max-width: 768px) {
-          max-width: none;
+          max-width: auto;
         }
       }
     }

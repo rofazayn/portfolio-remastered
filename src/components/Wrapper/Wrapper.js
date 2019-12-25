@@ -2,23 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SWrapper = styled.div`
-  padding: 200px 0;
-
-  min-height: calc(100vh - 80px);
   position: relative;
   background: ${({ theme }) => theme.colors.background};
   display: flex;
   @media (max-width: 1200px) {
-    padding: 180px 0;
+    padding-bottom: 180px;
   }
   @media (max-width: 992px) {
-    padding: 150px 0;
+    padding-bottom: 150px;
   }
   @media (max-width: 768px) {
-    padding: 120px 0;
+    padding-bottom: 120px;
   }
   @media (max-width: 576px) {
-    padding: 120px 0;
+    padding-bottom: 120px;
   }
 `;
 

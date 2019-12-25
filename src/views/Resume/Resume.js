@@ -7,22 +7,6 @@ import Hero from '../../components/Hero/Hero';
 
 const SResume = styled.div`
   width: 100%;
-  .top {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    @media (max-width: 1200px) {
-    }
-    @media (max-width: 992px) {
-    }
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    @media (max-width: 576px) {
-    }
-  }
 `;
 
 const Resume = ({ pageTitle }) => {
@@ -39,15 +23,19 @@ const Resume = ({ pageTitle }) => {
     <SResume className='page'>
       <Container>
         <div className='top'>
-          <Hero
-            pageTitle={pageTitle + '.'}
-            line1={line1}
-            line2={line2}
-            paragraph={paragraph}
-            buttonText={buttonText}
-            buttonPath={'/hire'}
-          />
-          <Image src={resumeImage} />
+          <div className='section'>
+            <Hero
+              pageTitle={pageTitle + '.'}
+              line1={line1}
+              line2={line2}
+              paragraph={paragraph}
+              buttonText={buttonText}
+              buttonPath={'/hire'}
+            />
+          </div>
+          <div className='section'>
+            <Image src={resumeImage} />
+          </div>
         </div>
       </Container>
     </SResume>

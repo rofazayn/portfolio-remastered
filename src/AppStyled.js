@@ -59,6 +59,27 @@ const SApp = styled.div`
       font-size: 0.9rem;
     }
   }
+
+  .top {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding-bottom: 5vh;
+    @media (max-width: 992px) {
+      padding-top: 100px;
+      padding-bottom: 0;
+    }
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    .section {
+      width: 100%;
+    }
+  }
 `;
 
 export default SApp;

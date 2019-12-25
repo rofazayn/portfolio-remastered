@@ -7,18 +7,9 @@ import Hero from '../../components/Hero/Hero';
 
 const SHome = styled.div`
   width: 100%;
-  .top {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
+
   .mid {
-    padding: 100px 0;
+    padding-bottom: 200px;
     @media (max-width: 768px) {
       padding: 0;
     }
@@ -90,15 +81,19 @@ const Home = ({ pageTitle }) => {
     <SHome className='page'>
       <Container>
         <div className='top'>
-          <Hero
-            pageTitle={pageTitle + '.'}
-            line1={line1}
-            line2={line2}
-            paragraph={paragraph}
-            buttonText={buttonText}
-            buttonPath={'/projects'}
-          />
-          <Image src={homeImage} />
+          <div className='section'>
+            <Hero
+              pageTitle={pageTitle + '.'}
+              line1={line1}
+              line2={line2}
+              paragraph={paragraph}
+              buttonText={buttonText}
+              buttonPath={'/projects'}
+            />
+          </div>
+          <div className='section'>
+            <Image src={homeImage} />
+          </div>
         </div>
         <div className='mid'>
           <div className='experience'>
