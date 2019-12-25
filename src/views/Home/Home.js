@@ -15,7 +15,8 @@ const SHome = styled.div`
     }
     .experience {
       display: grid;
-      grid-gap: 2rem;
+      grid-column-gap: 6rem;
+      grid-row-gap: 2rem;
       grid-template-columns: repeat(2, 1fr);
       width: 100%;
       @media (max-width: 768px) {
@@ -42,6 +43,9 @@ const SHome = styled.div`
         .title {
           font-size: 1.5rem;
           color: ${({ theme }) => theme.colors.primary};
+          font-family: 'Alegreya';
+          font-weight: 900;
+          margin-bottom: 1.2rem;
           @media (max-width: 1200px) {
             font-size: 1.4rem;
           }
@@ -50,13 +54,11 @@ const SHome = styled.div`
           }
           @media (max-width: 768px) {
             font-size: 1.2rem;
+            margin-bottom: 0.6rem;
           }
           @media (max-width: 576px) {
             font-size: 1.1rem;
           }
-          font-family: 'Alegreya';
-          font-weight: 900;
-          margin-bottom: 1.2rem;
         }
         .text {
           color: ${({ theme }) => theme.colors.secondary};

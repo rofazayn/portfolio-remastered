@@ -40,12 +40,12 @@ const SApp = styled.div`
   .paragraph {
     font-size: 1.1rem;
     line-height: 1.8;
-    word-wrap: break-word;
     overflow-wrap: break-word;
-
+    word-wrap: break-word;
     -webkit-hyphens: auto;
-    -moz-hyphens: auto;
+    -ms-hyphens: auto;
     hyphens: auto;
+    max-width: 450px;
     @media (max-width: 1200px) {
       font-size: 1.05rem;
     }
@@ -80,6 +80,19 @@ const SApp = styled.div`
     .section {
       width: 100%;
     }
+  }
+
+  .mid {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    @media (max-width: 992px) {
+      padding-top: 100px;
+      padding-bottom: 0;
+    }
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 `;
 
