@@ -44,7 +44,7 @@ const Hero = ({
 
   return (
     <SHero>
-      <div className='page-title'>{pageTitle}</div>
+      <Title className='page-title'>{pageTitle}</Title>
       <Title>
         <div className='line-wrapper'>
           <div className='line' ref={el => (heading1 = el)}>

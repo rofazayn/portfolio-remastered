@@ -32,10 +32,25 @@ const STitle = styled.div`
       visibility: hidden;
     }
   }
+
+  &.page-title {
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: 'Alegreya';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    /* color: ${({ theme }) => theme.colors.secondary}; */
+    color: gray;
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+  }
 `;
 
-const Title = ({ children }) => {
-  return <STitle>{children}</STitle>;
+const Title = ({ children, ...otherProps }) => {
+  return <STitle {...otherProps}>{children}</STitle>;
 };
 
 export default Title;
