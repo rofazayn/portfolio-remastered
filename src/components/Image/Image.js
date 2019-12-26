@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { revealImage } from '../../helpers/Animations';
 
@@ -56,16 +56,16 @@ const Image = ({ src }) => {
   let background2 = useRef(null);
   let image = useRef(null);
 
-  useEffect(() => {
+  const reveal = () => {
     revealImage(background1, background2, image);
-  }, [background1, background2, image]);
+  };
 
   return (
     <SImage>
       <div className='background-layer1' ref={el => (background1 = el)}></div>
       <div className='background-layer2' ref={el => (background2 = el)}></div>
       <div className='image-layer'>
-        <img src={src} alt='Hero' ref={el => (image = el)} />
+        <img src={src} alt='Hero' onLoad={reveal} ref={el => (image = el)} />
       </div>
     </SImage>
   );

@@ -6,15 +6,15 @@ import contactImage from '../../assets/images/06.png';
 import { useDispatch } from 'react-redux';
 import { setLoading } from '../../redux/actions/ui.actions';
 
-const Loader = () => {
-  const images = [
-    homeImage,
-    ProjectsImage,
-    resumeImage,
-    hireImage,
-    contactImage
-  ];
+export const images = [
+  homeImage,
+  ProjectsImage,
+  resumeImage,
+  hireImage,
+  contactImage
+];
 
+const Loader = () => {
   const checkImage = path =>
     new Promise(resolve => {
       const img = new Image();

@@ -9,7 +9,6 @@ import { lightTheme, darkTheme } from './assets/theming/theme.js';
 import { useSelector } from 'react-redux';
 import SApp from './AppStyled.js';
 import routes from './helpers/routes.js';
-import Loader from './components/Loader/Loader';
 
 function App({ history, location }) {
   useEffect(() => {
@@ -26,30 +25,23 @@ function App({ history, location }) {
   }, [location, history]);
 
   const isDarkTheme = useSelector(state => state.ui.isDarkTheme);
-  const isLoading = useSelector(state => state.ui.isLoading);
-
-  useEffect(() => console.log(isLoading), [isLoading]);
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <SApp className='App'>
-          <Navbar />
-          <Wrapper>
-            <Switch>
-              {routes.map(({ name, path, Component }) => (
-                <Route path={path} exact key={name}>
-                  <Component pageTitle={name} />
-                </Route>
-              ))}
-              <Redirect to='/' />
-            </Switch>
-          </Wrapper>
-          <Footer />
-        </SApp>
-      )}
+      <SApp className='App'>
+        <Navbar />
+        <Wrapper>
+          <Switch>
+            {routes.map(({ name, path, Component }) => (
+              <Route path={path} exact key={name}>
+                <Component pageTitle={name} />
+              </Route>
+            ))}
+            <Redirect to='/' />
+          </Switch>
+        </Wrapper>
+        <Footer />
+      </SApp>
     </ThemeProvider>
   );
 }
