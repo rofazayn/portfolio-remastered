@@ -9,6 +9,7 @@ import { lightTheme, darkTheme } from './assets/theming/theme.js';
 import { useSelector } from 'react-redux';
 import SApp from './AppStyled.js';
 import routes from './helpers/routes.js';
+import Loader from './components/Loader/Loader';
 
 function App({ history, location }) {
   useEffect(() => {
@@ -25,13 +26,14 @@ function App({ history, location }) {
   }, [location, history]);
 
   const isDarkTheme = useSelector(state => state.ui.isDarkTheme);
+  const isLoading = useSelector(state => state.ui.isLoading);
 
-  const isLoading = false;
+  useEffect(() => console.log(isLoading), [isLoading]);
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       {isLoading ? (
-        <h1>Loading</h1>
+        <Loader />
       ) : (
         <SApp className='App'>
           <Navbar />

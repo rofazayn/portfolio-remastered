@@ -65,12 +65,7 @@ const Image = ({ src }) => {
       <div className='background-layer1' ref={el => (background1 = el)}></div>
       <div className='background-layer2' ref={el => (background2 = el)}></div>
       <div className='image-layer'>
-        <img
-          src={src}
-          onLoad={() => console.log('Image loaded')}
-          alt='Hero'
-          ref={el => (image = el)}
-        />
+        <img src={src} alt='Hero' ref={el => (image = el)} />
       </div>
     </SImage>
   );
