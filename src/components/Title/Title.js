@@ -100,7 +100,6 @@ const STitle = styled.div`
       font-family: 'Alegreya';
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 1.5rem;
       color: gray;
       font-size: 0.8rem;
       margin-bottom: 1rem;
@@ -112,6 +111,7 @@ const STitle = styled.div`
       }
       @media (max-width: 768px) {
         font-size: 0.85rem;
+        margin-bottom: 0.7rem;
       }
       @media (max-width: 576px) {
         font-size: 0.8rem;

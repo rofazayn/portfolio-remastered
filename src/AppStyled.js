@@ -13,7 +13,7 @@ const SApp = styled.div`
     padding-bottom: 5vh;
     @media (max-width: 992px) {
       padding-top: 100px;
-      padding-bottom: 0;
+      padding-bottom: 100px;
     }
     display: flex;
     justify-content: space-around;
