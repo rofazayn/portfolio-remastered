@@ -102,6 +102,20 @@ const STitle = styled.div`
       letter-spacing: 1px;
       margin-bottom: 1.5rem;
       color: gray;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+      @media (max-width: 1200px) {
+        font-size: 0.95rem;
+      }
+      @media (max-width: 992px) {
+        font-size: 0.9rem;
+      }
+      @media (max-width: 768px) {
+        font-size: 0.85rem;
+      }
+      @media (max-width: 576px) {
+        font-size: 0.8rem;
+      }
       .line-wrapper {
         position: relative;
         overflow: hidden;
@@ -109,10 +123,6 @@ const STitle = styled.div`
           max-width: 480px;
           visibility: visible;
         }
-      }
-      @media (max-width: 768px) {
-        font-size: 0.8rem;
-        margin-bottom: 1rem;
       }
     `}
 `;
