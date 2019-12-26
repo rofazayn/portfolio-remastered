@@ -6,6 +6,7 @@ import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
 import Paragraph from '../../components/Paragraph/Paragraph';
 import Title from '../../components/Title/Title';
+import { Link } from 'react-router-dom';
 
 const SHome = styled.div`
   width: 100%;
@@ -21,6 +22,14 @@ const SHome = styled.div`
       grid-row-gap: 2rem;
       grid-template-columns: repeat(2, 1fr);
       width: 100%;
+      a {
+        text-decoration: underline;
+        transition: all ease-in-out 250ms;
+        font-weight: 700;
+        &:hover {
+          color: ${({ theme }) => theme.colors.artery};
+        }
+      }
       @media (max-width: 768px) {
         grid-template-columns: 1fr;
       }
@@ -86,11 +95,10 @@ const Home = ({ pageTitle }) => {
               <div className='counter'>9+</div>
               <Title itemTitle>Years' experience.</Title>
               <Paragraph>
-                In 2010, 12 yo me wrote his first HTML line. In 2011 I joined
-                codecademy at its earliest starts and became a junior front-end
-                developer with a descent knowledge of HTML, CSS & JavaScript. In
-                2013, I was able to build websites for local businesses and
-                companies.
+                In 2010, I wrote my first HTML line. In 2011 I joined codecademy
+                at its earliest starts and became a junior front-end developer
+                with a descent knowledge of HTML, CSS & JavaScript. In 2013, I
+                was able to build websites for local businesses and companies.
               </Paragraph>
             </div>
             <div className='item'>
@@ -111,7 +119,8 @@ const Home = ({ pageTitle }) => {
                 I love Git version control. And I show that love by contributing
                 daily to GitHub. Though, I keep my repositories private due to
                 secrecy agreements that I sign with my employers. Still, I have
-                some side projects that you can check in the Projects section.
+                some side projects that you can check in the{' '}
+                <Link to='/projects'>Projects</Link> section.
               </Paragraph>
             </div>
           </div>
