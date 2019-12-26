@@ -48,6 +48,7 @@ const Projects = ({ pageTitle }) => {
           </div>
         </div>
         <div className='mid'>
+          <Title pageTitle>Showcases</Title>
           <div className='section'>
             <Title sectionTitle>
               <div className='line-wrapper'>
@@ -66,6 +67,8 @@ const Projects = ({ pageTitle }) => {
             </Paragraph>
           </div>
           <div className='section'>
+            <div className='placeholder'></div>
+            <div className='placeholder'></div>
             <div className='placeholder'></div>
             <div className='placeholder'></div>
             <div className='placeholder'></div>

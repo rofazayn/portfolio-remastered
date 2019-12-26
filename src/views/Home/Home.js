@@ -15,7 +15,7 @@ const SHome = styled.div`
     @media (max-width: 768px) {
       padding: 0;
     }
-    .experience {
+    .about {
       display: grid;
       grid-column-gap: 6rem;
       grid-row-gap: 2rem;
@@ -80,7 +80,8 @@ const Home = ({ pageTitle }) => {
           </div>
         </div>
         <div className='mid'>
-          <div className='experience'>
+          <Title pageTitle>About</Title>
+          <div className='about'>
             <div className='item'>
               <div className='counter'>9+</div>
               <Title itemTitle>Years' experience.</Title>

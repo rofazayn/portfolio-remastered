@@ -65,14 +65,16 @@ const Hero = ({
         </div>
       </Paragraph>
       {buttonText && (
-        <Link to={buttonPath}>
-          <Button ref={el => (button = el)}>
-            {/* <div className='icon'>
+        <>
+          <Link to={buttonPath}>
+            <Button ref={el => (button = el)}>
+              {/* <div className='icon'>
               <SquareIcon />
             </div>{' '} */}
-            {buttonText && buttonText}
-          </Button>
-        </Link>
+              {buttonText && buttonText}
+            </Button>
+          </Link>
+        </>
       )}
     </SHero>
   );
