@@ -9,7 +9,7 @@ const SParagraph = styled.div`
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  max-width: 450px;
+  max-width: 720px;
   @media (max-width: 1200px) {
     font-size: 1.05rem;
   }

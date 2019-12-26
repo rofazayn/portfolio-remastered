@@ -21,7 +21,6 @@ const SApp = styled.div`
 
     @media (max-width: 768px) {
       flex-direction: column-reverse;
-      padding-bottom: 100px;
     }
     .section {
       width: 100%;
@@ -37,8 +36,12 @@ const SApp = styled.div`
       padding-bottom: 0;
     }
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    flex-direction: column;
+  }
+  .section {
+    width: 100%;
   }
 `;
 

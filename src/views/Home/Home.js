@@ -4,6 +4,8 @@ import Image from '../../components/Image/Image';
 import homeImage from '../../assets/images/03.png';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
+import Paragraph from '../../components/Paragraph/Paragraph';
+import Title from '../../components/Title/Title';
 
 const SHome = styled.div`
   width: 100%;
@@ -39,26 +41,6 @@ const SHome = styled.div`
           }
           color: ${({ theme }) => theme.colors.artery};
           font-family: 'Alegreya';
-        }
-        .title {
-          font-size: 1.5rem;
-          color: ${({ theme }) => theme.colors.primary};
-          font-family: 'Alegreya';
-          font-weight: 900;
-          margin-bottom: 1.2rem;
-          @media (max-width: 1200px) {
-            font-size: 1.4rem;
-          }
-          @media (max-width: 992px) {
-            font-size: 1.3rem;
-          }
-          @media (max-width: 768px) {
-            font-size: 1.2rem;
-            margin-bottom: 0.6rem;
-          }
-          @media (max-width: 576px) {
-            font-size: 1.1rem;
-          }
         }
         .text {
           color: ${({ theme }) => theme.colors.secondary};
@@ -101,35 +83,35 @@ const Home = ({ pageTitle }) => {
           <div className='experience'>
             <div className='item'>
               <div className='counter'>9+</div>
-              <div className='title'>Years' experience.</div>
-              <div className='text paragraph'>
+              <Title itemTitle>Years' experience.</Title>
+              <Paragraph>
                 In 2010, 12 yo me wrote his first HTML line. In 2011 I joined
                 codecademy at its earliest starts and became a junior front-end
                 developer with a descent knowledge of HTML, CSS & JavaScript. In
                 2013, I was able to build websites for local businesses and
                 companies.
-              </div>
+              </Paragraph>
             </div>
             <div className='item'>
               <div className='counter'>50+</div>
-              <div className='title'>Projects completed.</div>
-              <div className='text paragraph'>
+              <Title itemTitle>Projects completed.</Title>
+              <Paragraph>
                 Through my freelance journey, I delivered more than 50 complete
                 projects, from web design to UI development, I did it all. With
                 more than 5 years of freelancing (Late 2013 - Late 2018), I
                 dealt with impossible deadlines. Get stuff done on time is a way
                 of life for me.
-              </div>
+              </Paragraph>
             </div>
             <div className='item'>
               <div className='counter'>1200+</div>
-              <div className='title'>Github contributions.</div>
-              <div className='text paragraph'>
+              <Title itemTitle>Github contributions.</Title>
+              <Paragraph>
                 I love Git version control. And I show that love by contributing
                 daily to GitHub. Though, I keep my repositories private due to
                 secrecy agreements that I sign with my employers. Still, I have
                 some side projects that you can check in the Projects section.
-              </div>
+              </Paragraph>
             </div>
           </div>
         </div>

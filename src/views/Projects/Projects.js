@@ -4,9 +4,19 @@ import Image from '../../components/Image/Image';
 import ProjectsImage from '../../assets/images/04.png';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
+import Title from '../../components/Title/Title';
+import Paragraph from '../../components/Paragraph/Paragraph';
 
 const SProjects = styled.main`
   width: 100%;
+
+  .placeholder {
+    width: 100%;
+    background: ${({ theme }) => theme.colors.vein};
+    min-height: 300px;
+    display: flex;
+    margin-bottom: 2rem;
+  }
 `;
 
 const Projects = ({ pageTitle }) => {
@@ -38,14 +48,27 @@ const Projects = ({ pageTitle }) => {
           </div>
         </div>
         <div className='mid'>
-          <div className='upper'>
-            <small>Lorem.</small>
-            <h2>Lorem ipsum dolor sit amet consectetur.</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              unde deleniti ipsum ducimus pariatur eum quaerat est repellendus
-              adipisci sit? Modi laborum maiores est cumque?
-            </p>
+          <div className='section'>
+            <Title sectionTitle>
+              <div className='line-wrapper'>
+                <div className='line'>Every project listed</div>
+              </div>
+              <div className='line-wrapper'>
+                <div className='line'>below is selected carefully!</div>
+              </div>
+            </Title>
+            <Paragraph>
+              Every single project listed below, is selected carefully to
+              demonstrate a certain amount of skills, and is a personal project
+              that is built for the sake of this portfolio website, feel free to
+              check out the code on GitHub, or watch me build it on my YouTube
+              channel.
+            </Paragraph>
+          </div>
+          <div className='section'>
+            <div className='placeholder'></div>
+            <div className='placeholder'></div>
+            <div className='placeholder'></div>
           </div>
         </div>
       </Container>
