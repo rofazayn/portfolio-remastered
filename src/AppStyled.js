@@ -6,22 +6,6 @@ const SApp = styled.div`
   position: relative;
   z-index: 1;
 
-  .title {
-    font-size: 2.5rem;
-    @media (max-width: 1200px) {
-      font-size: 2.4rem;
-    }
-    @media (max-width: 992px) {
-      font-size: 2.3rem;
-    }
-    @media (max-width: 768px) {
-      font-size: 2.2rem;
-    }
-    @media (max-width: 576px) {
-      font-size: 1.8rem;
-    }
-  }
-
   .page-title {
       font-size: 1rem;
     font-weight: 900;
@@ -34,29 +18,6 @@ const SApp = styled.div`
     @media (max-width: 768px) {
       font-size: 0.8rem;
       margin-bottom: 1rem;
-    }
-  }
-
-  .paragraph {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    max-width: 450px;
-    @media (max-width: 1200px) {
-      font-size: 1.05rem;
-    }
-    @media (max-width: 992px) {
-      font-size: 1rem;
-    }
-    @media (max-width: 768px) {
-      font-size: 0.95rem;
-    }
-    @media (max-width: 576px) {
-      font-size: 0.9rem;
     }
   }
 

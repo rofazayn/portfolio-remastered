@@ -10,8 +10,7 @@ const SProjects = styled.main`
 `;
 
 const Projects = ({ pageTitle }) => {
-  const line1 = `Hmm
-  .. projects?`;
+  const line1 = `Hmm.. projects?`;
   const line2 = `I have done plenty!`;
   const paragraph = `I delivered more than 50 projects to individuals, startups, small businesses and even established companies, below are some side projects as demonstations of my skills.`;
   const buttonText = `Check out my resume`;
@@ -36,6 +35,17 @@ const Projects = ({ pageTitle }) => {
           </div>
           <div className='section'>
             <Image src={ProjectsImage} />
+          </div>
+        </div>
+        <div className='mid'>
+          <div className='upper'>
+            <small>Lorem.</small>
+            <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              unde deleniti ipsum ducimus pariatur eum quaerat est repellendus
+              adipisci sit? Modi laborum maiores est cumque?
+            </p>
           </div>
         </div>
       </Container>
