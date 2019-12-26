@@ -6,6 +6,8 @@ const SContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 4rem;
+  overflow: hidden;
+  /* height: 100%; */
   @media (max-width: 1200px) {
     max-width: 992px;
   }

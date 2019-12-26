@@ -30,7 +30,7 @@ const Menu = ({ toggler }) => {
       staggerTextHide(line1, line2, line3, line4, line5);
       staggerMenuHide(reveal2, reveal1);
       // Set menu to display none
-      gsap.to(myMenu, { duration: 1.5, css: { display: 'none' } });
+      gsap.to(myMenu, { delay: 1.5, css: { display: 'none' } });
     } else if (
       toggler.isClicked === true ||
       (toggler.isClicked === true && toggler.initial === null)

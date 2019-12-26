@@ -2,7 +2,8 @@ import uiTypes from '../types/ui.types';
 
 const initialUiState = {
   isLoading: true,
-  isDarkTheme: false
+  isDarkTheme: false,
+  pageHeight: '2000px'
 };
 
 export const uiReducer = (state = initialUiState, { type, payload }) => {
@@ -16,6 +17,11 @@ export const uiReducer = (state = initialUiState, { type, payload }) => {
       return {
         ...state,
         isDarkTheme: !state.isDarkTheme
+      };
+    case uiTypes.SET_WRAPPER_HEIGHT:
+      return {
+        ...state,
+        pageHeight: payload
       };
     default:
       return state;

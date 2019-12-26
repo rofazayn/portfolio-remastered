@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 const SButton = styled.div`
   position: relative;
-  /* overflow: hidden; */
-  /* opacity: 0; */
   .background-layer {
     position: absolute;
     top: 0;

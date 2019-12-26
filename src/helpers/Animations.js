@@ -107,7 +107,6 @@ export const revealParagraph = paragraph => {
 
 export const revealImage = (background1, background2, image) => {
   gsap.to([background1.parentElement], {
-    opacity: 1,
     duration: 1.1,
     ease: 'power3.inOut'
   });
@@ -131,7 +130,6 @@ export const revealImage = (background1, background2, image) => {
 export const revealButtons = background => {
   if (background) {
     gsap.from([background.parentElement], {
-      opacity: 0,
       duration: 1.1,
       ease: 'power3.inOut'
     });

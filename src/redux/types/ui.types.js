@@ -1,6 +1,7 @@
 const uiTypes = {
   SET_IS_LOADING: 'SET_IS_LOADING',
-  TOGGLE_THEME: 'TOGGLE_THEME'
+  TOGGLE_THEME: 'TOGGLE_THEME',
+  SET_WRAPPER_HEIGHT: 'SET_WRAPPER_HEIGHT'
 };
 
 export default uiTypes;

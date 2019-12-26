@@ -8,3 +8,8 @@ export const setLoading = loading => ({
 export const toggleTheme = () => ({
   type: uiTypes.TOGGLE_THEME
 });
+
+export const setWrapperHeight = height => ({
+  type: uiTypes.SET_WRAPPER_HEIGHT,
+  payload: height
+});

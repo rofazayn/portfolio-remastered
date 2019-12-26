@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import Image from '../../components/Image/Image';
 import homeImage from '../../assets/images/03.png';
@@ -7,10 +7,10 @@ import Hero from '../../components/Hero/Hero';
 import Paragraph from '../../components/Paragraph/Paragraph';
 import Title from '../../components/Title/Title';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setWrapperHeight } from '../../redux/actions/ui.actions';
 
 const SHome = styled.div`
-  width: 100%;
-
   .mid {
     padding-bottom: 200px;
     @media (max-width: 768px) {
@@ -67,11 +67,20 @@ const Home = ({ pageTitle }) => {
   const buttonText = `See some stuff I built`;
 
   useEffect(() => {
-    document.title = `rofazayn | ${pageTitle}`;
+    document.title = ` ${pageTitle} · Rofazayn`;
+  });
+
+  const dispatch = useDispatch();
+
+  // Calculate page height
+  let page = useRef(null);
+
+  useEffect(() => {
+    dispatch(setWrapperHeight(page.clientHeight));
   });
 
   return (
-    <SHome className='page'>
+    <SHome ref={el => (page = el)} className='page'>
       <Container>
         <div className='top'>
           <div className='section'>
@@ -89,7 +98,7 @@ const Home = ({ pageTitle }) => {
           </div>
         </div>
         <div className='mid'>
-          <Title pageTitle>About</Title>
+          <Title pageTitle>About.</Title>
           <div className='about'>
             <div className='item'>
               <div className='counter'>9+</div>

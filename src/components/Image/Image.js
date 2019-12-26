@@ -8,7 +8,6 @@ const SImage = styled.div`
   background: ${({ theme }) => theme.colors.background};
   position: relative;
   overflow: hidden;
-  opacity: 0;
   display: flex;
   @media (max-width: 768px) {
     margin-bottom: 1.5rem;

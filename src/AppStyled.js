@@ -43,6 +43,13 @@ const SApp = styled.div`
   .section {
     width: 100%;
   }
+  .page {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
 `;
 
 export default SApp;
