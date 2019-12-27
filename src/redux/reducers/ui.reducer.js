@@ -3,7 +3,7 @@ import uiTypes from '../types/ui.types';
 const initialUiState = {
   isLoading: true,
   isDarkTheme: false,
-  pageHeight: '100vh'
+  pageHeight: '1000px'
 };
 
 export const uiReducer = (state = initialUiState, { type, payload }) => {

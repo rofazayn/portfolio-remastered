@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Image from '../../components/Image/Image';
 import homeImage from '../../assets/images/03.png';
@@ -7,15 +7,9 @@ import Hero from '../../components/Hero/Hero';
 import Paragraph from '../../components/Paragraph/Paragraph';
 import Title from '../../components/Title/Title';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { setWrapperHeight } from '../../redux/actions/ui.actions';
 
 const SHome = styled.div`
   .mid {
-    padding-bottom: 200px;
-    @media (max-width: 768px) {
-      padding: 0;
-    }
     .about {
       display: grid;
       grid-column-gap: 6rem;
@@ -70,17 +64,8 @@ const Home = ({ pageTitle }) => {
     document.title = ` ${pageTitle} · Rofazayn`;
   });
 
-  const dispatch = useDispatch();
-
-  // Calculate page height
-  let page = useRef(null);
-
-  useEffect(() => {
-    dispatch(setWrapperHeight(page.clientHeight));
-  });
-
   return (
-    <SHome ref={el => (page = el)} className='page'>
+    <SHome>
       <Container>
         <div className='top'>
           <div className='section'>

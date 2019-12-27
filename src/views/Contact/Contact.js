@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Image from '../../components/Image/Image';
 import contactImage from '../../assets/images/06.png';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
-import { useDispatch } from 'react-redux';
-import { setWrapperHeight } from '../../redux/actions/ui.actions';
 
 const SContact = styled.main`
   width: 100%;
@@ -21,17 +19,8 @@ const Contact = ({ pageTitle }) => {
     document.title = ` ${pageTitle} · Rofazayn`;
   });
 
-  const dispatch = useDispatch();
-
-  // Calculate page height
-  let page = useRef(null);
-
-  useEffect(() => {
-    dispatch(setWrapperHeight(page.clientHeight));
-  });
-
   return (
-    <SContact ref={el => (page = el)} className='page'>
+    <SContact>
       <Container>
         <div className='top'>
           <div className='section'>

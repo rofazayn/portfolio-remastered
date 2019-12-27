@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Image from '../../components/Image/Image';
 import hireImage from '../../assets/images/09.png';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
-import { setWrapperHeight } from '../../redux/actions/ui.actions';
-import { useDispatch } from 'react-redux';
 
 const SHire = styled.main`
   /* width: 100%; */
@@ -21,17 +19,8 @@ const Hire = ({ pageTitle }) => {
     document.title = ` ${pageTitle} · Rofazayn`;
   });
 
-  const dispatch = useDispatch();
-
-  // Calculate page height
-  let page = useRef(null);
-
-  useEffect(() => {
-    dispatch(setWrapperHeight(page.clientHeight));
-  });
-
   return (
-    <SHire ref={el => (page = el)} className='page'>
+    <SHire>
       <Container>
         <div className='top'>
           <div className='section'>

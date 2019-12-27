@@ -9,6 +9,7 @@ import { lightTheme, darkTheme } from './assets/theming/theme.js';
 import { useSelector } from 'react-redux';
 import SApp from './AppStyled.js';
 import routes from './helpers/routes.js';
+import Page from './components/Page/Page';
 
 function App({ history, location }) {
   // Set my app to visible
@@ -32,14 +33,16 @@ function App({ history, location }) {
       <SApp className='App'>
         <Navbar />
         <Wrapper>
-          <Switch>
-            {routes.map(({ name, path, Component }) => (
-              <Route path={path} exact key={name}>
-                <Component pageTitle={name} />
-              </Route>
-            ))}
-            <Redirect to='/' />
-          </Switch>
+          <Page>
+            <Switch>
+              {routes.map(({ name, path, Component }) => (
+                <Route path={path} exact key={name}>
+                  <Component pageTitle={name} />
+                </Route>
+              ))}
+              <Redirect to='/' />
+            </Switch>
+          </Page>
         </Wrapper>
         <Footer />
       </SApp>

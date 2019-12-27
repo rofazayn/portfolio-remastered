@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Image from '../../components/Image/Image';
 import ProjectsImage from '../../assets/images/04.png';
@@ -6,8 +6,6 @@ import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
 import Title from '../../components/Title/Title';
 import Paragraph from '../../components/Paragraph/Paragraph';
-import { setWrapperHeight } from '../../redux/actions/ui.actions';
-import { useDispatch } from 'react-redux';
 
 const SProjects = styled.main`
   width: 100%;
@@ -31,17 +29,8 @@ const Projects = ({ pageTitle }) => {
     document.title = ` ${pageTitle} · Rofazayn`;
   });
 
-  const dispatch = useDispatch();
-
-  // Calculate page height
-  let page = useRef(null);
-
-  useEffect(() => {
-    dispatch(setWrapperHeight(page.clientHeight));
-  });
-
   return (
-    <SProjects ref={el => (page = el)} className='page'>
+    <SProjects>
       <Container>
         <div className='top'>
           <div className='section'>
