@@ -9,7 +9,7 @@ import { lightTheme, darkTheme } from './assets/theming/theme.js';
 import { useSelector } from 'react-redux';
 import SApp from './AppStyled.js';
 import routes from './helpers/routes.js';
-import { useTransition, animated } from 'react-spring';
+import { useTransition, animated, config } from 'react-spring';
 
 function App({ history, location }) {
   // Set my app to visible
@@ -28,12 +28,12 @@ function App({ history, location }) {
 
   // Page transitions
   const transitions = useTransition(location, location => location.pathname, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-    config: {
-      duration: 700
-    }
+    from: { opacity: 0, transform: 'scale(0.5) translateY(-50%)' },
+    enter: { opacity: 1, transform: 'scale(1) translateY(0)' },
+    leave: { opacity: 0, transform: 'scale(0.5) translateY(50%)' },
+    config:
+      // duration: 1000,
+      config.slow
   });
 
   const isDarkTheme = useSelector(state => state.ui.isDarkTheme);
