@@ -19,7 +19,7 @@ export const staggerMenuHide = (...nodes) => {
   gsap.to([...nodes], {
     duration: 0.8,
     height: 0,
-    delay: 0.5,
+    delay: 0.2,
     ease: 'power3.inOut',
     stagger: {
       amount: 0.07
@@ -42,7 +42,7 @@ export const staggerTextReveal = (...nodes) => {
     opacity: 1,
     ease: 'power3.inOut',
     stagger: {
-      amount: 0.3
+      amount: 0.1
     }
   });
 };
@@ -84,7 +84,7 @@ export const revealHeadings = (...nodes) => {
   });
   gsap.from([...nodes], {
     duration: 1.4,
-    delay: 0.7,
+    delay: 0.3,
     ease: 'power3.out',
     y: 55,
     stagger: {
@@ -99,7 +99,7 @@ export const revealParagraph = paragraph => {
   });
   gsap.from(paragraph, {
     duration: 1.4,
-    delay: 0.9,
+    delay: 0.5,
     y: '100%',
     ease: 'power3.out'
   });
@@ -114,7 +114,7 @@ export const revealImage = (background1, background2, image) => {
     duration: 1.4,
     width: '0%',
     ease: 'power3.inOut',
-    delay: 1.3,
+    delay: 1,
     stagger: {
       amount: -0.09
     }
@@ -123,7 +123,7 @@ export const revealImage = (background1, background2, image) => {
     duration: 1.4,
     scale: 1.6,
     ease: 'power3.inOut',
-    delay: 1.5
+    delay: 1.2
   });
 };
 
@@ -138,7 +138,7 @@ export const revealButtons = background => {
     duration: 1.3,
     width: '0',
     ease: 'power3.inOut',
-    delay: 1.2,
+    delay: 0.8,
     stagger: {
       amount: -0.09
     }

@@ -30,13 +30,13 @@ const Menu = ({ toggler }) => {
       staggerTextHide(line1, line2, line3, line4, line5);
       staggerMenuHide(reveal2, reveal1);
       // Set menu to display none
-      gsap.to(myMenu, { delay: 1.5, css: { display: 'none' } });
+      gsap.to(myMenu, { delay: 0.98, css: { display: 'none' } });
     } else if (
       toggler.isClicked === true ||
       (toggler.isClicked === true && toggler.initial === null)
     ) {
       // Set menu to display block
-      gsap.to(myMenu, { duration: 0, css: { display: 'block' } });
+      gsap.set(myMenu, { css: { display: 'block' } });
       // Allow menu to have height of 100%
       gsap.to([reveal1, reveal2], {
         duration: 0,

@@ -134,10 +134,23 @@ const NavOptions = ({ history }) => {
           disabled={menuDisabled}
           onClick={handleMenuActions}
         >
-          {state.isMenuOpen ? (
-            <XIcon ref={element => (element = xIcon)} />
+          {!menuDisabled && state.isMenuOpen ? (
+            <XIcon ref={element => (element = xIcon)} style={{ opacity: 1 }} />
+          ) : menuDisabled && state.isMenuOpen ? (
+            <MenuIcon
+              ref={element => (element = menuIcon)}
+              style={{ opacity: 0 }}
+            />
+          ) : menuDisabled && !state.isMenuOpen ? (
+            <MenuIcon
+              ref={element => (element = menuIcon)}
+              style={{ opacity: 0 }}
+            />
           ) : (
-            <MenuIcon ref={element => (element = menuIcon)} />
+            <MenuIcon
+              ref={element => (element = menuIcon)}
+              style={{ opacity: 1 }}
+            />
           )}
         </button>
       </div>
