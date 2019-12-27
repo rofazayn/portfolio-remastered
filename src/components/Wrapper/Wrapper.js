@@ -7,6 +7,7 @@ const SWrapper = styled.div`
   position: relative;
   background: ${({ theme }) => theme.colors.background};
   overflow: hidden;
+  /* min-height: 100vh; */
   @media (max-width: 1200px) {
     padding-bottom: 180px;
   }
@@ -33,7 +34,10 @@ const Wrapper = ({ children, ...otherProps }) => {
   }, [pageHeight, location]);
 
   return (
-    <SWrapper {...otherProps} style={{ height: wrapperHeightUnits }}>
+    <SWrapper
+      {...otherProps}
+      style={{ height: wrapperHeightUnits, minHeight: '100vh' }}
+    >
       {children}
     </SWrapper>
   );
