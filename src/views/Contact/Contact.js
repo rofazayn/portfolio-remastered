@@ -29,7 +29,7 @@ const Contact = ({ pageTitle }) => {
               line1={line1}
               line2={line2}
               paragraph={paragraph}
-              buttonText={buttonText}
+              // buttonText={''}
               buttonPath={'/'}
             />
           </div>

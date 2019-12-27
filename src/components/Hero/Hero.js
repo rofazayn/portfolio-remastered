@@ -41,9 +41,13 @@ const Hero = ({
     } else {
       revealHeadings(heading1, heading2);
     }
-    revealParagraph(text);
-    revealButtons(button);
-  }, [heading1, heading2, text, button]);
+    if (paragraph) {
+      revealParagraph(text);
+    }
+    if (buttonText) {
+      revealButtons(button);
+    }
+  }, [paragraph, buttonText, heading1, heading2, text, button]);
 
   return (
     <SHero>
