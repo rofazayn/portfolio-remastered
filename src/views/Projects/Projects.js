@@ -83,6 +83,7 @@ const Projects = ({ pageTitle }) => {
             <div className='placeholder'></div>
             <div className='placeholder'></div>
             <div className='placeholder'></div>
+            <div className='placeholder'></div>
           </div>
         </div>
       </Container>

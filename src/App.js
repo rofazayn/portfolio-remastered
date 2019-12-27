@@ -9,7 +9,6 @@ import { lightTheme, darkTheme } from './assets/theming/theme.js';
 import { useSelector } from 'react-redux';
 import SApp from './AppStyled.js';
 import routes from './helpers/routes.js';
-import { useTransition, animated, config } from 'react-spring';
 
 function App({ history, location }) {
   // Set my app to visible
@@ -26,16 +25,6 @@ function App({ history, location }) {
     }
   }, [location, history]);
 
-  // Page transitions
-  const transitions = useTransition(location, location => location.pathname, {
-    from: { opacity: 0, transform: 'scale(0.5) translateY(-50%)' },
-    enter: { opacity: 1, transform: 'scale(1) translateY(0)' },
-    leave: { opacity: 0, transform: 'scale(0.5) translateY(50%)' },
-    config:
-      // duration: 1000,
-      config.slow
-  });
-
   const isDarkTheme = useSelector(state => state.ui.isDarkTheme);
 
   return (
@@ -43,18 +32,14 @@ function App({ history, location }) {
       <SApp className='App'>
         <Navbar />
         <Wrapper>
-          {transitions.map(({ item, props, key }) => (
-            <animated.div key={key} style={props}>
-              <Switch location={item}>
-                {routes.map(({ name, path, Component }) => (
-                  <Route path={path} exact key={name}>
-                    <Component pageTitle={name} />
-                  </Route>
-                ))}
-                <Redirect to='/' />
-              </Switch>
-            </animated.div>
-          ))}
+          <Switch>
+            {routes.map(({ name, path, Component }) => (
+              <Route path={path} exact key={name}>
+                <Component pageTitle={name} />
+              </Route>
+            ))}
+            <Redirect to='/' />
+          </Switch>
         </Wrapper>
         <Footer />
       </SApp>
