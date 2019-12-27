@@ -17,6 +17,9 @@ const SHero = styled.div`
   width: 100%;
   align-items: flex-start;
   justify-content: center;
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
 `;
 
 const Hero = ({
