@@ -42,9 +42,9 @@ const SImage = styled.div`
     }
     img {
       object-fit: cover;
-      /* width: calc((40vh + 40vw) / 2); */
-      width: 100%;
-      max-width: 600px;
+      width: calc((35vh + 35vw) / 1.7);
+      /* width: 100%; */
+      max-width: 500px;
       min-width: 256px;
     }
   }
