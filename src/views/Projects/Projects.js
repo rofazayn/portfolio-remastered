@@ -69,10 +69,6 @@ const Projects = ({ pageTitle }) => {
           <div className='section'>
             <div className='placeholder'></div>
             <div className='placeholder'></div>
-            <div className='placeholder'></div>
-            <div className='placeholder'></div>
-            <div className='placeholder'></div>
-            <div className='placeholder'></div>
           </div>
         </div>
       </Container>

@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 import SApp from './AppStyled.js';
 import routes from './helpers/routes.js';
 import Page from './components/Page/Page';
+import SmoothScroller from './components/SmoothScroller/SmoothScroller';
 
 function App({ history, location }) {
   // Set my app to visible
@@ -32,18 +33,20 @@ function App({ history, location }) {
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <SApp className='App'>
         <Navbar />
-        <Wrapper>
-          <Page>
-            <Switch>
-              {routes.map(({ name, path, Component }) => (
-                <Route path={path} exact key={name}>
-                  <Component pageTitle={name} />
-                </Route>
-              ))}
-              <Redirect to='/' />
-            </Switch>
-          </Page>
-        </Wrapper>
+        <SmoothScroller>
+          <Wrapper>
+            <Page>
+              <Switch>
+                {routes.map(({ name, path, Component }) => (
+                  <Route path={path} exact key={name}>
+                    <Component pageTitle={name} />
+                  </Route>
+                ))}
+                <Redirect to='/' />
+              </Switch>
+            </Page>
+          </Wrapper>
+        </SmoothScroller>
         <Footer />
       </SApp>
     </ThemeProvider>

@@ -5,6 +5,7 @@ import { revealImage } from '../../helpers/Animations';
 const SImage = styled.div`
   width: 100%;
   height: 100%;
+  min-height: 280px;
   background: ${({ theme }) => theme.colors.background};
   position: relative;
   overflow: hidden;
@@ -42,9 +43,11 @@ const SImage = styled.div`
     }
     img {
       object-fit: cover;
-      width: calc((35vh + 35vw) / 1.7);
-      /* width: 100%; */
-      max-width: 500px;
+      width: calc((40vh + 40vw) / 2);
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      max-width: 600px;
       min-width: 256px;
     }
   }

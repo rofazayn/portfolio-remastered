@@ -4,9 +4,9 @@ import styled from 'styled-components';
 // import { __RouterContext } from 'react-router-dom';
 
 const SWrapper = styled.div`
-  position: relative;
+  /* position: relative; */
   background: ${({ theme }) => theme.colors.background};
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 
 const Wrapper = ({ children, ...otherProps }) => {
