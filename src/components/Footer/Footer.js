@@ -4,10 +4,10 @@ import Status from '../Status/Status';
 import Social from '../Social/Social';
 
 const SFooter = styled.footer`
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100%; */
   /* height: 100%; */
   background: ${({ theme }) => theme.colors.background};
   .footer {

@@ -29,7 +29,7 @@ const SmoothScroller = ({ children }) => {
 
     if (resized) {
       let height = scroller.target.current.clientHeight;
-      body.style.height = height + 100 + 'px';
+      body.style.height = height + 'px';
       scroller.resizeRequest = 0;
     }
 

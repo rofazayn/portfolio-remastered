@@ -49,8 +49,8 @@ function App({ history, location }) {
               </Switch>
             </Page>
           </Wrapper>
+          <Footer />
         </SmoothScroller>
-        <Footer />
       </div>
     </ThemeProvider>
   );
