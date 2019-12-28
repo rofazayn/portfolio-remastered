@@ -64,6 +64,7 @@ const SmoothScroller = ({ children }) => {
       requestId = requestAnimationFrame(updateScroller);
     }
   };
+
   const onLoad = () => {
     updateScroller();
     window.focus();

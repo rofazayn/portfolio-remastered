@@ -44,6 +44,8 @@ const SImage = styled.div`
     img {
       object-fit: cover;
       width: calc((40vh + 40vw) / 2);
+      filter: ${({ theme }) => theme.imageBrightness};
+      transition: filter ease-in-out 400ms;
       @media (max-width: 768px) {
         width: 100%;
       }

@@ -31,6 +31,7 @@ function App({ history, location }) {
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      {/* <ThemeProvider theme={lightTheme}> */}
       <GlobalStyle />
 
       <div className='App'>

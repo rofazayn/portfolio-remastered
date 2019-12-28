@@ -6,7 +6,8 @@ export const darkTheme = {
     secondary: '#7d7d7d',
     background: 'black',
     neutral: 'black'
-  }
+  },
+  imageBrightness: 'brightness(2)'
 };
 
 export const lightTheme = {
@@ -17,5 +18,6 @@ export const lightTheme = {
     secondary: '#404040',
     background: '#f2fffb',
     neutral: 'black'
-  }
+  },
+  imageBrightness: 'brightness(1)'
 };
