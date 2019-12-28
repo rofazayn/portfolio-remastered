@@ -2,12 +2,12 @@ export const darkTheme = {
   colors: {
     vein: '#ace6d5',
     artery: '#63ad97',
-    primary: '#BDBBBC',
+    primary: '#e0e0e0',
     secondary: '#7d7d7d',
     background: 'black',
     neutral: 'black'
   },
-  imageBrightness: 'brightness(2)'
+  imageBrightness: 'brightness(2.5)'
 };
 
 export const lightTheme = {
