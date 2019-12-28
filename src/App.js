@@ -7,10 +7,10 @@ import Wrapper from './components/Wrapper/Wrapper';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './assets/theming/theme.js';
 import { useSelector } from 'react-redux';
-import SApp from './AppStyled.js';
 import routes from './helpers/routes.js';
 import Page from './components/Page/Page';
 import SmoothScroller from './components/SmoothScroller/SmoothScroller';
+import GlobalStyle from './helpers/GlobalStyles';
 
 function App({ history, location }) {
   // Set my app to visible
@@ -31,7 +31,9 @@ function App({ history, location }) {
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      <SApp className='App'>
+      <GlobalStyle />
+
+      <div className='App'>
         <Navbar />
         <SmoothScroller>
           <Wrapper>
@@ -48,7 +50,7 @@ function App({ history, location }) {
           </Wrapper>
         </SmoothScroller>
         <Footer />
-      </SApp>
+      </div>
     </ThemeProvider>
   );
 }
