@@ -8,7 +8,6 @@ const SmoothScroller = ({ children }) => {
   let scrollContainer = useRef(null);
 
   const scroller = {
-    // target: document.querySelector('#scroll-container'),
     target: scrollContainer,
     ease: 0.1, // <= scroll speed
     endY: 0,
@@ -28,8 +27,10 @@ const SmoothScroller = ({ children }) => {
     let resized = scroller.resizeRequest > 0;
 
     if (resized) {
-      let height = scroller.target.current.clientHeight;
-      body.style.height = height + 'px';
+      setTimeout(() => {
+        let height = scroller.target.current.clientHeight;
+        body.style.height = `${height}px`;
+      }, 500);
       scroller.resizeRequest = 0;
     }
 

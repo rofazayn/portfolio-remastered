@@ -67,6 +67,8 @@ const GlobalStyle = createGlobalStyle`
     .scroll-container {
       position: absolute;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
       z-index: 1;
       width: 100%;
       backface-visibility: hidden;

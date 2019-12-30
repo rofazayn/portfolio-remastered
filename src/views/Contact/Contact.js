@@ -10,9 +10,9 @@ const SContact = styled.main`
 `;
 
 const Contact = ({ pageTitle }) => {
-  const line1 = `Feel free to contact`;
-  const line2 = `me at anytime.`;
-  const paragraph = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`;
+  const line1 = `Want to reach out?`;
+  const line2 = `Send me an email.`;
+  const paragraph = `Looking to hire? or you are just interested in what I do? Awesome, feel free to fill in the form down below in order to contact me, and don't worry, I'll be quick to reply!`;
   // const buttonText = `Back to the homepage`;
 
   useEffect(() => {
