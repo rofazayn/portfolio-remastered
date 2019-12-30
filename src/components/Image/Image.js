@@ -48,7 +48,7 @@ const SImage = styled.div`
       @media (max-width: 768px) {
         width: 100%;
       }
-      max-width: 600px;
+      max-width: 500px;
       min-width: 256px;
     }
   }

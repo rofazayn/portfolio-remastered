@@ -11,12 +11,16 @@ import routes from './helpers/routes.js';
 import Page from './components/Page/Page';
 import SmoothScroller from './components/SmoothScroller/SmoothScroller';
 import GlobalStyle from './helpers/GlobalStyles';
+import kursor from 'kursor';
 
 function App({ history, location }) {
   // Set my app to visible
   useEffect(() => {
     gsap.set('.App', {
       visibility: 'visible'
+    });
+    new kursor({
+      type: 1
     });
   });
 
