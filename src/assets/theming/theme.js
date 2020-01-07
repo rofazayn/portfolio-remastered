@@ -7,7 +7,7 @@ export const darkTheme = {
     background: 'black',
     neutral: 'black'
   },
-  imageBrightness: 'brightness(2.5)'
+  imageBrightness: 'brightness(2)'
 };
 
 export const lightTheme = {
