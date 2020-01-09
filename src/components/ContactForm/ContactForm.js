@@ -18,7 +18,6 @@ const ContactForm = props => {
           name='name'
           type='text'
           label='Your name'
-          autoFocus={true}
           autoComplete='off'
         />
         <TextField
