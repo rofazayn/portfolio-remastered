@@ -116,7 +116,7 @@ const NavOptions = ({ history }) => {
 
   return (
     <SNavOptions>
-      <NavLink to='/resume' className='resume-button'>
+      {/* <NavLink to='/resume' className='resume-button'>
         <Button navButton>
           <div className='icon'>
             <SquareIcon />
@@ -124,7 +124,7 @@ const NavOptions = ({ history }) => {
           Resume
         </Button>
       </NavLink>
-      <Divider />
+      <Divider /> */}
       <div className='icons'>
         <div className='icon' onClick={() => handleThemeToggle()}>
           {isDarkTheme ? <SunIcon /> : <MoonIcon />}

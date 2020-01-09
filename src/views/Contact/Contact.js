@@ -13,8 +13,8 @@ const SContact = styled.main`
 const Contact = ({ pageTitle }) => {
   const line1 = `Reach me out?`;
   const line2 = `Send me an email.`;
-  const paragraph = `Looking to hire? or you are just interested in what I do? Awesome, feel free to fill in the form down below in order to contact me, and don't worry, I'll be quick to reply!`;
-  // const buttonText = `Back to the homepage`;
+  const paragraph = `Looking to hire? or you are just interested in what I do? Awesome, feel free to contact me by filling the form below, I typically within a day, if I don't then please be patient.`;
+  const buttonText = `Back to the homepage`;
 
   useEffect(() => {
     document.title = ` ${pageTitle} · Rofazayn`;
@@ -30,7 +30,7 @@ const Contact = ({ pageTitle }) => {
               line1={line1}
               line2={line2}
               paragraph={paragraph}
-              // buttonText={''}
+              buttonText={buttonText}
               buttonPath={'/'}
             />
           </div>
