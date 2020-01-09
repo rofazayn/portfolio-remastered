@@ -25,6 +25,11 @@ const SPage = styled.div`
     @media (max-width: 768px) {
       flex-direction: column-reverse;
     }
+    &.--no-reverse {
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
     .section {
       width: 100%;
     }

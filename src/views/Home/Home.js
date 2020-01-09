@@ -86,7 +86,7 @@ const Home = ({ pageTitle }) => {
           <Title pageTitle>About.</Title>
           <div className='about'>
             <div className='item'>
-              <div className='counter'>9+</div>
+              <div className='counter'>3+</div>
               <Title itemTitle>Years' experience.</Title>
               <Paragraph>
                 In 2010, I wrote my first HTML line. In 2011 I joined codecademy

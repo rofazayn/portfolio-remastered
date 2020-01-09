@@ -5,12 +5,14 @@ import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import Wrapper from './components/Wrapper/Wrapper';
 import { ThemeProvider } from 'styled-components';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles';
 import { lightTheme, darkTheme } from './assets/theming/theme.js';
 import { useSelector } from 'react-redux';
 import routes from './helpers/routes.js';
 import Page from './components/Page/Page';
 import SmoothScroller from './components/SmoothScroller/SmoothScroller';
 import GlobalStyle from './helpers/GlobalStyles';
+import { muiThemeDark, muiThemeLight } from './assets/theming/muiTheme';
 
 function App({ history, location }) {
   // Set my app to visible
@@ -31,27 +33,28 @@ function App({ history, location }) {
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      {/* <ThemeProvider theme={lightTheme}> */}
-      <GlobalStyle />
+      <MuiThemeProvider theme={isDarkTheme ? muiThemeDark : muiThemeLight}>
+        <GlobalStyle />
 
-      <div className='App'>
-        <Navbar />
-        <SmoothScroller>
-          <Wrapper>
-            <Page>
-              <Switch>
-                {routes.map(({ name, path, Component }) => (
-                  <Route path={path} exact key={name}>
-                    <Component pageTitle={name} />
-                  </Route>
-                ))}
-                <Redirect to='/' />
-              </Switch>
-            </Page>
-          </Wrapper>
-          <Footer />
-        </SmoothScroller>
-      </div>
+        <div className='App'>
+          <Navbar />
+          <SmoothScroller>
+            <Wrapper>
+              <Page>
+                <Switch>
+                  {routes.map(({ name, path, Component }) => (
+                    <Route path={path} exact key={name}>
+                      <Component pageTitle={name} />
+                    </Route>
+                  ))}
+                  <Redirect to='/' />
+                </Switch>
+              </Page>
+            </Wrapper>
+            <Footer />
+          </SmoothScroller>
+        </div>
+      </MuiThemeProvider>
     </ThemeProvider>
   );
 }

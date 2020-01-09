@@ -4,13 +4,14 @@ import Image from '../../components/Image/Image';
 import contactImage from '../../assets/images/06.png';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
+import ContactForm from '../../components/ContactForm/ContactForm';
 
 const SContact = styled.main`
   width: 100%;
 `;
 
 const Contact = ({ pageTitle }) => {
-  const line1 = `Want to reach out?`;
+  const line1 = `Reach me out?`;
   const line2 = `Send me an email.`;
   const paragraph = `Looking to hire? or you are just interested in what I do? Awesome, feel free to fill in the form down below in order to contact me, and don't worry, I'll be quick to reply!`;
   // const buttonText = `Back to the homepage`;
@@ -22,7 +23,7 @@ const Contact = ({ pageTitle }) => {
   return (
     <SContact>
       <Container>
-        <div className='top'>
+        <div className='top --no-reverse'>
           <div className='section'>
             <Hero
               pageTitle={pageTitle + '.'}
@@ -34,7 +35,7 @@ const Contact = ({ pageTitle }) => {
             />
           </div>
           <div className='section'>
-            <Image src={contactImage} />
+            <ContactForm />
           </div>
         </div>
       </Container>
