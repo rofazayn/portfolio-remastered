@@ -13,7 +13,7 @@ const SContact = styled.main`
 const Contact = ({ pageTitle }) => {
   const line1 = `Get in touch..`;
   const line2 = `Send me an email.`;
-  const paragraph = `Looking to hire? or you are just interested in what I do? Awesome, feel free to contact me by filling the form below, I typically within a day, if I don't then please be patient.`;
+  const paragraph = `Looking to hire? or you're just interested in what I do? Awesome, feel free to contact me by filling the form, I typically reply within a day, so please be patient.`;
   // const buttonText = `Back to the homepage`;
   const extra = `Or contact me via Twitter, you can find me by clicking on the twitter icon down there in the footer section.`;
 
