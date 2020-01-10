@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const SPage = styled.div`
   position: relative;
   width: 100%;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
   overflow: hidden;
 
   .top {
@@ -43,6 +43,7 @@ const SPage = styled.div`
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    padding-bottom: 5rem;
   }
   .section {
     width: 100%;
