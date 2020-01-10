@@ -38,21 +38,19 @@ function App({ history, location }) {
 
         <div className='App'>
           <Navbar />
-          <SmoothScroller>
-            <Wrapper>
-              <Page>
-                <Switch>
-                  {routes.map(({ name, path, Component }) => (
-                    <Route path={path} exact key={name}>
-                      <Component pageTitle={name} />
-                    </Route>
-                  ))}
-                  <Redirect to='/' />
-                </Switch>
-              </Page>
-            </Wrapper>
-            <Footer />
-          </SmoothScroller>
+          <Wrapper>
+            <Page>
+              <Switch>
+                {routes.map(({ name, path, Component }) => (
+                  <Route path={path} exact key={name}>
+                    <Component pageTitle={name} />
+                  </Route>
+                ))}
+                <Redirect to='/' />
+              </Switch>
+            </Page>
+          </Wrapper>
+          <Footer />
         </div>
       </MuiThemeProvider>
     </ThemeProvider>

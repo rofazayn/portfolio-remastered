@@ -26,7 +26,7 @@ const SHero = styled.div`
     /* text-decoration: underline; */
     max-width: 240px;
     line-height: 1.5;
-    margin-top: 3rem;
+    margin-top: 1rem;
     color: ${({ theme }) => theme.colors.primary};
     overflow: hidden;
     @media (max-width: 768px) {
