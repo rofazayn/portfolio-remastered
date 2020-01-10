@@ -20,6 +20,19 @@ const SHero = styled.div`
   @media (max-width: 768px) {
     margin-top: 2rem;
   }
+  .extra {
+    display: flex;
+    font-weight: 900;
+    /* text-decoration: underline; */
+    max-width: 240px;
+    line-height: 1.5;
+    margin-top: 3rem;
+    color: ${({ theme }) => theme.colors.primary};
+    overflow: hidden;
+    @media (max-width: 768px) {
+      margin-top: 1rem;
+    }
+  }
 `;
 
 const Hero = ({
@@ -28,7 +41,8 @@ const Hero = ({
   line2,
   paragraph,
   buttonText,
-  buttonPath
+  buttonPath,
+  extra
 }) => {
   let heading1 = useRef(null);
   let heading2 = useRef(null);
@@ -83,6 +97,7 @@ const Hero = ({
           </Link>
         </>
       )}
+      {extra && <small className='extra'>{extra}</small>}
     </SHero>
   );
 };

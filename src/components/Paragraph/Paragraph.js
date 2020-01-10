@@ -41,8 +41,8 @@ const SParagraph = styled.div`
   }
 `;
 
-const Paragraph = ({ children }) => {
-  return <SParagraph>{children}</SParagraph>;
+const Paragraph = ({ children, ...otherProps }) => {
+  return <SParagraph {...otherProps}>{children}</SParagraph>;
 };
 
 export default Paragraph;

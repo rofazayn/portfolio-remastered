@@ -15,6 +15,7 @@ const Contact = ({ pageTitle }) => {
   const line2 = `Send me an email.`;
   const paragraph = `Looking to hire? or you are just interested in what I do? Awesome, feel free to contact me by filling the form below, I typically within a day, if I don't then please be patient.`;
   // const buttonText = `Back to the homepage`;
+  const extra = `Or contact me via Twitter, you can find me by clicking on the twitter icon down there in the footer section.`;
 
   useEffect(() => {
     document.title = ` ${pageTitle} · Rofazayn`;
@@ -32,6 +33,7 @@ const Contact = ({ pageTitle }) => {
               paragraph={paragraph}
               buttonText={''}
               buttonPath={'/'}
+              extra={extra}
             />
           </div>
           <div className='section'>
