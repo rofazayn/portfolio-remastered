@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Divider from '../Divider/Divider';
 import { ReactComponent as GithubIcon } from '../../assets/icons/github.svg';
 import { ReactComponent as LinkedInIcon } from '../../assets/icons/linkedin.svg';
+import { ReactComponent as TwitterIcon } from '../../assets/icons/twitter.svg';
 
 const SSocial = styled.div`
   display: flex;
@@ -57,6 +58,14 @@ const Social = () => {
           className='icon'
         >
           <GithubIcon />
+        </a>
+        <a
+          href='https://twitter.com/rofazayn'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='icon'
+        >
+          <TwitterIcon />
         </a>
         <a
           href='https://www.linkedin.com/in/abderraouf-zine-906642192/'
