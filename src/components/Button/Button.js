@@ -70,7 +70,9 @@ const Button = React.forwardRef((props, ref) => {
       {props.navButton ? null : (
         <div className='background-layer' ref={ref}></div>
       )}
-      <div className='button-layer'>{props.children}</div>
+      <button className='button-layer' {...props}>
+        {props.children}
+      </button>
     </SButton>
   );
 });
