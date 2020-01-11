@@ -5,6 +5,7 @@ import ContactFormStyled from './ContactFormStyled';
 import Button from '../Button/Button';
 import { revealButtons } from '../../helpers/Animations';
 import emailjs from 'emailjs-com';
+import * as Yup from 'yup';
 
 const ContactForm = () => {
   let button = useRef();
@@ -13,15 +14,6 @@ const ContactForm = () => {
     revealButtons(button.current);
   }, [button]);
 
-  // const templateParams = {
-  //   name: 'Bobby',
-  //   subject: 'Sorry baws',
-  //   message:
-  //     'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo minima fugiat exercitationem temporibus. Recusandae harum molestiae aspernatur tenetur quasi quae! Amet eum officiis in! Totam voluptatum, cum corrupti ab atque molestiae nulla perspiciatis distinctio dignissimos nobis consequatur magni hic voluptates dolore libero autem odio quis corporis itaque. Facilis illo corrupti quam rem, voluptatibus vel voluptate autem perferendis aperiam sapiente, quae ratione error ut possimus commodi libero qui consequuntur laudantium est a, reiciendis vitae modi non quasi? Adipisci, aperiam quidem. Magnam.',
-  //   from_email: 'enizarboy@gmail.com',
-  //   reply_to: 'enizarboy@gmail.com'
-  // };
-
   const initialValues = {
     email: '',
     name: '',
@@ -29,10 +21,29 @@ const ContactForm = () => {
     message: ''
   };
 
+  const validationSchema = Yup.object().shape({
+    email: Yup.string()
+      .email('Please make sure you entered a valid email!')
+      .required('I need your email so I can reply to you!'),
+    name: Yup.string()
+      .min(2, 'Please enter a correct full name.')
+      .max(50, 'This name is too long!')
+      .required('Please enter your name!'),
+    subject: Yup.string()
+      .min(2, 'The email subject is too short!')
+      .max(100, 'The email subject is too long!')
+      .required('The subject is a required field!'),
+    message: Yup.string()
+      .min(20, 'Your message should be at least 20 characters long!')
+      .max(2000, 'Your message must be less than 2000 characters long!')
+      .required('The message field is required!')
+  });
+
   return (
     <ContactFormStyled>
       <Formik
         initialValues={initialValues}
+        validationSchema={validationSchema}
         onSubmit={values => {
           console.log('submitting');
           emailjs
@@ -58,7 +69,14 @@ const ContactForm = () => {
             );
         }}
       >
-        {({ values, handleChange, handleBlur, handleSubmit }) => (
+        {({
+          values,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          touched,
+          errors
+        }) => (
           <form onSubmit={handleSubmit}>
             <TextField
               variant='filled'
@@ -69,6 +87,8 @@ const ContactForm = () => {
               value={values.name}
               onChange={handleChange}
               onBlur={handleBlur}
+              error={touched.name && errors.name ? true : false}
+              helperText={touched.name && errors.name ? errors.name : ''}
             />
             <TextField
               variant='filled'
@@ -79,6 +99,8 @@ const ContactForm = () => {
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
+              error={touched.email && errors.email ? true : false}
+              helperText={touched.email && errors.email ? errors.email : ''}
             />
             <TextField
               variant='filled'
@@ -89,6 +111,10 @@ const ContactForm = () => {
               value={values.subject}
               onChange={handleChange}
               onBlur={handleBlur}
+              error={touched.subject && errors.subject ? true : false}
+              helperText={
+                touched.subject && errors.subject ? errors.subject : ''
+              }
             />
             <TextField
               variant='filled'
@@ -100,6 +126,10 @@ const ContactForm = () => {
               value={values.message}
               onChange={handleChange}
               onBlur={handleBlur}
+              error={touched.message && errors.message ? true : false}
+              helperText={
+                touched.message && errors.message ? errors.message : ''
+              }
             />
             <Button ref={button} type='submit'>
               Send
