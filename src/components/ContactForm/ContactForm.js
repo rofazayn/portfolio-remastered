@@ -1,19 +1,19 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Formik } from 'formik';
-import { TextField } from '@material-ui/core';
+import {
+  TextField,
+  Button,
+  CircularProgress,
+  Snackbar
+} from '@material-ui/core';
 import ContactFormStyled from './ContactFormStyled';
-import Button from '../Button/Button';
-import { revealButtons } from '../../helpers/Animations';
+import { ReactComponent as SendIcon } from '../../assets/icons/send.svg';
+import { ReactComponent as CheckIcon } from '../../assets/icons/check.svg';
+import { ReactComponent as AlertIcon } from '../../assets/icons/alert-triangle.svg';
 import emailjs from 'emailjs-com';
 import * as Yup from 'yup';
 
 const ContactForm = () => {
-  let button = useRef();
-
-  useEffect(() => {
-    revealButtons(button.current);
-  }, [button]);
-
   const initialValues = {
     email: '',
     name: '',
@@ -39,13 +39,24 @@ const ContactForm = () => {
       .required('The message field is required!')
   });
 
+  const [open, setOpen] = useState(false);
+  const [openError, setOpenError] = useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+    setOpenError(false);
+  };
+
   return (
     <ContactFormStyled>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={values => {
-          console.log('submitting');
+        onSubmit={(values, { setSubmitting, resetForm }) => {
           emailjs
             .send(
               'gmail',
@@ -61,10 +72,13 @@ const ContactForm = () => {
             )
             .then(
               result => {
-                console.log(result.text);
+                setSubmitting(false);
+                resetForm();
+                setOpen(true);
               },
               error => {
-                console.log(error.text);
+                setOpenError(true);
+                setSubmitting(false);
               }
             );
         }}
@@ -75,7 +89,8 @@ const ContactForm = () => {
           handleBlur,
           handleSubmit,
           touched,
-          errors
+          errors,
+          isSubmitting
         }) => (
           <form onSubmit={handleSubmit}>
             <TextField
@@ -131,12 +146,48 @@ const ContactForm = () => {
                 touched.message && errors.message ? errors.message : ''
               }
             />
-            <Button ref={button} type='submit'>
+            <Button
+              variant='contained'
+              color='secondary'
+              className='contact-button'
+              type='submit'
+              endIcon={
+                isSubmitting ? (
+                  <CircularProgress size={20} />
+                ) : (
+                  <SendIcon width='20px' />
+                )
+              }
+            >
               Send
             </Button>
           </form>
         )}
       </Formik>
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center'
+        }}
+        open={open}
+        autoHideDuration={4000}
+        message='Email sent successfuly!'
+        action={<CheckIcon width='20px' />}
+        onClose={handleClose}
+        className='success-message'
+      />
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center'
+        }}
+        open={openError}
+        autoHideDuration={4000}
+        message='Failed to send email!'
+        action={<AlertIcon width='20px' />}
+        onClose={handleClose}
+        className='error-message'
+      />
     </ContactFormStyled>
   );
 };

@@ -2,11 +2,14 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 export const muiThemeLight = createMuiTheme({
   typography: {
-    fontFamily: 'Alegreya, Lato'
+    fontFamily: 'Lato'
   },
   palette: {
     primary: {
       main: '#63ad97'
+    },
+    secondary: {
+      main: '#ace6d5'
     },
     type: 'light'
   }
@@ -14,11 +17,14 @@ export const muiThemeLight = createMuiTheme({
 
 export const muiThemeDark = createMuiTheme({
   typography: {
-    fontFamily: 'Alegreya, Lato'
+    fontFamily: 'Lato'
   },
   palette: {
     primary: {
       main: '#63ad97'
+    },
+    secondary: {
+      main: '#ace6d5'
     },
     type: 'dark'
   }

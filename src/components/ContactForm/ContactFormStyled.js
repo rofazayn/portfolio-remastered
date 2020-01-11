@@ -11,6 +11,19 @@ const ContactFormStyled = styled.div`
   form {
     display: grid;
     grid-gap: 1rem;
+    .contact-button {
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .success-message > div {
+    background: green;
+    color: white;
+  }
+  .error-message > div {
+    background: red;
+    color: white;
   }
 `;
 
