@@ -23,6 +23,8 @@ const Menu = ({ toggler }) => {
     line4 = useRef(null),
     line5 = useRef(null);
 
+  let html = document.querySelector('#html-element');
+
   useEffect(() => {
     // If the menu is open and we click the menu button to close it.
     if (toggler.isClicked === false) {
@@ -31,6 +33,8 @@ const Menu = ({ toggler }) => {
       staggerMenuHide(reveal2, reveal1);
       // Set menu to display none
       gsap.to(myMenu, { delay: 0.98, css: { display: 'none' } });
+
+      html.classList.remove('no-sroll');
     } else if (
       toggler.isClicked === true ||
       (toggler.isClicked === true && toggler.initial === null)
@@ -45,8 +49,9 @@ const Menu = ({ toggler }) => {
       });
       staggerMenuReveal(reveal1, reveal2);
       staggerTextReveal(line1, line2, line3, line4, line5);
+      html.classList.add('no-sroll');
     }
-  }, [toggler]);
+  }, [toggler, html]);
 
   return (
     <SMenu ref={el => (myMenu = el)}>

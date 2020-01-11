@@ -10,6 +10,7 @@ const SNavbar = styled.nav`
   left: 0;
   width: 100%;
   background: ${({ theme }) => theme.colors.background};
+  transition: all ease 400ms;
   .navbar {
     padding: 1rem;
     display: flex;
@@ -21,8 +22,19 @@ const SNavbar = styled.nav`
 `;
 
 const Navbar = () => {
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById('navbar').style.top = '0';
+    } else {
+      document.getElementById('navbar').style.top = '-100px';
+    }
+    prevScrollpos = currentScrollPos;
+  };
+
   return (
-    <SNavbar>
+    <SNavbar id='navbar'>
       <div className='navbar'>
         <Logo />
         {/* <Pagination /> */}

@@ -14,10 +14,15 @@ const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    min-height: 100%;
+    /* min-height: 100%; */
     overflow-x: hidden;
     background: ${({ theme }) => theme.colors.background};
     /* scroll-behavior: smooth; */
+  }
+
+  .no-sroll {
+      overflow: hidden;
+      height: 100%;
   }
 
   #root {
