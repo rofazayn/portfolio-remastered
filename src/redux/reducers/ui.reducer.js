@@ -2,7 +2,7 @@ import uiTypes from '../types/ui.types';
 
 const initialUiState = {
   isLoading: true,
-  isDarkTheme: true,
+  isDarkTheme: false,
   pageHeight: '1000px'
 };
 

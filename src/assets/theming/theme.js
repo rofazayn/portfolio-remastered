@@ -1,23 +1,24 @@
+export const lightTheme = {
+  colors: {
+    vein: '#FF0055',
+    artery: '#FF3377',
+    primary: 'black',
+    secondary: '#545454',
+    background: 'white',
+    neutral: 'white'
+  },
+  imageBrightness: 'brightness(1)'
+};
+
 export const darkTheme = {
   colors: {
-    vein: '#ace6d5',
-    artery: '#63ad97',
-    primary: '#e0e0e0',
-    secondary: '#7d7d7d',
+    vein: '#FF4491',
+    artery: '#FF77AF',
+
+    primary: 'white',
+    secondary: '#adadad',
     background: 'black',
     neutral: 'black'
   },
   imageBrightness: 'brightness(2)'
-};
-
-export const lightTheme = {
-  colors: {
-    vein: '#ace6d5',
-    artery: '#63ad97',
-    primary: '#231F20',
-    secondary: '#404040',
-    background: '#f2fffb',
-    neutral: 'black'
-  },
-  imageBrightness: 'brightness(1)'
 };

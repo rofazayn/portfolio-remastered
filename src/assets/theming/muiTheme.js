@@ -6,10 +6,10 @@ export const muiThemeLight = createMuiTheme({
   },
   palette: {
     primary: {
-      main: '#63ad97'
+      main: '#FF0055'
     },
     secondary: {
-      main: '#ace6d5'
+      main: '#FF3377'
     },
     type: 'light'
   }
@@ -21,10 +21,10 @@ export const muiThemeDark = createMuiTheme({
   },
   palette: {
     primary: {
-      main: '#63ad97'
+      main: '#FF4491'
     },
     secondary: {
-      main: '#ace6d5'
+      main: '#FF77AF'
     },
     type: 'dark'
   }

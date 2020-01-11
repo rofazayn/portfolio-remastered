@@ -11,7 +11,7 @@ const SButton = styled.div`
     width: 100%;
     height: 100%;
     z-index: 3;
-    background: ${({ theme }) => theme.colors.primary};
+    background: ${({ theme }) => theme.colors.vein};
   }
   .button-layer {
     white-space: nowrap;
