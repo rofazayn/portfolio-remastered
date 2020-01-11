@@ -22,7 +22,7 @@ const SNavbar = styled.nav`
 `;
 
 const Navbar = () => {
-  var prevScrollpos = window.pageYOffset;
+  var prevScrollpos = window.pageYOffset + 10;
   window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {

@@ -50,6 +50,8 @@ const NavOptions = ({ history }) => {
   let xIcon = useRef(null),
     menuIcon = useRef(null);
 
+  const [routeChanged, setRouteChanged] = useState(false);
+
   const [state, setState] = useState({
     initial: false,
     isClicked: null,
@@ -63,9 +65,14 @@ const NavOptions = ({ history }) => {
   useEffect(() => {
     history.listen(() => {
       setState({
+        initial: false,
         isClicked: false,
         isMenuOpen: false
       });
+      setRouteChanged(true);
+      setTimeout(() => {
+        setRouteChanged(false);
+      }, 1500);
     });
   });
 
@@ -131,7 +138,7 @@ const NavOptions = ({ history }) => {
         </div>
         <button
           className='icon'
-          disabled={menuDisabled}
+          disabled={menuDisabled || routeChanged}
           onClick={handleMenuActions}
         >
           {state.isMenuOpen ? (

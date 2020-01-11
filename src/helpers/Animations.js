@@ -49,7 +49,7 @@ export const staggerTextReveal = (...nodes) => {
 
 export const staggerTextHide = (...nodes) => {
   gsap.to([...nodes], {
-    duration: 0.8,
+    duration: 0.3,
     opacity: 0,
     ease: 'power3.inOut',
     stagger: {
