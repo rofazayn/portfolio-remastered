@@ -151,6 +151,7 @@ const ContactForm = () => {
               color='secondary'
               className='contact-button'
               type='submit'
+              disabled={isSubmitting}
               endIcon={
                 isSubmitting ? (
                   <CircularProgress size={20} />
