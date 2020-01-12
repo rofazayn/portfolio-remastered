@@ -2,11 +2,37 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Image from '../../components/Image/Image';
 import resumeImage from '../../assets/images/05.png';
+import profileImage from '../../assets/images/profile.jpg';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
+import Title from '../../components/Title/Title';
+import Paragraph from '../../components/Paragraph/Paragraph';
 
 const SResume = styled.div`
   width: 100%;
+  .about {
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
+    @media (max-width: 768px) {
+      align-items: fle-start;
+      flex-direction: column;
+    }
+
+    .item {
+      &:first-of-type {
+        margin-inline-end: 5rem;
+        @media (max-width: 768px) {
+          margin-inline-end: 0;
+          margin-block-end: 2rem;
+        }
+      }
+      img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
 `;
 
 const Resume = ({ pageTitle }) => {
@@ -35,6 +61,30 @@ const Resume = ({ pageTitle }) => {
           </div>
           <div className='section'>
             <Image src={resumeImage} />
+          </div>
+        </div>
+        <div className='mid'>
+          <div className='about'>
+            <div className='item'>
+              <img src={profileImage} />
+            </div>
+            <div className='item'>
+              <Title pageTitle>About me.</Title>
+              <Title sectionTitle>
+                <div className='line-wrapper'>
+                  <div className='line'>I'm Abderraouf..</div>
+                </div>
+                <div className='line-wrapper'>
+                  <div className='line'>You can call me Rofa.</div>
+                </div>
+              </Title>
+              <Paragraph>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Provident, cupiditate unde commodi temporibus ipsa quam soluta!
+                Repellendus, eaque possimus perspiciatis, quisquam suscipit
+                facilis impedit laboriosam eius, omnis adipisci nam rerum?
+              </Paragraph>
+            </div>
           </div>
         </div>
       </Container>
