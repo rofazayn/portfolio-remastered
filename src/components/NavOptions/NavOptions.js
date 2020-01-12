@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import Button from '../Button/Button';
-import { ReactComponent as SquareIcon } from '../../assets/icons/square.svg';
 import { ReactComponent as SunIcon } from '../../assets/icons/sun.svg';
 import { ReactComponent as MoonIcon } from '../../assets/icons/moon.svg';
 import { ReactComponent as MenuIcon } from '../../assets/icons/menu.svg';
 import { ReactComponent as XIcon } from '../../assets/icons/x.svg';
-import Divider from '../Divider/Divider';
 import Menu from '../Menu/Menu';
-import { NavLink, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../../redux/actions/ui.actions';
 
@@ -17,6 +14,9 @@ const SNavOptions = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media (min-width: 1000px) {
+    display: none;
+  }
   @media (max-width: 1200px) {
     .resume-button {
       display: none;

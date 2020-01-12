@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from '../Logo/Logo';
 import NavOptions from '../NavOptions/NavOptions';
+import NavbarStatic from '../NavbarStatic/NavbarStatic';
 
 const SNavbar = styled.nav`
   position: fixed;
@@ -38,6 +39,7 @@ const Navbar = () => {
       <div className='navbar'>
         <Logo />
         {/* <Pagination /> */}
+        <NavbarStatic />
         <NavOptions />
       </div>
     </SNavbar>
