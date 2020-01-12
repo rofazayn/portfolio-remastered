@@ -9,7 +9,7 @@ const SParagraph = styled.div`
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  max-width: 450px;
+  max-width: 720px;
   @media (max-width: 1200px) {
     font-size: 0.95rem;
   }
@@ -42,7 +42,11 @@ const SParagraph = styled.div`
 `;
 
 const Paragraph = ({ children, ...otherProps }) => {
-  return <SParagraph {...otherProps}>{children}</SParagraph>;
+  return (
+    <SParagraph className='paragraph' {...otherProps}>
+      {children}
+    </SParagraph>
+  );
 };
 
 export default Paragraph;

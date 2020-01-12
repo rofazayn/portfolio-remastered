@@ -20,6 +20,12 @@ const SHero = styled.div`
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    .paragraph {
+      max-width: 450px;
+      @media (max-width: 1200px) {
+        fmax-width: 400px;
+      }
+    }
   }
   .extra {
     display: flex;

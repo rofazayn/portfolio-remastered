@@ -15,10 +15,12 @@ const SPage = styled.div`
 
     min-height: 100vh;
     padding-bottom: 4vh;
+    @media (max-height: 600px) {
+      min-height: 700px;
+    }
     @media (max-width: 992px) {
       padding-top: 100px;
       padding-bottom: 100px;
-      min-height: 600px;
     }
     display: flex;
     justify-content: space-around;
