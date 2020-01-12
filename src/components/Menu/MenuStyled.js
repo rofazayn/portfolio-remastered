@@ -57,7 +57,7 @@ export const SMenu = styled.div`
               width: 0%;
               z-index: -1;
               background: ${({ theme }) => theme.colors.artery};
-              transition: all ease-in-out 300ms;
+              transition: all ease-in-out 99ms;
             }
             &.active {
               color: ${({ theme }) => theme.colors.background};
