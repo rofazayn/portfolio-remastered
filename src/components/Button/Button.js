@@ -10,7 +10,7 @@ const SButton = styled.div`
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    z-index: 3;
+    z-index: -1;
     background: ${({ theme }) => theme.colors.vein};
   }
   .button-layer {
@@ -58,8 +58,6 @@ const SButton = styled.div`
     &:hover {
       color: ${({ navButton, theme }) =>
         navButton ? theme.colors.artery : theme.colors.primary};
-      background: ${({ navButton, theme }) =>
-        navButton ? 'none' : theme.colors.artery};
     }
   }
 `;

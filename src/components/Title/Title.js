@@ -29,7 +29,7 @@ const STitle = styled.div`
     overflow: hidden;
     .line {
       max-width: 480px;
-      visibility: hidden;
+      /* visibility: hidden; */
     }
   }
 
