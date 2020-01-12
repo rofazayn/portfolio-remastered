@@ -5,8 +5,11 @@ import { revealImage } from '../../helpers/Animations';
 const SImage = styled.div`
   width: 100%;
   height: 100%;
-  max-width: 420px;
-  /* min-height: 300px; */
+  max-width: 480px;
+  @media (max-height: 800px) {
+    margin-bottom: 1.5rem;
+    max-width: 350px;
+  }
   background: ${({ theme }) => theme.colors.background};
   position: relative;
   overflow: hidden;
@@ -46,7 +49,7 @@ const SImage = styled.div`
     }
     img {
       object-fit: cover;
-      width: calc((40vh + 40vw) / 2.2);
+      width: 100%;
       filter: ${({ theme }) => theme.imageBrightness};
       transition: filter ease-in-out 400ms;
       @media (max-width: 768px) {
