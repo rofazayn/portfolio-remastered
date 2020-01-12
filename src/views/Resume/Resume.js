@@ -15,7 +15,7 @@ const SResume = styled.div`
     justify-items: space-between;
     align-items: center;
     @media (max-width: 768px) {
-      align-items: fle-start;
+      align-items: flex-start;
       flex-direction: column;
     }
 

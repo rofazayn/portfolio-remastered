@@ -7,8 +7,11 @@ const SContainer = styled.div`
   margin: 0 auto;
   padding: 0 4rem;
   overflow: hidden;
+  @media (max-width: 786px) {
+    padding: 0 2rem;
+  }
   /* height: 100%; */
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     max-width: 992px;
   }
   @media (max-width: 992px) {
@@ -20,7 +23,7 @@ const SContainer = styled.div`
   }
   @media (max-width: 576px) {
     max-width: 400px;
-  }
+  } */
 `;
 
 const Container = ({ children }) => {

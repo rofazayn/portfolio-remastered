@@ -26,9 +26,10 @@ const SNavbarStatic = styled.nav`
     li {
       a {
         padding: 1rem;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
         letter-spacing: 1px;
-        font-size: 0.8rem;
+        font-size: 1rem;
+        font-family: 'Alegreya';
         &.active {
           color: ${({ theme }) => theme.colors.vein};
         }

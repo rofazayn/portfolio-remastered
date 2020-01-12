@@ -1,29 +1,29 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-// import { ReactComponent as SquareIcon } from '../../assets/icons/square.svg';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
-// import {
-//   revealHeadings,
-//   revealParagraph,
-//   revealButtons
-// } from '../../helpers/Animations';
 import Title from '../Title/Title';
 import Paragraph from '../Paragraph/Paragraph';
 
 const SHero = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  align-items: flex-start;
+  display: flex;
   justify-content: center;
+  align-items: center;
   @media (max-width: 768px) {
     margin-top: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .hero-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
   }
   .extra {
     display: flex;
     font-weight: 900;
-    /* text-decoration: underline; */
     max-width: 240px;
     line-height: 1.5;
     margin-top: 1rem;
@@ -65,33 +65,35 @@ const Hero = ({
 
   return (
     <SHero>
-      <Title pageTitle>{pageTitle}</Title>
-      <Title>
-        <div className='line-wrapper'>
-          <div className='line'>{line1 && line1}</div>
-        </div>
-        <div className='line-wrapper'>
-          <div className='line'>{line2 && line2}</div>
-        </div>
-      </Title>
-      <Paragraph>
-        <div className='text-wrapper'>
-          <div className='text'>{paragraph && paragraph}</div>
-        </div>
-      </Paragraph>
-      {buttonText && (
-        <>
-          <Link to={buttonPath}>
-            <Button>
-              {/* <div className='icon'>
+      <div className='hero-wrapper'>
+        <Title pageTitle>{pageTitle}</Title>
+        <Title>
+          <div className='line-wrapper'>
+            <div className='line'>{line1 && line1}</div>
+          </div>
+          <div className='line-wrapper'>
+            <div className='line'>{line2 && line2}</div>
+          </div>
+        </Title>
+        <Paragraph>
+          <div className='text-wrapper'>
+            <div className='text'>{paragraph && paragraph}</div>
+          </div>
+        </Paragraph>
+        {buttonText && (
+          <>
+            <Link to={buttonPath}>
+              <Button>
+                {/* <div className='icon'>
               <SquareIcon />
             </div>{' '} */}
-              {buttonText && buttonText}
-            </Button>
-          </Link>
-        </>
-      )}
-      {extra && <small className='extra'>{extra}</small>}
+                {buttonText && buttonText}
+              </Button>
+            </Link>
+          </>
+        )}
+        {extra && <small className='extra'>{extra}</small>}
+      </div>
     </SHero>
   );
 };

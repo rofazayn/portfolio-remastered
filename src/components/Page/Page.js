@@ -12,11 +12,13 @@ const SPage = styled.div`
   .top {
     width: 100%;
     height: 100%;
+
     min-height: 100vh;
     padding-bottom: 4vh;
     @media (max-width: 992px) {
       padding-top: 100px;
       padding-bottom: 100px;
+      min-height: 600px;
     }
     display: flex;
     justify-content: space-around;
@@ -31,7 +33,13 @@ const SPage = styled.div`
       }
     }
     .section {
-      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 768px) {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
     }
   }
 

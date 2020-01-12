@@ -10,12 +10,12 @@ const SFooter = styled.footer`
   width: 100%; */
   background: ${({ theme }) => theme.colors.background};
   .footer {
-    justify-content: space-between;
-    max-width: 1500px;
+    padding: 1rem 2rem;
     margin: 0 auto;
-    padding: 1rem;
+    max-width: 1920px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 `;
 

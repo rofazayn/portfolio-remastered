@@ -5,12 +5,15 @@ import { revealImage } from '../../helpers/Animations';
 const SImage = styled.div`
   width: 100%;
   height: 100%;
+  max-width: 420px;
+  /* min-height: 300px; */
   background: ${({ theme }) => theme.colors.background};
   position: relative;
   overflow: hidden;
   display: flex;
   @media (max-width: 768px) {
     margin-bottom: 1.5rem;
+    min-height: auto;
   }
   .background-layer1 {
     position: absolute;
@@ -35,14 +38,15 @@ const SImage = styled.div`
     height: 100%;
     z-index: 9;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     @media (max-width: 768px) {
       justify-content: flex-start;
+      align-items: flex-start;
     }
     img {
       object-fit: cover;
-      width: calc((40vh + 40vw) / 2);
+      width: calc((40vh + 40vw) / 2.2);
       filter: ${({ theme }) => theme.imageBrightness};
       transition: filter ease-in-out 400ms;
       @media (max-width: 768px) {

@@ -4,10 +4,10 @@ import styled, { css } from 'styled-components';
 const STitle = styled.div`
   font-size: 2.5rem;
   @media (max-width: 1200px) {
-    font-size: 2.4rem;
+    font-size: 1.7rem;
   }
   @media (max-width: 992px) {
-    font-size: 2.3rem;
+    font-size: 1.5rem;
   }
   @media (max-width: 768px) {
     font-size: 2.2rem;
@@ -51,10 +51,10 @@ const STitle = styled.div`
         }
       }
       @media (max-width: 1200px) {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
       @media (max-width: 992px) {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
       }
       @media (max-width: 768px) {
         font-size: 1.2rem;
@@ -79,10 +79,10 @@ const STitle = styled.div`
         }
       }
       @media (max-width: 1200px) {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
       }
       @media (max-width: 992px) {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
       }
       @media (max-width: 768px) {
         font-size: 1.4rem;
@@ -104,10 +104,10 @@ const STitle = styled.div`
       font-size: 0.8rem;
       margin-bottom: 1rem;
       @media (max-width: 1200px) {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
       }
       @media (max-width: 992px) {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
       @media (max-width: 768px) {
         font-size: 0.85rem;

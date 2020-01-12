@@ -13,12 +13,13 @@ const SNavbar = styled.nav`
   background: ${({ theme }) => theme.colors.background};
   transition: all ease 400ms;
   .navbar {
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1500px;
+    /* max-width: 1500px; */
     margin: 0 auto;
+    max-width: 1920px;
   }
 `;
 
