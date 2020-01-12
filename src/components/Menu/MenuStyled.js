@@ -48,6 +48,7 @@ export const SMenu = styled.div`
             position: absolute;
             color: ${({ theme }) => theme.colors.primary};
             opacity: 1;
+            visibility: hidden;
             &::before {
               position: absolute;
               content: '';

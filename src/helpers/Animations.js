@@ -28,10 +28,11 @@ export const staggerMenuHide = (...nodes) => {
 };
 
 export const staggerTextReveal = (...nodes) => {
-  gsap.to([...nodes], {
-    delay: 0.2,
-    visibility: 'visible'
-  });
+  setTimeout(() => {
+    gsap.set([...nodes], {
+      visibility: 'visible'
+    });
+  }, 600);
   gsap.from([...nodes], {
     duration: 0.8,
     y: 90,
@@ -60,10 +61,11 @@ export const staggerTextHide = (...nodes) => {
       amount: 0.3
     }
   });
-  gsap.to([...nodes], {
-    delay: 1,
-    visibility: 'hidden'
-  });
+  setTimeout(() => {
+    gsap.set([...nodes], {
+      visibility: 'hidden'
+    });
+  }, 500);
 };
 
 // Hover on the link
