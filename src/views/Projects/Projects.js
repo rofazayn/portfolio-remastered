@@ -22,8 +22,8 @@ const SProjects = styled.main`
 const Projects = ({ pageTitle }) => {
   const line1 = `Hmm.. projects?`;
   const line2 = `I have done plenty!`;
-  const paragraph = `I delivered more than 50 projects to individuals, startups, small businesses and even established companies, below are some side projects as demonstations of my skills.`;
-  const buttonText = `Check out my resume`;
+  const paragraph = `I delivered more than 50 projects to individuals, startups, small businesses and even established companies, below are some personal projects to review.`;
+  // const buttonText = `Check out my resume`;
 
   useEffect(() => {
     document.title = ` ${pageTitle} · Rofazayn`;
@@ -39,7 +39,7 @@ const Projects = ({ pageTitle }) => {
               line1={line1}
               line2={line2}
               paragraph={paragraph}
-              buttonText={buttonText}
+              buttonText={''}
               buttonPath={'/resume'}
             />
           </div>

@@ -38,12 +38,15 @@ const SPage = styled.div`
   .mid {
     width: 100%;
     height: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
+    @media (max-width: 768px) {
+      padding-bottom: 5rem;
+    }
   }
   .section {
     width: 100%;

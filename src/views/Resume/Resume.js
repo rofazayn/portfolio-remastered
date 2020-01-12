@@ -10,7 +10,7 @@ import Paragraph from '../../components/Paragraph/Paragraph';
 
 const SResume = styled.div`
   width: 100%;
-  .about {
+  .rofa {
     display: flex;
     justify-items: space-between;
     align-items: center;
@@ -39,7 +39,7 @@ const Resume = ({ pageTitle }) => {
   const line1 = `Years of exp`;
   const line2 = `at your service.`;
   const paragraph = `I provide web design and development, from prototyping and wireframing to UI development. I make sure to write good, scalable, clean and easy to maintain code.`;
-  const buttonText = `Are you hiring?`;
+  // const buttonText = `Are you hiring?`;
 
   useEffect(() => {
     document.title = ` ${pageTitle} · Rofazayn`;
@@ -55,7 +55,7 @@ const Resume = ({ pageTitle }) => {
               line1={line1}
               line2={line2}
               paragraph={paragraph}
-              buttonText={buttonText}
+              buttonText={''}
               buttonPath={'/hire'}
             />
           </div>
@@ -64,9 +64,9 @@ const Resume = ({ pageTitle }) => {
           </div>
         </div>
         <div className='mid'>
-          <div className='about'>
+          <div className='rofa'>
             <div className='item'>
-              <img src={profileImage} />
+              <img src={profileImage} alt='Abderraouf Zine' />
             </div>
             <div className='item'>
               <Title pageTitle>About me.</Title>

@@ -13,7 +13,7 @@ const Hire = ({ pageTitle }) => {
   const line1 = `Looking to hire?`;
   const line2 = `let's talk about it!`;
   const paragraph = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`;
-  const buttonText = `Send me an email`;
+  // const buttonText = `Send me an email`;
 
   useEffect(() => {
     document.title = ` ${pageTitle} · Rofazayn`;
@@ -29,7 +29,7 @@ const Hire = ({ pageTitle }) => {
               line1={line1}
               line2={line2}
               paragraph={paragraph}
-              buttonText={buttonText}
+              buttonText={''}
               buttonPath={'/contact'}
             />
           </div>
