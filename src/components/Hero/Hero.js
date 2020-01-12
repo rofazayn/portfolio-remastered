@@ -23,7 +23,7 @@ const SHero = styled.div`
     .paragraph {
       max-width: 450px;
       @media (max-width: 1200px) {
-        fmax-width: 400px;
+        max-width: 390px;
       }
     }
   }

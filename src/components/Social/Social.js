@@ -17,7 +17,7 @@ const SSocial = styled.div`
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-inline-end: 0.5rem;
-    @media (max-width: 1200px) {
+    @media (max-width: 1000px) {
       display: none;
     }
   }

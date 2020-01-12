@@ -7,7 +7,7 @@ const SDivider = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 1rem;
-  @media (max-width: 1200px) {
+  @media (max-width: 1000px) {
     display: none;
   }
   .line {
