@@ -8,6 +8,9 @@ import ContactForm from '../../components/ContactForm/ContactForm';
 
 const SContact = styled.main`
   width: 100%;
+  .section {
+    display: block !important;
+  }
 `;
 
 const Contact = ({ pageTitle }) => {
