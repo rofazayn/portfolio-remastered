@@ -32,7 +32,7 @@ export const staggerTextReveal = (...nodes) => {
     gsap.set([...nodes], {
       visibility: 'visible'
     });
-  }, 600);
+  }, 800);
   gsap.from([...nodes], {
     duration: 0.8,
     y: 90,
