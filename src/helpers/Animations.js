@@ -29,6 +29,7 @@ export const staggerMenuHide = (...nodes) => {
 
 export const staggerTextReveal = (...nodes) => {
   gsap.to([...nodes], {
+    delay: 0.2,
     visibility: 'visible'
   });
   gsap.from([...nodes], {
