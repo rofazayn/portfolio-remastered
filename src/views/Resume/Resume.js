@@ -33,6 +33,13 @@ const SResume = styled.div`
       }
     }
   }
+  .skills {
+    padding: 10rem 0;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+      padding: 4rem 0;
+    }
+  }
 `;
 
 const Resume = ({ pageTitle }) => {
@@ -85,6 +92,24 @@ const Resume = ({ pageTitle }) => {
                 facilis impedit laboriosam eius, omnis adipisci nam rerum?
               </Paragraph>
             </div>
+          </div>
+          <div className='skills'>
+            <Title pageTitle>My skills.</Title>
+            <Title sectionTitle>
+              <div className='line-wrapper'>
+                <div className='line'>Front-end or back-end?!</div>
+              </div>
+              <div className='line-wrapper'>
+                <div className='line'>Well, I work with both ends.</div>
+              </div>
+            </Title>
+            <Paragraph>
+              I started my journey as a front-end developer, I have always paid
+              attention to details, and the little things that eventually create
+              something beautfiul are always interesting to me, but that wasn't
+              for long, life happened, and I had to learn back-end technologies
+              too, in order to land a job and support myself and my family.
+            </Paragraph>
           </div>
         </div>
       </Container>
