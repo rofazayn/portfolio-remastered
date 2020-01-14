@@ -124,7 +124,7 @@ export const revealImage = (background1, background2, image) => {
     duration: 1.4,
     width: '0%',
     ease: 'power3.inOut',
-    delay: 1,
+    delay: 0.5,
     stagger: {
       amount: -0.09
     }
@@ -133,7 +133,7 @@ export const revealImage = (background1, background2, image) => {
     duration: 1.4,
     scale: 1.6,
     ease: 'power3.inOut',
-    delay: 1.2
+    delay: 0.7
   });
 };
 

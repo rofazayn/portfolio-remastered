@@ -51,7 +51,7 @@ const SImage = styled.div`
       object-fit: cover;
       width: 100%;
       filter: ${({ theme }) => theme.imageBrightness};
-      transition: filter ease-in-out 400ms;
+      transition: filter ease 400ms;
       @media (max-width: 768px) {
         width: 100%;
       }

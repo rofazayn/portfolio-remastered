@@ -30,8 +30,33 @@ const SNavbarStatic = styled.nav`
         letter-spacing: 1px;
         font-size: 1rem;
         font-family: 'Alegreya';
+        position: relative;
+        transition: all ease-in-out 250ms;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 3px;
+          border-radius: 100%;
+          background: ${({ theme }) => theme.colors.background};
+          /* background: red; */
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          transition: all ease-in-out 250ms;
+        }
         &.active {
           color: ${({ theme }) => theme.colors.vein};
+          &::before {
+            background: ${({ theme }) => theme.colors.vein};
+          }
+        }
+        &:hover {
+          color: ${({ theme }) => theme.colors.vein};
+          &::before {
+            background: ${({ theme }) => theme.colors.vein};
+          }
         }
       }
     }

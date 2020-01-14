@@ -21,10 +21,10 @@ export const muiThemeDark = createMuiTheme({
   },
   palette: {
     primary: {
-      main: '#FF4491'
+      main: '#FF77AF'
     },
     secondary: {
-      main: '#FF77AF'
+      main: '#FF4491'
     },
     type: 'dark'
   }
