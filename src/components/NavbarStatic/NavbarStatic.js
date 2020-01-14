@@ -26,10 +26,11 @@ const SNavbarStatic = styled.nav`
     li {
       a {
         padding: 1rem;
-        /* text-transform: uppercase; */
+        text-transform: uppercase;
         letter-spacing: 1px;
-        font-size: 1rem;
-        font-family: 'Alegreya';
+        font-size: 0.8rem;
+        font-family: 'Lato';
+        font-weight: 600;
         position: relative;
         transition: all ease-in-out 250ms;
         &::before {
@@ -61,18 +62,34 @@ const SNavbarStatic = styled.nav`
       }
     }
   }
-  .icon {
+  .theme-toggler {
     display: flex;
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    span {
+      width: 120px;
+      padding: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      font-family: 'Lato';
+      font-weight: 600;
+      transition: all ease-in-out 250ms;
+      &:hover {
+        color: ${({ theme }) => theme.colors.artery};
+      }
+    }
+    /* padding: 1rem; */
     @media (max-width: 1200px) {
       padding: 0.75rem;
     }
     cursor: pointer;
     color: ${({ theme }) => theme.colors.primary};
     svg {
+      margin-inline-end: 0.5rem;
       transition: all ease-in-out 250ms;
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
     }
     &:hover {
       svg {
@@ -110,11 +127,22 @@ const NavbarStatic = () => {
         <li>
           <NavLink to='/contact'>Contact</NavLink>
         </li>
+        <Divider vertical />
+
+        <li className='icon theme-toggler' onClick={() => handleThemeToggle()}>
+          {isDarkTheme ? (
+            <>
+              <SunIcon />
+              <span>Lights ON.</span>
+            </>
+          ) : (
+            <>
+              <MoonIcon />
+              <span>Lights OFF.</span>
+            </>
+          )}
+        </li>
       </ul>
-      <Divider vertical />
-      <div className='icon' onClick={() => handleThemeToggle()}>
-        {isDarkTheme ? <SunIcon /> : <MoonIcon />}
-      </div>
     </SNavbarStatic>
   );
 };

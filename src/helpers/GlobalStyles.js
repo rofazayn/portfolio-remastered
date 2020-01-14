@@ -21,7 +21,8 @@ const GlobalStyle = createGlobalStyle`
     /* min-height: 100%; */
     overflow-x: hidden;
     background: ${({ theme }) => theme.colors.background};
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
+    scroll-padding-block-start: 30px;
   }
 
   .no-sroll {

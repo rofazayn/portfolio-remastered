@@ -18,32 +18,32 @@ const SButton = styled.div`
     width: 100%;
     display: flex;
     height: 100%;
-    padding: ${({ navButton }) => (navButton ? '.5rem' : '.9rem 1.5rem')};
+    padding: ${({ navButton }) => (navButton ? '.5rem' : '.9rem 1rem')};
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     overflow: hidden;
     background: ${({ navButton, theme }) =>
       navButton ? 'none' : theme.colors.vein};
     color: ${({ navButton, theme }) =>
-      navButton ? theme.colors.primary : theme.colors.neutral};
-    font-family: 'Alegreya';
+      navButton ? theme.colors.primary : theme.colors.background};
+    font-family: 'Lato';
     cursor: pointer;
     font-size: 0.9rem;
     @media (max-width: 1200px) {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
     }
     @media (max-width: 992px) {
-      font-size: 0.86rem;
+      font-size: 0.8rem;
     }
     @media (max-width: 768px) {
-      font-size: 0.84rem;
+      font-size: 0.75rem;
     }
     @media (max-width: 1440px) {
-      padding: ${({ navButton }) => (navButton ? '.25rem' : '.9rem 1.5rem')};
+      padding: ${({ navButton }) => (navButton ? '.25rem' : '.7rem .8rem')};
     }
     transition: all ease-in-out 250ms;
     .icon {
@@ -56,8 +56,9 @@ const SButton = styled.div`
       }
     }
     &:hover {
-      color: ${({ navButton, theme }) =>
-        navButton ? theme.colors.artery : theme.colors.primary};
+      background: ${({ theme }) => theme.colors.primary};
+      /* color: ${({ navButton, theme }) =>
+        navButton ? theme.colors.primary : theme.colors.primary}; */
     }
   }
 `;

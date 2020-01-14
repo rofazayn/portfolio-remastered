@@ -10,7 +10,7 @@ import { lightTheme, darkTheme } from './assets/theming/theme.js';
 import { useSelector } from 'react-redux';
 import routes from './helpers/routes.js';
 import Page from './components/Page/Page';
-import SmoothScroller from './components/SmoothScroller/SmoothScroller';
+// import SmoothScroller from './components/SmoothScroller/SmoothScroller';
 import GlobalStyle from './helpers/GlobalStyles';
 import { muiThemeDark, muiThemeLight } from './assets/theming/muiTheme';
 
@@ -21,6 +21,10 @@ function App({ history, location }) {
       visibility: 'visible'
     });
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     // Redirect to home when component mounts and path is /

@@ -4,6 +4,8 @@ import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 import Title from '../Title/Title';
 import Paragraph from '../Paragraph/Paragraph';
+import { IconButton } from '@material-ui/core';
+import { ReactComponent as ArrowDownIcon } from '../../assets/icons/arrow-down.svg';
 
 const SHero = styled.div`
   width: 100%;
@@ -39,6 +41,19 @@ const SHero = styled.div`
       margin-top: 1rem;
     }
   }
+  .scroller {
+    display: flex;
+    align-items: center;
+
+    &__text {
+      margin-inline-end: 0.5rem;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: ${({ theme }) => theme.colors.secondary};
+    }
+  }
 `;
 
 const Hero = ({
@@ -48,27 +63,9 @@ const Hero = ({
   paragraph,
   buttonText,
   buttonPath,
-  extra
+  extra,
+  scroller
 }) => {
-  // let heading1 = useRef(null);
-  // let heading2 = useRef(null);
-  // let text = useRef(null);
-  // let button = useRef(null);
-
-  // useEffect(() => {
-  //   if (heading2 === null) {
-  //     revealHeadings(heading1);
-  //   } else {
-  //     revealHeadings(heading1, heading2);
-  //   }
-  //   if (paragraph) {
-  //     revealParagraph(text);
-  //   }
-  //   if (buttonText) {
-  //     revealButtons(button);
-  //   }
-  // }, [paragraph, buttonText, heading1, heading2, text, button]);
-
   return (
     <SHero>
       <div className='hero-wrapper'>
@@ -99,6 +96,14 @@ const Hero = ({
           </>
         )}
         {extra && <small className='extra'>{extra}</small>}
+        {scroller && (
+          <a className='scroller' href='#mid'>
+            <span className='scroller__text'>Scroll down for more</span>
+            <IconButton>
+              <ArrowDownIcon />
+            </IconButton>
+          </a>
+        )}
       </div>
     </SHero>
   );

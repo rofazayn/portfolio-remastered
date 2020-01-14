@@ -4,10 +4,6 @@ import Status from '../Status/Status';
 import Social from '../Social/Social';
 
 const SFooter = styled.footer`
-  /* position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%; */
   background: ${({ theme }) => theme.colors.background};
   .footer {
     padding: 1rem 2rem;
