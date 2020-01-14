@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Image from '../../components/Image/Image';
-import homeImage from '../../assets/images/01.png';
+import homeImage from '../../assets/images/03.png';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
 import Paragraph from '../../components/Paragraph/Paragraph';

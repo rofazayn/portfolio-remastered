@@ -45,7 +45,7 @@ const SNavbarStatic = styled.nav`
           left: 0;
           right: 0;
           margin: 0 auto;
-          transition: all ease-in-out 250ms;
+          transition: all ease 400ms;
         }
         &.active {
           color: ${({ theme }) => theme.colors.vein};

@@ -41,13 +41,14 @@ const Projects = ({ pageTitle }) => {
               paragraph={paragraph}
               buttonText={''}
               buttonPath={'/resume'}
+              scroller
             />
           </div>
           <div className='section'>
             <Image src={ProjectsImage} />
           </div>
         </div>
-        <div className='mid'>
+        <div className='mid' id='mid'>
           <Title pageTitle>Showcases.</Title>
           <div className='section'>
             <Title sectionTitle>

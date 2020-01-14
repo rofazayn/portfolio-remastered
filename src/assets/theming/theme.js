@@ -20,5 +20,5 @@ export const darkTheme = {
     background: 'black',
     neutral: 'black'
   },
-  imageBrightness: 'brightness(3)'
+  imageBrightness: 'brightness(2.3)'
 };

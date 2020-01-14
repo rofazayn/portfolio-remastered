@@ -44,10 +44,10 @@ const SHero = styled.div`
   .scroller {
     display: flex;
     align-items: center;
-
+    transform: translateX(-18px);
     &__text {
-      margin-inline-end: 0.5rem;
-      font-size: 0.85rem;
+      margin-inline-start: 0.5rem;
+      font-size: 0.75rem;
       letter-spacing: 1px;
       font-weight: 700;
       text-transform: uppercase;
@@ -98,10 +98,10 @@ const Hero = ({
         {extra && <small className='extra'>{extra}</small>}
         {scroller && (
           <a className='scroller' href='#mid'>
-            <span className='scroller__text'>Scroll down for more</span>
             <IconButton>
               <ArrowDownIcon />
             </IconButton>
+            <span className='scroller__text'>Scroll down for more</span>
           </a>
         )}
       </div>
