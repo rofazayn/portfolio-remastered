@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
 import Image from '../../components/Image/Image';
 import resumeImage from '../../assets/images/05.png';
 import profileImage from '../../assets/images/profile.jpg';
@@ -7,40 +6,8 @@ import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
 import Title from '../../components/Title/Title';
 import Paragraph from '../../components/Paragraph/Paragraph';
-
-const SResume = styled.div`
-  width: 100%;
-  .rofa {
-    display: flex;
-    justify-items: space-between;
-    align-items: center;
-    @media (max-width: 768px) {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    .item {
-      &:first-of-type {
-        margin-inline-end: 5rem;
-        @media (max-width: 768px) {
-          margin-inline-end: 0;
-          margin-block-end: 2rem;
-        }
-      }
-      img {
-        width: 100%;
-        max-width: 400px;
-      }
-    }
-  }
-  .skills {
-    padding: 10rem 0;
-    margin: 0 auto;
-    @media (max-width: 768px) {
-      padding: 4rem 0;
-    }
-  }
-`;
+import { htmlImage, cssImage, javascriptImage } from './resumeAssets';
+import SResume from './ResumeStyled';
 
 const Resume = ({ pageTitle }) => {
   const line1 = `Years of exp`;
@@ -64,13 +31,14 @@ const Resume = ({ pageTitle }) => {
               paragraph={paragraph}
               buttonText={''}
               buttonPath={'/hire'}
+              scroller
             />
           </div>
           <div className='section'>
             <Image src={resumeImage} />
           </div>
         </div>
-        <div className='mid'>
+        <div className='mid' id='mid'>
           <div className='rofa'>
             <div className='item'>
               <img src={profileImage} alt='Abderraouf Zine' />
@@ -94,22 +62,139 @@ const Resume = ({ pageTitle }) => {
             </div>
           </div>
           <div className='skills'>
-            <Title pageTitle>My skills.</Title>
-            <Title sectionTitle>
-              <div className='line-wrapper'>
-                <div className='line'>Front-end or back-end?!</div>
+            <div className='skills__header'>
+              <Title pageTitle>Skills.</Title>
+              <Title sectionTitle>
+                <div className='line-wrapper'>
+                  <div className='line'>Front-end or back-end?!</div>
+                </div>
+                <div className='line-wrapper'>
+                  <div className='line'>Well, I work with both ends.</div>
+                </div>
+              </Title>
+              <Paragraph>
+                I started my journey as a front-end developer, I have always
+                paid attention to details, and the little things that eventually
+                create something beautfiul are always interesting to me, but
+                that wasn't for long, life happened, and I had to learn back-end
+                technologies too, in order to land a job and support myself and
+                my family.
+              </Paragraph>
+            </div>
+            <div className='skills__list'>
+              {/* <Title pageTitle>Front-end.</Title> */}
+              <div className='skills__list__set'>
+                <h3>Front-end technologies.</h3>
+                <ul>
+                  <li className='item'>
+                    <img src={htmlImage} alt='HTML' />
+                    <h4 className='item__title'>HTML</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={cssImage} alt='CSS' />
+                    <h4 className='item__title'>CSS</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={javascriptImage} alt='JavaScript' />
+                    <h4 className='item__title'>JavaScript</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li className='item'>
+                    <img src={htmlImage} alt='HTML' />
+                    <h4 className='item__title'>HTML</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={cssImage} alt='CSS' />
+                    <h4 className='item__title'>CSS</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={javascriptImage} alt='JavaScript' />
+                    <h4 className='item__title'>JavaScript</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                </ul>
               </div>
-              <div className='line-wrapper'>
-                <div className='line'>Well, I work with both ends.</div>
+              <div className='skills__list__set'>
+                <h3>Front-end technologies.</h3>
+                <ul>
+                  <li className='item'>
+                    <img src={htmlImage} alt='HTML' />
+                    <h4 className='item__title'>HTML</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={cssImage} alt='CSS' />
+                    <h4 className='item__title'>CSS</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={javascriptImage} alt='JavaScript' />
+                    <h4 className='item__title'>JavaScript</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li className='item'>
+                    <img src={htmlImage} alt='HTML' />
+                    <h4 className='item__title'>HTML</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={cssImage} alt='CSS' />
+                    <h4 className='item__title'>CSS</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={javascriptImage} alt='JavaScript' />
+                    <h4 className='item__title'>JavaScript</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                </ul>
               </div>
-            </Title>
-            <Paragraph>
-              I started my journey as a front-end developer, I have always paid
-              attention to details, and the little things that eventually create
-              something beautfiul are always interesting to me, but that wasn't
-              for long, life happened, and I had to learn back-end technologies
-              too, in order to land a job and support myself and my family.
-            </Paragraph>
+              <div className='skills__list__set'>
+                <h3>Front-end technologies.</h3>
+                <ul>
+                  <li className='item'>
+                    <img src={htmlImage} alt='HTML' />
+                    <h4 className='item__title'>HTML</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={cssImage} alt='CSS' />
+                    <h4 className='item__title'>CSS</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={javascriptImage} alt='JavaScript' />
+                    <h4 className='item__title'>JavaScript</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li className='item'>
+                    <img src={htmlImage} alt='HTML' />
+                    <h4 className='item__title'>HTML</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={cssImage} alt='CSS' />
+                    <h4 className='item__title'>CSS</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                  <li className='item'>
+                    <img src={javascriptImage} alt='JavaScript' />
+                    <h4 className='item__title'>JavaScript</h4>
+                    <p className='item__level'>Lvl: Advanced</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

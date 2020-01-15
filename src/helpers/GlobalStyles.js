@@ -19,10 +19,10 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     /* min-height: 100%; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background: ${({ theme }) => theme.colors.background};
     scroll-behavior: smooth;
-    scroll-padding-block-start: 30px;
+    scroll-padding-block-start: 40px;
   }
 
   .no-sroll {
@@ -32,6 +32,10 @@ const GlobalStyle = createGlobalStyle`
 
   #root {
     height: 100%;
+  }
+
+  html {
+    overflow-x: hidden;
   }
 
   body {
@@ -66,24 +70,6 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     position: relative;
     z-index: 1;
-    .viewport {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-    }
-    .scroll-container {
-      position: absolute;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      z-index: 1;
-      width: 100%;
-      backface-visibility: hidden;
-      transform-style: preserve-3d;
-    }
   }
 `;
 

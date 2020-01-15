@@ -44,14 +44,43 @@ const SHero = styled.div`
   .scroller {
     display: flex;
     align-items: center;
-    transform: translateX(-18px);
+    justify-content: center;
+    transform: translateX(-22px);
+    &:hover {
+      .scroller__text {
+        color: ${({ theme }) => theme.colors.vein};
+      }
+      svg {
+        color: ${({ theme }) => theme.colors.vein};
+      }
+    }
+
+    svg {
+      transition: all ease 400ms;
+    }
+
     &__text {
       margin-inline-start: 0.5rem;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       letter-spacing: 1px;
       font-weight: 700;
       text-transform: uppercase;
-      color: ${({ theme }) => theme.colors.secondary};
+      color: ${({ theme }) => theme.colors.primary};
+      transition: all ease 400ms;
+      padding: 1rem 0;
+
+      @media (max-width: 1200px) {
+        font-size: 0.7rem;
+      }
+      @media (max-width: 992px) {
+        font-size: 0.75rem;
+      }
+      @media (max-width: 768px) {
+        font-size: 0.7rem;
+      }
+      @media (max-width: 576px) {
+        font-size: 0.65rem;
+      }
     }
   }
 `;

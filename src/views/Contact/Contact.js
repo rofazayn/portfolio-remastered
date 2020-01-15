@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import Image from '../../components/Image/Image';
-import contactImage from '../../assets/images/06.png';
+// import Image from '../../components/Image/Image';
+// import contactImage from '../../assets/images/06.png';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
 import ContactForm from '../../components/ContactForm/ContactForm';
