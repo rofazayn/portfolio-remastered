@@ -37,20 +37,31 @@ const SResume = styled.div`
       justify-content: flex-start;
     }
     &__header {
-      width: 100%;
-      padding: 7rem 0;
       position: -webkit-sticky;
       position: sticky;
-      top: 0;
+      top: 7rem;
       align-self: flex-start;
+      padding-bottom: 3rem;
       @media (max-width: 768px) {
         position: static;
         padding: 0;
+        padding-bottom: 2rem;
       }
     }
     &__list {
       width: 100%;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      @media (max-width: 768px) {
+        align-items: flex-end;
+      }
+      /* background: red; */
       &__set {
+        width: 90%;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
         h3 {
           text-align: center;
           margin-bottom: 3rem;
@@ -60,6 +71,9 @@ const SResume = styled.div`
         margin-bottom: 5rem;
         ul {
           margin-bottom: 3rem;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
           display: flex;
           justify-content: space-around;
           list-style: none;

@@ -10,8 +10,14 @@ const SNavbar = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  background: ${({ theme }) => theme.colors.background};
-  transition: all ease 400ms;
+  background-color: ${({ theme }) => theme.colors.background};
+  background: linear-gradient(
+    to bottom,
+    ${({ theme }) => theme.colors.background} 72%,
+    ${({ theme }) => theme.colors.backgroundLowOpacity} 100%
+  );
+
+  /* transition: background ease 400ms; */
   .navbar {
     padding: 1rem 2rem;
     display: flex;

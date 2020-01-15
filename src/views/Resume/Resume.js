@@ -89,71 +89,34 @@ const Resume = ({ pageTitle }) => {
                   <li className='item'>
                     <img src={htmlImage} alt='HTML' />
                     <h4 className='item__title'>HTML</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                   <li className='item'>
                     <img src={cssImage} alt='CSS' />
                     <h4 className='item__title'>CSS</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                   <li className='item'>
                     <img src={javascriptImage} alt='JavaScript' />
                     <h4 className='item__title'>JavaScript</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                 </ul>
                 <ul>
                   <li className='item'>
                     <img src={htmlImage} alt='HTML' />
                     <h4 className='item__title'>HTML</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                   <li className='item'>
                     <img src={cssImage} alt='CSS' />
                     <h4 className='item__title'>CSS</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                   <li className='item'>
                     <img src={javascriptImage} alt='JavaScript' />
                     <h4 className='item__title'>JavaScript</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
-                  </li>
-                </ul>
-              </div>
-              <div className='skills__list__set'>
-                <h3>Front-end technologies.</h3>
-                <ul>
-                  <li className='item'>
-                    <img src={htmlImage} alt='HTML' />
-                    <h4 className='item__title'>HTML</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
-                  </li>
-                  <li className='item'>
-                    <img src={cssImage} alt='CSS' />
-                    <h4 className='item__title'>CSS</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
-                  </li>
-                  <li className='item'>
-                    <img src={javascriptImage} alt='JavaScript' />
-                    <h4 className='item__title'>JavaScript</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
-                  </li>
-                </ul>
-                <ul>
-                  <li className='item'>
-                    <img src={htmlImage} alt='HTML' />
-                    <h4 className='item__title'>HTML</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
-                  </li>
-                  <li className='item'>
-                    <img src={cssImage} alt='CSS' />
-                    <h4 className='item__title'>CSS</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
-                  </li>
-                  <li className='item'>
-                    <img src={javascriptImage} alt='JavaScript' />
-                    <h4 className='item__title'>JavaScript</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                 </ul>
               </div>
@@ -163,34 +126,34 @@ const Resume = ({ pageTitle }) => {
                   <li className='item'>
                     <img src={htmlImage} alt='HTML' />
                     <h4 className='item__title'>HTML</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                   <li className='item'>
                     <img src={cssImage} alt='CSS' />
                     <h4 className='item__title'>CSS</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                   <li className='item'>
                     <img src={javascriptImage} alt='JavaScript' />
                     <h4 className='item__title'>JavaScript</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                 </ul>
                 <ul>
                   <li className='item'>
                     <img src={htmlImage} alt='HTML' />
                     <h4 className='item__title'>HTML</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                   <li className='item'>
                     <img src={cssImage} alt='CSS' />
                     <h4 className='item__title'>CSS</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                   <li className='item'>
                     <img src={javascriptImage} alt='JavaScript' />
                     <h4 className='item__title'>JavaScript</h4>
-                    <p className='item__level'>Lvl: Advanced</p>
+                    <p className='item__level'>Advanced</p>
                   </li>
                 </ul>
               </div>

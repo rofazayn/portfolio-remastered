@@ -11,7 +11,7 @@ const SNavbarStatic = styled.nav`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0.5rem 0;
+  padding: 0;
   @media (max-width: 999px) {
     display: none;
   }
@@ -39,7 +39,7 @@ const SNavbarStatic = styled.nav`
           width: 8px;
           height: 3px;
           border-radius: 100%;
-          background: ${({ theme }) => theme.colors.background};
+          background: transparent;
           /* background: red; */
           bottom: 0;
           left: 0;

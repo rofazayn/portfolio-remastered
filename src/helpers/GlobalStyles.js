@@ -12,8 +12,8 @@ const GlobalStyle = createGlobalStyle`
     user-select: none;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    transition: color ease 400ms;
-    transition: background-color ease 400ms;
+    /* transition: color ease 400ms; */
+    /* transition: background-color ease 400ms; */
   }
 
   html,
