@@ -41,7 +41,7 @@ const SResume = styled.div`
       position: sticky;
       top: 7rem;
       align-self: flex-start;
-      padding-bottom: 3rem;
+      padding-bottom: 3.25rem;
       @media (max-width: 768px) {
         position: static;
         padding: 0;

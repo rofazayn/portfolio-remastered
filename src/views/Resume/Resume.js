@@ -202,6 +202,50 @@ const Resume = ({ pageTitle }) => {
                   </li>
                 </ul>
               </div>
+              <div className='skills__list__set'>
+                <h3>I do use these as well...</h3>
+                <ul>
+                  <li className='item'>
+                    <img src={adobexdImage} alt='GraphQL' />
+                    <h4 className='item__title'>GraphQL</h4>
+                    <p className='item__level'>Basic</p>
+                  </li>
+                  <li className='item'>
+                    <img src={adobexdImage} alt='Apollo JS' />
+                    <h4 className='item__title'>Apollo JS</h4>
+                    <p className='item__level'>Basic</p>
+                  </li>
+                  <li className='item'>
+                    <img src={adobexdImage} alt='Socket IO' />
+                    <h4 className='item__title'>Socket IO</h4>
+                    <p className='item__level'>Basic</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li className='item'>
+                    <img src={adobexdImage} alt='Jest JS' />
+                    <h4 className='item__title'>Jest JS</h4>
+                    <p className='item__level'>Basic</p>
+                  </li>
+                  <li className='item'>
+                    <img src={adobexdImage} alt='Redux' />
+                    <h4 className='item__title'>Redux</h4>
+                    <p className='item__level'>Great</p>
+                  </li>
+                  <li className='item'>
+                    <img src={adobexdImage} alt='Firebase' />
+                    <h4 className='item__title'>Firebase</h4>
+                    <p className='item__level'>Good</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li className='item'>
+                    <img src={adobexdImage} alt='Webpack' />
+                    <h4 className='item__title'>Webpack</h4>
+                    <p className='item__level'>Basic</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
