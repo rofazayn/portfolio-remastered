@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const SPage = styled.div`
   position: relative;
 
-  min-height: 20000px;
+  /* min-height: 20000px; */
   width: 100%;
   /* padding-bottom: 100px; */
   /* overflow: hidden; */
@@ -17,7 +17,7 @@ const SPage = styled.div`
 
     min-height: 100vh;
     /* padding-bottom: 4vh; */
-    @media (max-height: 600px) {
+    @media (max-height: 800px) {
       min-height: 700px;
     }
     @media (max-width: 992px) {
