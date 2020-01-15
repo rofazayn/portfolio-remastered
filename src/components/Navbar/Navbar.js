@@ -17,7 +17,7 @@ const SNavbar = styled.nav`
     ${({ theme }) => theme.colors.backgroundLowOpacity} 100%
   );
 
-  /* transition: background ease 400ms; */
+  transition: top ease 400ms;
   .navbar {
     padding: 1rem 2rem;
     display: flex;
