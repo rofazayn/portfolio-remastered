@@ -6,7 +6,8 @@ export const lightTheme = {
     secondary: '#545454',
     background: 'white',
     backgroundLowOpacity: 'rgba(255, 255, 255, 0%)',
-    neutral: 'white'
+    neutral: 'white',
+    accent: 'papayawhip'
   },
   imageBrightness: 'brightness(1)'
 };
@@ -19,7 +20,8 @@ export const darkTheme = {
     secondary: '#adadad',
     background: 'black',
     backgroundLowOpacity: 'rgba(0, 0, 0, 0%)',
-    neutral: 'black'
+    neutral: 'black',
+    accent: '#22201D'
   },
   imageBrightness: 'brightness(2.3)'
 };

@@ -69,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
     visibility: hidden;
     min-height: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 0;
   }
 `;
 

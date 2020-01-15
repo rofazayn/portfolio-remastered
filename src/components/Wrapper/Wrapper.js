@@ -7,6 +7,7 @@ const SWrapper = styled.div`
   /* position: relative; */
   background: ${({ theme }) => theme.colors.background};
   /* overflow: hidden; */
+  z-index: 10;
 `;
 
 const Wrapper = ({ children, ...otherProps }) => {

@@ -22,6 +22,9 @@ const SResume = styled.div`
       img {
         width: 100%;
         max-width: 400px;
+        @media (max-width: 768px) {
+          margin-inline-end: 0;
+        }
       }
     }
   }
@@ -59,9 +62,12 @@ const SResume = styled.div`
       /* background: red; */
       &__set {
         width: 90%;
+        margin-bottom: 5rem;
         @media (max-width: 768px) {
           width: 100%;
+          margin-bottom: 3rem;
         }
+
         h3 {
           text-align: center;
           margin-bottom: 3rem;
@@ -69,41 +75,51 @@ const SResume = styled.div`
           color: ${({ theme }) => theme.colors.secondary};
           @media (max-width: 768px) {
             text-align: start;
+            margin-bottom: 1rem;
           }
         }
-        margin-bottom: 5rem;
         ul {
-          margin-bottom: 3rem;
-          &:last-of-type {
-            margin-bottom: 0;
-          }
           display: flex;
           justify-content: space-around;
+          align-items: center;
           list-style: none;
           @media (max-width: 768px) {
             justify-content: space-between;
           }
           .item {
-            text-align: center;
-            min-width: 33%;
+            /* text-align: center; */
+            width: 100%;
+            max-width: 100%;
+            transition: background ease 250ms;
+            padding: 1.5rem 0 1rem 0;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            cursor: pointer;
             img {
-              width: 90px;
-              height: 90px;
+              width: 85px;
+              height: 85px;
               margin: 0 auto;
               @media (max-width: 768px) {
                 width: 60px;
                 height: 60px;
               }
-              margin-bottom: 1rem;
+              /* margin-bottom: 1rem; */
             }
             &__title {
               color: ${({ theme }) => theme.colors.primary};
               text-align: center;
-              margin-bottom: 0.25rem;
+              margin: 1rem 0 0.25rem 0;
             }
             &__level {
               text-align: center;
               color: ${({ theme }) => theme.colors.secondary};
+            }
+            &:hover {
+              /* background: papayawhip; */
+              background: ${({ theme }) => theme.colors.accent};
             }
           }
         }
