@@ -67,6 +67,9 @@ const SResume = styled.div`
           margin-bottom: 3rem;
           font-family: 'Alegreya', 'Lato';
           color: ${({ theme }) => theme.colors.secondary};
+          @media (max-width: 768px) {
+            text-align: start;
+          }
         }
         margin-bottom: 5rem;
         ul {

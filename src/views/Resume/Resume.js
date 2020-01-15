@@ -15,15 +15,22 @@ import {
   nodejsImage,
   scomponentsImage,
   gatsbyImage,
-  laravelImage,
-  postgresqlImage,
   mongodbImage,
   vscodeImage,
   postmanImage,
   gitImage,
   adobexdImage,
   adobeIllustratorImage,
-  githubImage
+  githubImage,
+  graphqlImage,
+  firebaseImage,
+  reduxImage,
+  jestImage,
+  webpackImage,
+  socketioImage,
+  apolloImage,
+  npmImage,
+  expressImage
 } from './resumeAssets';
 import SResume from './ResumeStyled';
 
@@ -72,10 +79,13 @@ const Resume = ({ pageTitle }) => {
                 </div>
               </Title>
               <Paragraph>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Provident, cupiditate unde commodi temporibus ipsa quam soluta!
-                Repellendus, eaque possimus perspiciatis, quisquam suscipit
-                facilis impedit laboriosam eius, omnis adipisci nam rerum?
+                Hello there, my name is Abderraouf Zine (Phonetic spelling:
+                Abd'Rauf Zayn), I am 21 years old from the Aurès region located
+                in Algeria, a computer science sophomore, I started teaching
+                myself how to code years ago and I ended up walking the web
+                development path, I've also worked for a decent amount of time
+                as a freelancer. Lately, I've been focusing more on landing a
+                full-time position as a remote web developer.
               </Paragraph>
             </div>
           </div>
@@ -84,19 +94,16 @@ const Resume = ({ pageTitle }) => {
               <Title pageTitle>Skills.</Title>
               <Title sectionTitle>
                 <div className='line-wrapper'>
-                  <div className='line'>Front-end or back-end?!</div>
+                  <div className='line'>Front-end or Back-end?!</div>
                 </div>
                 <div className='line-wrapper'>
-                  <div className='line'>Well, I work with both ends.</div>
+                  <div className='line'>Well, I 'm experienced with both.</div>
                 </div>
               </Title>
               <Paragraph>
-                I started my journey as a front-end developer, I have always
-                paid attention to details, and the little things that eventually
-                create something beautfiul are always interesting to me, but
-                that wasn't for long, life happened, and I had to learn back-end
-                technologies too, in order to land a job and support myself and
-                my family.
+                Here you will find a showcase of some of the technologies I work
+                with / used before and how good am I with that certain
+                technology.
               </Paragraph>
             </div>
             <div className='skills__list'>
@@ -123,7 +130,7 @@ const Resume = ({ pageTitle }) => {
                 <ul>
                   <li className='item'>
                     <img src={reactImage} alt='ReactJS' />
-                    <h4 className='item__title'>ReactJS</h4>
+                    <h4 className='item__title'>React JS</h4>
                     <p className='item__level'>Great</p>
                   </li>
                   <li className='item'>
@@ -143,25 +150,18 @@ const Resume = ({ pageTitle }) => {
                 <ul>
                   <li className='item'>
                     <img src={nodejsImage} alt='NodeJS' />
-                    <h4 className='item__title'>NodeJS</h4>
+                    <h4 className='item__title'>Node JS</h4>
+                    <p className='item__level'>Great</p>
+                  </li>
+                  <li className='item'>
+                    <img src={expressImage} alt='Express JS' />
+                    <h4 className='item__title'>Express JS</h4>
                     <p className='item__level'>Great</p>
                   </li>
                   <li className='item'>
                     <img src={mongodbImage} alt='MongoDB' />
                     <h4 className='item__title'>MongoDB</h4>
                     <p className='item__level'>Great</p>
-                  </li>
-                  <li className='item'>
-                    <img src={laravelImage} alt='Laravel' />
-                    <h4 className='item__title'>Laravel</h4>
-                    <p className='item__level'>Good</p>
-                  </li>
-                </ul>
-                <ul>
-                  <li className='item'>
-                    <img src={postgresqlImage} alt='PostgreSQL' />
-                    <h4 className='item__title'>PostgreSQL</h4>
-                    <p className='item__level'>Good</p>
                   </li>
                 </ul>
               </div>
@@ -206,43 +206,53 @@ const Resume = ({ pageTitle }) => {
                 <h3>I do use these as well...</h3>
                 <ul>
                   <li className='item'>
-                    <img src={adobexdImage} alt='GraphQL' />
+                    <img src={graphqlImage} alt='GraphQL' />
                     <h4 className='item__title'>GraphQL</h4>
                     <p className='item__level'>Basic</p>
                   </li>
                   <li className='item'>
-                    <img src={adobexdImage} alt='Apollo JS' />
+                    <img src={apolloImage} alt='Apollo JS' />
                     <h4 className='item__title'>Apollo JS</h4>
                     <p className='item__level'>Basic</p>
                   </li>
                   <li className='item'>
-                    <img src={adobexdImage} alt='Socket IO' />
+                    <img src={socketioImage} alt='Socket IO' />
                     <h4 className='item__title'>Socket IO</h4>
                     <p className='item__level'>Basic</p>
                   </li>
                 </ul>
                 <ul>
                   <li className='item'>
-                    <img src={adobexdImage} alt='Jest JS' />
+                    <img src={jestImage} alt='Jest JS' />
                     <h4 className='item__title'>Jest JS</h4>
                     <p className='item__level'>Basic</p>
                   </li>
                   <li className='item'>
-                    <img src={adobexdImage} alt='Redux' />
+                    <img src={reduxImage} alt='Redux' />
                     <h4 className='item__title'>Redux</h4>
                     <p className='item__level'>Great</p>
                   </li>
                   <li className='item'>
-                    <img src={adobexdImage} alt='Firebase' />
+                    <img src={firebaseImage} alt='Firebase' />
                     <h4 className='item__title'>Firebase</h4>
                     <p className='item__level'>Good</p>
                   </li>
                 </ul>
                 <ul>
                   <li className='item'>
-                    <img src={adobexdImage} alt='Webpack' />
+                    <img src={webpackImage} alt='Webpack' />
                     <h4 className='item__title'>Webpack</h4>
                     <p className='item__level'>Basic</p>
+                  </li>
+                  <li className='item'>
+                    <img src={scomponentsImage} alt='SComponents' />
+                    <h4 className='item__title'>SComponents</h4>
+                    <p className='item__level'>Great</p>
+                  </li>
+                  <li className='item'>
+                    <img src={npmImage} alt='NPM' />
+                    <h4 className='item__title'>NPM</h4>
+                    <p className='item__level'>Great</p>
                   </li>
                 </ul>
               </div>
