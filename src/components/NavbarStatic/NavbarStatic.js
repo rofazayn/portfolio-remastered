@@ -33,6 +33,10 @@ const SNavbarStatic = styled.nav`
         font-weight: 600;
         position: relative;
         transition: all ease-in-out 250ms;
+        @media (max-width: 1366px) {
+          font-size: 0.7rem;
+          padding: 0.8rem 0.5rem;
+        }
         &::before {
           content: '';
           position: absolute;
@@ -75,6 +79,14 @@ const SNavbarStatic = styled.nav`
       font-family: 'Lato';
       font-weight: 600;
       transition: all ease-in-out 250ms;
+      @media (max-width: 1366px) {
+        font-size: 0.7rem;
+        padding: 0.8rem 0.5rem;
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
       &:hover {
         color: ${({ theme }) => theme.colors.artery};
       }

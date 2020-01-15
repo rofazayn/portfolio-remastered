@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 const STitle = styled.div`
   font-size: 2.5rem;
-  @media (max-width: 1200px) {
+  @media (max-width: 1366px) {
     font-size: 1.7rem;
   }
   @media (max-width: 992px) {
@@ -50,7 +50,7 @@ const STitle = styled.div`
           visibility: visible;
         }
       }
-      @media (max-width: 1200px) {
+      @media (max-width: 1366px) {
         font-size: 1.2rem;
       }
       @media (max-width: 992px) {
@@ -78,7 +78,7 @@ const STitle = styled.div`
           visibility: visible;
         }
       }
-      @media (max-width: 1200px) {
+      @media (max-width: 1366px) {
         font-size: 1.3rem;
       }
       @media (max-width: 992px) {
@@ -103,7 +103,7 @@ const STitle = styled.div`
       color: gray;
       font-size: 0.8rem;
       margin-bottom: 1rem;
-      @media (max-width: 1200px) {
+      @media (max-width: 1366px) {
         font-size: 0.85rem;
       }
       @media (max-width: 992px) {

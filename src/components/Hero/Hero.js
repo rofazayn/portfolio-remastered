@@ -24,7 +24,7 @@ const SHero = styled.div`
     flex-direction: column;
     .paragraph {
       max-width: 450px;
-      @media (max-width: 1200px) {
+      @media (max-width: 1366px) {
         max-width: 390px;
       }
     }
@@ -69,7 +69,7 @@ const SHero = styled.div`
       transition: all ease 400ms;
       padding: 1rem 0;
 
-      @media (max-width: 1200px) {
+      @media (max-width: 1366px) {
         font-size: 0.7rem;
       }
       @media (max-width: 992px) {
