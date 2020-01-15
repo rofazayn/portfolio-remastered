@@ -97,7 +97,7 @@ const Resume = ({ pageTitle }) => {
                   <div className='line'>Front-end or Back-end?!</div>
                 </div>
                 <div className='line-wrapper'>
-                  <div className='line'>Well, I 'm experienced with both.</div>
+                  <div className='line'>I 'm experienced with both.</div>
                 </div>
               </Title>
               <Paragraph>

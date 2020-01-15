@@ -80,6 +80,9 @@ const SResume = styled.div`
           display: flex;
           justify-content: space-around;
           list-style: none;
+          @media (max-width: 768px) {
+            justify-content: space-between;
+          }
           .item {
             text-align: center;
             min-width: 33%;
