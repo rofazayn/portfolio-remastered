@@ -26,7 +26,7 @@ const SResume = styled.div`
     }
   }
   .skills {
-    margin: 14rem 0 10rem 0;
+    margin: 15rem 0 40rem 0;
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -79,10 +79,14 @@ const SResume = styled.div`
           list-style: none;
           .item {
             text-align: center;
+            min-width: 33%;
             img {
+              width: 90px;
+              height: 90px;
               margin: 0 auto;
               @media (max-width: 768px) {
-                width: 62px;
+                width: 60px;
+                height: 60px;
               }
               margin-bottom: 1rem;
             }

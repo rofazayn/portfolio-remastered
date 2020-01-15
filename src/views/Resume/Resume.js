@@ -6,7 +6,25 @@ import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
 import Title from '../../components/Title/Title';
 import Paragraph from '../../components/Paragraph/Paragraph';
-import { htmlImage, cssImage, javascriptImage } from './resumeAssets';
+import {
+  htmlImage,
+  cssImage,
+  javascriptImage,
+  reactImage,
+  sassImage,
+  nodejsImage,
+  scomponentsImage,
+  gatsbyImage,
+  laravelImage,
+  postgresqlImage,
+  mongodbImage,
+  vscodeImage,
+  postmanImage,
+  gitImage,
+  adobexdImage,
+  adobeIllustratorImage,
+  githubImage
+} from './resumeAssets';
 import SResume from './ResumeStyled';
 
 const Resume = ({ pageTitle }) => {
@@ -89,71 +107,98 @@ const Resume = ({ pageTitle }) => {
                   <li className='item'>
                     <img src={htmlImage} alt='HTML' />
                     <h4 className='item__title'>HTML</h4>
-                    <p className='item__level'>Advanced</p>
+                    <p className='item__level'>Great</p>
                   </li>
                   <li className='item'>
                     <img src={cssImage} alt='CSS' />
                     <h4 className='item__title'>CSS</h4>
-                    <p className='item__level'>Advanced</p>
+                    <p className='item__level'>Great</p>
                   </li>
                   <li className='item'>
                     <img src={javascriptImage} alt='JavaScript' />
                     <h4 className='item__title'>JavaScript</h4>
-                    <p className='item__level'>Advanced</p>
+                    <p className='item__level'>Great</p>
                   </li>
                 </ul>
                 <ul>
                   <li className='item'>
-                    <img src={htmlImage} alt='HTML' />
-                    <h4 className='item__title'>HTML</h4>
-                    <p className='item__level'>Advanced</p>
+                    <img src={reactImage} alt='ReactJS' />
+                    <h4 className='item__title'>ReactJS</h4>
+                    <p className='item__level'>Great</p>
                   </li>
                   <li className='item'>
-                    <img src={cssImage} alt='CSS' />
-                    <h4 className='item__title'>CSS</h4>
-                    <p className='item__level'>Advanced</p>
+                    <img src={sassImage} alt='Sass' />
+                    <h4 className='item__title'>Sass</h4>
+                    <p className='item__level'>Great</p>
                   </li>
                   <li className='item'>
-                    <img src={javascriptImage} alt='JavaScript' />
-                    <h4 className='item__title'>JavaScript</h4>
-                    <p className='item__level'>Advanced</p>
+                    <img src={gatsbyImage} alt='Gatsby' />
+                    <h4 className='item__title'>Gatsby</h4>
+                    <p className='item__level'>Good</p>
                   </li>
                 </ul>
               </div>
               <div className='skills__list__set'>
-                <h3>Front-end technologies.</h3>
+                <h3>Back-end technologies.</h3>
                 <ul>
                   <li className='item'>
-                    <img src={htmlImage} alt='HTML' />
-                    <h4 className='item__title'>HTML</h4>
-                    <p className='item__level'>Advanced</p>
+                    <img src={nodejsImage} alt='NodeJS' />
+                    <h4 className='item__title'>NodeJS</h4>
+                    <p className='item__level'>Great</p>
                   </li>
                   <li className='item'>
-                    <img src={cssImage} alt='CSS' />
-                    <h4 className='item__title'>CSS</h4>
-                    <p className='item__level'>Advanced</p>
+                    <img src={mongodbImage} alt='MongoDB' />
+                    <h4 className='item__title'>MongoDB</h4>
+                    <p className='item__level'>Great</p>
                   </li>
                   <li className='item'>
-                    <img src={javascriptImage} alt='JavaScript' />
-                    <h4 className='item__title'>JavaScript</h4>
-                    <p className='item__level'>Advanced</p>
+                    <img src={laravelImage} alt='Laravel' />
+                    <h4 className='item__title'>Laravel</h4>
+                    <p className='item__level'>Good</p>
                   </li>
                 </ul>
                 <ul>
                   <li className='item'>
-                    <img src={htmlImage} alt='HTML' />
-                    <h4 className='item__title'>HTML</h4>
-                    <p className='item__level'>Advanced</p>
+                    <img src={postgresqlImage} alt='PostgreSQL' />
+                    <h4 className='item__title'>PostgreSQL</h4>
+                    <p className='item__level'>Good</p>
+                  </li>
+                </ul>
+              </div>
+              <div className='skills__list__set'>
+                <h3>Software & tools.</h3>
+                <ul>
+                  <li className='item'>
+                    <img src={vscodeImage} alt='VSCode' />
+                    <h4 className='item__title'>VSCode</h4>
+                    <p className='item__level'>Great</p>
                   </li>
                   <li className='item'>
-                    <img src={cssImage} alt='CSS' />
-                    <h4 className='item__title'>CSS</h4>
-                    <p className='item__level'>Advanced</p>
+                    <img src={gitImage} alt='Git' />
+                    <h4 className='item__title'>Git</h4>
+                    <p className='item__level'>Good</p>
                   </li>
                   <li className='item'>
-                    <img src={javascriptImage} alt='JavaScript' />
-                    <h4 className='item__title'>JavaScript</h4>
-                    <p className='item__level'>Advanced</p>
+                    <img src={postmanImage} alt='Postman' />
+                    <h4 className='item__title'>Postman</h4>
+                    <p className='item__level'>Great</p>
+                  </li>
+                </ul>
+                <ul>
+                  <li className='item'>
+                    <img src={adobexdImage} alt='Adobe XD' />
+                    <h4 className='item__title'>Adobe XD</h4>
+                    <p className='item__level'>Great</p>
+                  </li>
+                  <li className='item'>
+                    <img src={adobeIllustratorImage} alt='Adobe AI' />
+                    <h4 className='item__title'>Adobe AI</h4>
+                    <p className='item__level'>Good</p>
+                  </li>
+                  <li className='item'>
+                    <img src={githubImage} alt='GitHub' />
+                    <h4 className='item__title'>GitHub</h4>
+                    <p className='item__level'>Good</p>
                   </li>
                 </ul>
               </div>
