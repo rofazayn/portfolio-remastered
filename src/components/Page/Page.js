@@ -99,7 +99,7 @@ const SPage = styled.div`
       border-radius: 5px;
       /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); */
       @media (max-width: 768px) {
-        padding: 3rem 1rem;
+        padding: 1.5rem 1.5rem;
       }
     }
   }
