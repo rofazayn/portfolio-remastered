@@ -21,7 +21,7 @@ export const darkTheme = {
     background: 'black',
     backgroundLowOpacity: 'rgba(0, 0, 0, 0%)',
     neutral: 'black',
-    accent: '#22201D'
+    accent: '#0d0c0a'
   },
   imageBrightness: 'brightness(2.3)'
 };

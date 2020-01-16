@@ -76,24 +76,26 @@ const SPage = styled.div`
   .bot {
     width: 100%;
     height: 100%;
-    min-height: 100vh;
-    display: flex;
+    /* min-height: 100vh; */
+    /* display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; */
     flex-direction: column;
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
     @media (max-width: 768px) {
       padding-bottom: 5rem;
     }
     .cta {
-      /* margin: 0 auto; */
+      /* text-align: center; */
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding: 5rem 2rem;
+      padding: 4rem 3rem;
       margin: 2rem 0;
-      /* background: ${({ theme }) => theme.colors.accent}; */
+      background: ${({ theme }) => theme.colors.accent};
+      /* color: ${({ theme }) => theme.colors.background}; */
       border-radius: 5px;
       /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); */
       @media (max-width: 768px) {

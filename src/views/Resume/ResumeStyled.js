@@ -29,7 +29,7 @@ const SResume = styled.div`
     }
   }
   .skills {
-    margin: 10rem 0 6rem 0;
+    margin: 15rem 0 6rem 0;
     width: 100%;
     display: flex;
     align-items: flex-start;

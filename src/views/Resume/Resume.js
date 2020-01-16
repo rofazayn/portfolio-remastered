@@ -34,6 +34,7 @@ import {
   expressImage
 } from './resumeAssets';
 import SResume from './ResumeStyled';
+import { ReactComponent as ExternalLinkIcon } from '../../assets/icons/external-link.svg';
 import { ReactComponent as ArrowRightIcon } from '../../assets/icons/arrow-right.svg';
 import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
@@ -95,11 +96,11 @@ const Resume = ({ pageTitle }) => {
               <Button
                 variant='outlined'
                 color='primary'
-                endIcon={<DownloadIcon width='16px' />}
+                endIcon={<ExternalLinkIcon width='16px' />}
                 href={process.env.PUBLIC_URL + '/docs/resume-not-ready.pdf'}
-                download
+                target='_blank'
               >
-                Download my resume
+                Open resume pdf file
               </Button>
             </div>
           </div>
