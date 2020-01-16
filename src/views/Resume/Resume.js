@@ -71,7 +71,7 @@ const Resume = ({ pageTitle }) => {
         </div>
         <div className='mid' id='mid'>
           <div className='rofa'>
-            <div className='item'>
+            <div className='item '>
               <img src={profileImage} alt='Abderraouf Zine' />
             </div>
             <div className='item'>

@@ -15,7 +15,7 @@ const SPage = styled.div`
     width: 100%;
     height: 100%;
 
-    min-height: 100vh;
+    min-height: calc(100vh - 84px);
     /* padding-bottom: 4vh; */
     @media (max-height: 800px) {
       min-height: 700px;

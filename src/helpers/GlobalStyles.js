@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     /* overflow-x: hidden; */
     background: ${({ theme }) => theme.colors.background};
     /* scroll-behavior: smooth; */
-    scroll-padding-block-start: 40px;
+    scroll-padding-block-start: 60px;
   }
 
   .no-sroll {

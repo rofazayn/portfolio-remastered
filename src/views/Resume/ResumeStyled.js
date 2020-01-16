@@ -12,6 +12,7 @@ const SResume = styled.div`
     }
 
     .item {
+      position: relative;
       &:first-of-type {
         margin-inline-end: 5rem;
         @media (max-width: 768px) {
@@ -19,11 +20,14 @@ const SResume = styled.div`
           margin-block-end: 2rem;
         }
       }
+
       img {
         width: 100%;
         max-width: 400px;
+        box-shadow: -20px -20px 0 ${({ theme }) => theme.colors.artery};
         @media (max-width: 768px) {
           margin-inline-end: 0;
+          box-shadow: -13px -13px 0 ${({ theme }) => theme.colors.artery};
         }
       }
     }

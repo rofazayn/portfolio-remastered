@@ -58,7 +58,7 @@ const Home = ({ pageTitle }) => {
   // Page content
   const line1 = `Welcome to my`;
   const line2 = `personal portfolio.`;
-  const paragraph = `My name is Abderraouf. I'm a web developer from Aurès, Algeria. Please, have a look around and discover what I can offer for you or your business.`;
+  const paragraph = `My name is Abderraouf. I'm a web developer from Aurès, Algeria. Have a look around and discover what I can offer for you or your business.`;
   // const buttonText = `See some stuff I built`;
 
   useEffect(() => {
@@ -75,7 +75,7 @@ const Home = ({ pageTitle }) => {
               line1={line1}
               line2={line2}
               paragraph={paragraph}
-              buttonText={`Check out my projects`}
+              buttonText={`Let's start exploring`}
               buttonPath={'/projects'}
               buttonIcon={<CoffeeIcon width='18px' />}
             />

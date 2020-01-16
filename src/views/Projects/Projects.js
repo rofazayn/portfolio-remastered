@@ -45,7 +45,7 @@ const Projects = ({ pageTitle }) => {
               buttonText={''}
               buttonPath={'/resume'}
               scroller
-              scrollButtonText='Check out my projects'
+              scrollButtonText='Show me the projects'
             />
           </div>
           <div className='section'>
@@ -64,11 +64,9 @@ const Projects = ({ pageTitle }) => {
               </div>
             </Title>
             <Paragraph>
-              Every single project listed below, is selected carefully to
-              demonstrate a certain amount of skills, and is a personal project
-              that is built for the sake of this portfolio website, feel free to
-              check out the code on GitHub, or watch me build it on my YouTube
-              channel.
+              Each one of the projects listed here is a personal project,
+              carefully selected to show certain skills. Feel free to check out
+              the code on GitHub or contact me if you have any inquiries.
             </Paragraph>
           </div>
           <div className='section'>
