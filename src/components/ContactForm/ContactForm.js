@@ -104,6 +104,7 @@ const ContactForm = () => {
               onBlur={handleBlur}
               error={touched.name && errors.name ? true : false}
               helperText={touched.name && errors.name ? errors.name : ''}
+              size='small'
             />
             <TextField
               variant='filled'
@@ -116,6 +117,7 @@ const ContactForm = () => {
               onBlur={handleBlur}
               error={touched.email && errors.email ? true : false}
               helperText={touched.email && errors.email ? errors.email : ''}
+              size='small'
             />
             <TextField
               variant='filled'
@@ -130,6 +132,7 @@ const ContactForm = () => {
               helperText={
                 touched.subject && errors.subject ? errors.subject : ''
               }
+              size='small'
             />
             <TextField
               variant='filled'
@@ -142,13 +145,14 @@ const ContactForm = () => {
               onChange={handleChange}
               onBlur={handleBlur}
               error={touched.message && errors.message ? true : false}
+              size='small'
               helperText={
                 touched.message && errors.message ? errors.message : ''
               }
             />
             <Button
               variant='contained'
-              color='secondary'
+              // color='secondary'
               className='contact-button'
               type='submit'
               disabled={isSubmitting}
