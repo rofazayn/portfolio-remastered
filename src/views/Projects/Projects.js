@@ -6,6 +6,9 @@ import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
 import Title from '../../components/Title/Title';
 import Paragraph from '../../components/Paragraph/Paragraph';
+import { ReactComponent as ArrowRightIcon } from '../../assets/icons/arrow-right.svg';
+import { Link } from 'react-router-dom';
+import { Button } from '@material-ui/core';
 
 const SProjects = styled.main`
   width: 100%;
@@ -32,7 +35,7 @@ const Projects = ({ pageTitle }) => {
   return (
     <SProjects>
       <Container>
-        <div className='top'>
+        <div className='top --reverse-row'>
           <div className='section'>
             <Hero
               pageTitle={pageTitle + '.'}
@@ -42,6 +45,7 @@ const Projects = ({ pageTitle }) => {
               buttonText={''}
               buttonPath={'/resume'}
               scroller
+              scrollButtonText='Check out my projects'
             />
           </div>
           <div className='section'>
@@ -70,6 +74,34 @@ const Projects = ({ pageTitle }) => {
           <div className='section'>
             <div className='placeholder'></div>
             <div className='placeholder'></div>
+            <div className='placeholder'></div>
+            <div className='placeholder'></div>
+            <div className='placeholder'></div>
+          </div>
+        </div>
+        <div className='bot'>
+          <div className='cta'>
+            <Title sectionTitle>
+              <div className='line-wrapper'>
+                <div className='line'>You like what you see?</div>
+              </div>
+              <div className='line-wrapper'>
+                <div className='line'>Have a look at my resume.</div>
+              </div>
+            </Title>
+            <Paragraph className='text'>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus amet pariatur suscipit voluptatem rerum autem neque
+              voluptates et praesentium doloremque!
+            </Paragraph>
+            <Button
+              variant='outlined'
+              component={Link}
+              to='/resume'
+              endIcon={<ArrowRightIcon width='16px' />}
+            >
+              Go to resume page
+            </Button>
           </div>
         </div>
       </Container>

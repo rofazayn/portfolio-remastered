@@ -28,14 +28,23 @@ const SPage = styled.div`
     justify-content: space-around;
     align-items: center;
 
+    &.--reverse-row {
+      flex-direction: row-reverse;
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
+    }
+
     @media (max-width: 768px) {
       flex-direction: column-reverse;
     }
+
     &.--no-reverse {
       @media (max-width: 768px) {
         flex-direction: column;
       }
     }
+
     .section {
       display: flex;
       justify-content: center;
@@ -55,9 +64,41 @@ const SPage = styled.div`
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    /* padding-bottom: 5rem; */
+    @media (max-width: 768px) {
+      /* padding-bottom: 5rem; */
+    }
+  }
+  .section {
+    width: 100%;
+  }
+
+  .bot {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     padding-bottom: 5rem;
     @media (max-width: 768px) {
       padding-bottom: 5rem;
+    }
+    .cta {
+      /* margin: 0 auto; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 5rem 2rem;
+      margin: 2rem 0;
+      /* background: ${({ theme }) => theme.colors.accent}; */
+      border-radius: 5px;
+      /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); */
+      @media (max-width: 768px) {
+        padding: 3rem 1rem;
+      }
     }
   }
   .section {

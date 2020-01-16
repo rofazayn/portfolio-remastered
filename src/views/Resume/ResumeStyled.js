@@ -29,13 +29,14 @@ const SResume = styled.div`
     }
   }
   .skills {
-    margin: 15rem 0 40rem 0;
+    margin: 10rem 0 6rem 0;
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     @media (max-width: 768px) {
-      margin: 4rem 0;
+      margin-top: 4rem;
+      margin-bottom: 0;
       flex-direction: column;
       justify-content: flex-start;
     }
@@ -44,7 +45,7 @@ const SResume = styled.div`
       position: sticky;
       top: 7rem;
       align-self: flex-start;
-      padding-bottom: 3.25rem;
+      padding-bottom: 4.46rem;
       @media (max-width: 768px) {
         position: static;
         padding: 0;

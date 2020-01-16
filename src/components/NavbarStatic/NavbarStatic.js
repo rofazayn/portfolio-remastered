@@ -145,12 +145,12 @@ const NavbarStatic = () => {
           {isDarkTheme ? (
             <>
               <SunIcon />
-              <span>Lights ON.</span>
+              <span>Lights ON</span>
             </>
           ) : (
             <>
               <MoonIcon />
-              <span>Lights OFF.</span>
+              <span>Lights OFF</span>
             </>
           )}
         </li>

@@ -4,9 +4,10 @@ import Image from '../../components/Image/Image';
 import homeImage from '../../assets/images/03.png';
 import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
-import Paragraph from '../../components/Paragraph/Paragraph';
-import Title from '../../components/Title/Title';
-import { Link } from 'react-router-dom';
+// import Paragraph from '../../components/Paragraph/Paragraph';
+// import Title from '../../components/Title/Title';
+// import { Link } from 'react-router-dom';
+import { ReactComponent as CoffeeIcon } from '../../assets/icons/coffee.svg';
 
 const SHome = styled.div`
   .mid {
@@ -74,16 +75,16 @@ const Home = ({ pageTitle }) => {
               line1={line1}
               line2={line2}
               paragraph={paragraph}
-              buttonText={''}
+              buttonText={`Check out my projects`}
               buttonPath={'/projects'}
-              scroller
+              buttonIcon={<CoffeeIcon width='18px' />}
             />
           </div>
           <div className='section'>
             <Image src={homeImage} />
           </div>
         </div>
-        <div className='mid' id='mid'>
+        {/* <div className='mid' id='mid'>
           <Title pageTitle>About.</Title>
           <div className='about'>
             <div className='item'>
@@ -113,13 +114,13 @@ const Home = ({ pageTitle }) => {
               <Paragraph>
                 I love Git version control. And I show that love by contributing
                 daily to GitHub. Though, I keep my repositories private due to
-                secrecy agreements that I sign with my employers. Still, I have
-                some side projects that you can check in the{' '}
+                secrecy agreements that I sign with my employers. But, I have
+                side projects that you can check out in the{' '}
                 <Link to='/projects'>Projects</Link> section.
               </Paragraph>
             </div>
           </div>
-        </div>
+        </div> */}
       </Container>
     </SHome>
   );

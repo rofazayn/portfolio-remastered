@@ -6,6 +6,7 @@ import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
 import Title from '../../components/Title/Title';
 import Paragraph from '../../components/Paragraph/Paragraph';
+import { ReactComponent as DownloadIcon } from '../../assets/icons/download.svg';
 import {
   htmlImage,
   cssImage,
@@ -33,6 +34,9 @@ import {
   expressImage
 } from './resumeAssets';
 import SResume from './ResumeStyled';
+import { ReactComponent as ArrowRightIcon } from '../../assets/icons/arrow-right.svg';
+import { Link } from 'react-router-dom';
+import { Button } from '@material-ui/core';
 
 const Resume = ({ pageTitle }) => {
   const line1 = `Years of exp`;
@@ -57,6 +61,7 @@ const Resume = ({ pageTitle }) => {
               buttonText={''}
               buttonPath={'/hire'}
               scroller
+              scrollButtonText='A little info about me'
             />
           </div>
           <div className='section'>
@@ -79,14 +84,23 @@ const Resume = ({ pageTitle }) => {
                 </div>
               </Title>
               <Paragraph>
-                Hello there, my name is Abderraouf Zine (Phonetic spelling:
-                Abd'Rauf Zayn), I am 21 years old from the Aurès region located
-                in Algeria, a computer science sophomore, I started teaching
-                myself how to code years ago and I ended up walking the web
-                development path, I've also worked for a decent amount of time
-                as a freelancer. Lately, I've been focusing more on landing a
-                full-time position as a remote web developer.
+                My name is Abderraouf Zine (Phonetic spelling: Abd'Rauf Zayn), I
+                am 21 years old from the Aurès, Algeria. I'm a computer science
+                sophomore, I started teaching myself how to code years ago and I
+                ended up walking the web development path, I've also worked for
+                a decent amount of time as a freelancer. Lately, I've been
+                focusing more on landing a full-time position as a remote web
+                developer.
               </Paragraph>
+              <Button
+                variant='outlined'
+                color='primary'
+                endIcon={<DownloadIcon width='16px' />}
+                href={process.env.PUBLIC_URL + '/docs/resume-not-ready.pdf'}
+                download
+              >
+                Download my resume
+              </Button>
             </div>
           </div>
           <div className='skills'>
@@ -257,6 +271,31 @@ const Resume = ({ pageTitle }) => {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+        <div className='bot'>
+          <div className='cta'>
+            <Title sectionTitle>
+              <div className='line-wrapper'>
+                <div className='line'>You are wondering</div>
+              </div>
+              <div className='line-wrapper'>
+                <div className='line'>why you should hire me?</div>
+              </div>
+            </Title>
+            <Paragraph className='text'>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus amet pariatur suscipit voluptatem rerum autem neque
+              voluptates et praesentium doloremque!
+            </Paragraph>
+            <Button
+              variant='outlined'
+              component={Link}
+              to='/hire'
+              endIcon={<ArrowRightIcon width='16px' />}
+            >
+              Here is why you should!
+            </Button>
           </div>
         </div>
       </Container>

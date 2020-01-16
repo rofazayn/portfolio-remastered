@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../../components/Button/Button';
+// import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 import Title from '../Title/Title';
 import Paragraph from '../Paragraph/Paragraph';
-import { IconButton } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import { ReactComponent as ArrowDownIcon } from '../../assets/icons/arrow-down.svg';
 
 const SHero = styled.div`
@@ -41,46 +41,12 @@ const SHero = styled.div`
       margin-top: 1rem;
     }
   }
-  .scroller {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(-22px);
-    &:hover {
-      .scroller__text {
-        color: ${({ theme }) => theme.colors.vein};
-      }
-      svg {
-        color: ${({ theme }) => theme.colors.vein};
-      }
+  .hero-button {
+    @media (max-width: 1366px) {
+      font-size: 0.8rem;
     }
-
-    svg {
-      transition: all ease 400ms;
-    }
-
-    &__text {
-      margin-inline-start: 0.5rem;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: ${({ theme }) => theme.colors.primary};
-      transition: all ease 400ms;
-      padding: 1rem 0;
-
-      @media (max-width: 1366px) {
-        font-size: 0.7rem;
-      }
-      @media (max-width: 992px) {
-        font-size: 0.75rem;
-      }
-      @media (max-width: 768px) {
-        font-size: 0.7rem;
-      }
-      @media (max-width: 576px) {
-        font-size: 0.65rem;
-      }
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
     }
   }
 `;
@@ -92,8 +58,10 @@ const Hero = ({
   paragraph,
   buttonText,
   buttonPath,
+  buttonIcon,
   extra,
-  scroller
+  scroller,
+  scrollButtonText
 }) => {
   return (
     <SHero>
@@ -115,11 +83,14 @@ const Hero = ({
         {buttonText && (
           <>
             <Link to={buttonPath}>
-              <Button>
-                {/* <div className='icon'>
-              <SquareIcon />
-            </div>{' '} */}
-                {buttonText && buttonText}
+              <Button
+                endIcon={buttonIcon}
+                size='large'
+                variant='outlined'
+                color='primary'
+                className='hero-button'
+              >
+                {buttonText ? buttonText : 'Hmm! Smothing went wrong...'}
               </Button>
             </Link>
           </>
@@ -127,10 +98,15 @@ const Hero = ({
         {extra && <small className='extra'>{extra}</small>}
         {scroller && (
           <a className='scroller' href='#mid'>
-            <IconButton>
-              <ArrowDownIcon />
-            </IconButton>
-            <span className='scroller__text'>Scroll down for more</span>
+            <Button
+              startIcon={<ArrowDownIcon width='18px' />}
+              size='large'
+              variant='outlined'
+              color='primary'
+              className='hero-button'
+            >
+              {scrollButtonText ? scrollButtonText : 'Scroll down for more'}
+            </Button>
           </a>
         )}
       </div>
