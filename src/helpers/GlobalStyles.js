@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   body {
