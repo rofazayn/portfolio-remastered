@@ -6,9 +6,9 @@ const SImage = styled.div`
   width: 100%;
   height: 100%;
   max-width: 480px;
-  @media (max-height: 800px) {
+  @media (max-height: 700px) {
     margin-bottom: 1.5rem;
-    max-width: 350px;
+    max-width: 370px;
   }
   background: ${({ theme }) => theme.colors.background};
   position: relative;

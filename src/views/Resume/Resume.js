@@ -6,7 +6,7 @@ import Container from '../../components/Container/Container';
 import Hero from '../../components/Hero/Hero';
 import Title from '../../components/Title/Title';
 import Paragraph from '../../components/Paragraph/Paragraph';
-import { ReactComponent as DownloadIcon } from '../../assets/icons/download.svg';
+// import { ReactComponent as DownloadIcon } from '../../assets/icons/download.svg';
 import {
   htmlImage,
   cssImage,
@@ -99,6 +99,8 @@ const Resume = ({ pageTitle }) => {
                 endIcon={<ExternalLinkIcon width='16px' />}
                 href={process.env.PUBLIC_URL + '/docs/resume-not-ready.pdf'}
                 target='_blank'
+                size='large'
+                className='custom-button'
               >
                 Open resume pdf file
               </Button>
@@ -294,6 +296,8 @@ const Resume = ({ pageTitle }) => {
               component={Link}
               to='/hire'
               endIcon={<ArrowRightIcon width='16px' />}
+              size='large'
+              className='custom-button'
             >
               Here is why you should!
             </Button>

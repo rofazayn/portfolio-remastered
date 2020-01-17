@@ -41,14 +41,6 @@ const SHero = styled.div`
       margin-top: 1rem;
     }
   }
-  .hero-button {
-    @media (max-width: 1366px) {
-      font-size: 0.8rem;
-    }
-    @media (max-width: 768px) {
-      font-size: 0.8rem;
-    }
-  }
 `;
 
 const Hero = ({
@@ -85,10 +77,10 @@ const Hero = ({
             <Link to={buttonPath}>
               <Button
                 endIcon={buttonIcon}
-                size='large'
                 variant='outlined'
                 color='primary'
-                className='hero-button'
+                size='large'
+                className='custom-button'
               >
                 {buttonText ? buttonText : 'Hmm! Smothing went wrong...'}
               </Button>
@@ -100,10 +92,10 @@ const Hero = ({
           <a className='scroller' href='#mid'>
             <Button
               startIcon={<ArrowDownIcon width='18px' />}
-              size='large'
               variant='outlined'
               color='primary'
-              className='hero-button'
+              size='large'
+              className='custom-button'
             >
               {scrollButtonText ? scrollButtonText : 'Scroll down for more'}
             </Button>

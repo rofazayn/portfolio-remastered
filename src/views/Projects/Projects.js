@@ -97,6 +97,8 @@ const Projects = ({ pageTitle }) => {
               component={Link}
               to='/resume'
               endIcon={<ArrowRightIcon width='16px' />}
+              size='large'
+              className='custom-button'
             >
               Go to resume page
             </Button>

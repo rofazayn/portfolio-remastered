@@ -65,6 +65,21 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
   }
 
+  .custom-button {
+    @media (max-width: 1366px) {
+      font-size: 0.8rem !important; 
+      padding: .5 .75rem !important;
+      
+    }
+    @media (max-width: 768px) {
+    font-size: .75rem;
+      font-size: 0.77rem !important; 
+      padding: .4 .55rem !important;
+      
+    }
+    
+  }
+
   .App {
     visibility: hidden;
     min-height: 100%;
