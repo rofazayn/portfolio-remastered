@@ -12,9 +12,9 @@ const ContactFormStyled = styled.div`
     display: grid;
     grid-gap: 1rem;
     .contact-button {
-      height: 50px;
-      display: flex;
       justify-content: space-between;
+      height: 45px;
+      /* display: grid; */
     }
   }
   .success-message > div {

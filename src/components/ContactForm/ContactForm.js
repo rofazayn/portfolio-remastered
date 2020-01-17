@@ -151,9 +151,10 @@ const ContactForm = () => {
               }
             />
             <Button
-              variant='contained'
-              // color='secondary'
-              className='contact-button'
+              variant='outlined'
+              color='primary'
+              className='contact-button custom-button'
+              size='large'
               type='submit'
               disabled={isSubmitting}
               endIcon={
