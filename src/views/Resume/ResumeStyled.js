@@ -125,6 +125,7 @@ const SResume = styled.div`
             &:hover {
               /* background: papayawhip; */
               background: ${({ theme }) => theme.colors.accent};
+              box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
             }
           }
         }
