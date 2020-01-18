@@ -32,8 +32,8 @@ import {
   apolloImage,
   npmImage,
   expressImage
-} from './resumeAssets';
-import SResume from './ResumeStyled';
+} from './aboutAssets';
+import SAbout from './AboutStyled';
 import { ReactComponent as ExternalLinkIcon } from '../../assets/icons/external-link.svg';
 import { ReactComponent as ArrowRightIcon } from '../../assets/icons/arrow-right.svg';
 import { Link } from 'react-router-dom';
@@ -50,7 +50,7 @@ const Resume = ({ pageTitle }) => {
   });
 
   return (
-    <SResume>
+    <SAbout>
       <Container>
         <div className='top'>
           <div className='section'>
@@ -280,10 +280,10 @@ const Resume = ({ pageTitle }) => {
           <div className='cta'>
             <Title sectionTitle>
               <div className='line-wrapper'>
-                <div className='line'>You are wondering</div>
+                <div className='line'>Looking for projects?</div>
               </div>
               <div className='line-wrapper'>
-                <div className='line'>why you should hire me?</div>
+                <div className='line'>I prepared some for you!</div>
               </div>
             </Title>
             <Paragraph className='text'>
@@ -294,17 +294,17 @@ const Resume = ({ pageTitle }) => {
             <Button
               variant='outlined'
               component={Link}
-              to='/hire'
+              to='/projects'
               endIcon={<ArrowRightIcon width='16px' />}
               size='large'
               className='custom-button'
             >
-              Here is why you should!
+              Have a look
             </Button>
           </div>
         </div>
       </Container>
-    </SResume>
+    </SAbout>
   );
 };
 

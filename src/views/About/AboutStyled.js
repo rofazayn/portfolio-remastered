@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SResume = styled.div`
+const SAbout = styled.div`
   width: 100%;
   .rofa {
     display: flex;
@@ -134,4 +134,4 @@ const SResume = styled.div`
   }
 `;
 
-export default SResume;
+export default SAbout;

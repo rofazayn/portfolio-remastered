@@ -81,10 +81,10 @@ const Projects = ({ pageTitle }) => {
           <div className='cta'>
             <Title sectionTitle>
               <div className='line-wrapper'>
-                <div className='line'>You like what you see?</div>
+                <div className='line'>Looking to reach out?</div>
               </div>
               <div className='line-wrapper'>
-                <div className='line'>Have a look at my resume.</div>
+                <div className='line'>I made a page for that!</div>
               </div>
             </Title>
             <Paragraph className='text'>
@@ -95,12 +95,12 @@ const Projects = ({ pageTitle }) => {
             <Button
               variant='outlined'
               component={Link}
-              to='/resume'
+              to='/contact'
               endIcon={<ArrowRightIcon width='16px' />}
               size='large'
               className='custom-button'
             >
-              Go to resume page
+              Come and say hello
             </Button>
           </div>
         </div>

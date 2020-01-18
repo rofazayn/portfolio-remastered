@@ -58,7 +58,7 @@ const Home = ({ pageTitle }) => {
   // Page content
   const line1 = `Welcome to my`;
   const line2 = `personal portfolio.`;
-  const paragraph = `My name is Abderraouf. I'm a web developer from Aurès, Algeria. Have a look around and discover what I can offer for you or your business.`;
+  const paragraph = `My name is Abderraouf. I'm a web developer from Algeria. Sometimes I design stuff, and some other times I code them, I just love what I do.`;
   // const buttonText = `See some stuff I built`;
 
   useEffect(() => {
@@ -68,7 +68,7 @@ const Home = ({ pageTitle }) => {
   return (
     <SHome>
       <Container>
-        <div className='top'>
+        <div className='top --reverse-row'>
           <div className='section'>
             <Hero
               pageTitle={pageTitle + '.'}
@@ -76,7 +76,7 @@ const Home = ({ pageTitle }) => {
               line2={line2}
               paragraph={paragraph}
               buttonText={`Let's start exploring`}
-              buttonPath={'/projects'}
+              buttonPath={'/about'}
               buttonIcon={<CoffeeIcon width='18px' />}
             />
           </div>

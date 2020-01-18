@@ -128,14 +128,14 @@ const NavbarStatic = () => {
           <NavLink to='/home'>Home</NavLink>
         </li>
         <li>
+          <NavLink to='/about'>About me</NavLink>
+        </li>
+        <li>
           <NavLink to='/projects'>Projects</NavLink>
         </li>
-        <li>
-          <NavLink to='/resume'>Resume</NavLink>
-        </li>
-        <li>
+        {/* <li>
           <NavLink to='/hire'>Hire me</NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to='/contact'>Contact</NavLink>
         </li>
@@ -145,12 +145,12 @@ const NavbarStatic = () => {
           {isDarkTheme ? (
             <>
               <SunIcon />
-              <span>Lights ON</span>
+              {/* <span>Lights ON</span> */}
             </>
           ) : (
             <>
               <MoonIcon />
-              <span>Lights OFF</span>
+              {/* <span>Lights OFF</span> */}
             </>
           )}
         </li>

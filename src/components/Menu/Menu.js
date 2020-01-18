@@ -20,7 +20,7 @@ const Menu = ({ toggler }) => {
     line1 = useRef(null),
     line2 = useRef(null),
     line3 = useRef(null),
-    line4 = useRef(null),
+    // line4 = useRef(null),
     line5 = useRef(null);
 
   let html = document.querySelector('#html-element');
@@ -29,7 +29,7 @@ const Menu = ({ toggler }) => {
     // If the menu is open and we click the menu button to close it.
     if (toggler.isClicked === false) {
       // If menu is closed and we want to open it.
-      staggerTextHide(line1, line2, line3, line4, line5);
+      staggerTextHide(line1, line2, line3, line5);
       staggerMenuHide(reveal2, reveal1);
       // Set menu to display none
       gsap.to(myMenu, { delay: 0.98, css: { display: 'none' } });
@@ -48,7 +48,7 @@ const Menu = ({ toggler }) => {
         height: '100%'
       });
       staggerMenuReveal(reveal1, reveal2);
-      staggerTextReveal(line1, line2, line3, line4, line5);
+      staggerTextReveal(line1, line2, line3, line5);
       html.classList.add('no-sroll');
     }
   }, [toggler, html]);
@@ -75,25 +75,25 @@ const Menu = ({ toggler }) => {
               </li>
               <li>
                 <NavLink
-                  to='/projects'
+                  to='/about'
                   ref={el => (line2 = el)}
+                  onMouseEnter={e => handleHover(e)}
+                  onMouseOut={e => handleHoverExit(e)}
+                >
+                  About me
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to='/projects'
+                  ref={el => (line3 = el)}
                   onMouseEnter={e => handleHover(e)}
                   onMouseOut={e => handleHoverExit(e)}
                 >
                   Projects
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to='/resume'
-                  ref={el => (line3 = el)}
-                  onMouseEnter={e => handleHover(e)}
-                  onMouseOut={e => handleHoverExit(e)}
-                >
-                  Resume
-                </NavLink>
-              </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to='/hire'
                   ref={el => (line4 = el)}
@@ -102,7 +102,7 @@ const Menu = ({ toggler }) => {
                 >
                   Hire me
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
                   to='/contact'

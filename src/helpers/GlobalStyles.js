@@ -67,6 +67,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .custom-button {
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
     @media (max-width: 1366px) {
       font-size: 0.8rem !important; 
       padding: .5 .75rem !important;

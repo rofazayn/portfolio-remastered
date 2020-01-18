@@ -13,7 +13,7 @@ const SNavbar = styled.nav`
   background-color: ${({ theme }) => theme.colors.background};
   background: linear-gradient(
     to bottom,
-    ${({ theme }) => theme.colors.background} 72%,
+    ${({ theme }) => theme.colors.background} 89%,
     ${({ theme }) => theme.colors.backgroundLowOpacity} 100%
   );
 
