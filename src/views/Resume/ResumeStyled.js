@@ -102,7 +102,7 @@ const SResume = styled.div`
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            cursor: pointer;
+            cursor: default;
             img {
               width: 85px;
               height: 85px;
