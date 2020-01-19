@@ -58,12 +58,14 @@ const Home = ({ pageTitle }) => {
   // Page content
   const line1 = `Welcome to my`;
   const line2 = `personal portfolio.`;
-  const paragraph = `My name is Abderraouf. I'm a web developer from Algeria. Sometimes I design stuff, and some other times I code them, I just love what I do.`;
+  const paragraph = `My name is Abderraouf. I'm a web developer from Algeria. Sometimes I design, some other times I code them, and I love what I do.`;
   // const buttonText = `See some stuff I built`;
 
   useEffect(() => {
     document.title = ` ${pageTitle} · Rofazayn`;
   });
+
+  console.log(homeImage);
 
   return (
     <SHome>

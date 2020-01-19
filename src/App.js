@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
@@ -15,6 +15,7 @@ import GlobalStyle from './helpers/GlobalStyles';
 import { muiThemeDark, muiThemeLight } from './assets/theming/muiTheme';
 
 function App({ history, location }) {
+  const [isImagesLoaded, setIsImagesLoaded] = useState(true);
   // Set my app to visible
   useEffect(() => {
     gsap.set('.App', {
@@ -39,23 +40,26 @@ function App({ history, location }) {
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <MuiThemeProvider theme={isDarkTheme ? muiThemeDark : muiThemeLight}>
         <GlobalStyle />
-
-        <div className='App'>
-          <Navbar />
-          <Wrapper>
-            <Page>
-              <Switch>
-                {routes.map(({ name, path, Component }) => (
-                  <Route path={path} exact key={name}>
-                    <Component pageTitle={name} />
-                  </Route>
-                ))}
-                <Redirect to='/' />
-              </Switch>
-            </Page>
-          </Wrapper>
-          <Footer />
-        </div>
+        {isImagesLoaded ? (
+          <div className='App'>
+            <Navbar />
+            <Wrapper>
+              <Page>
+                <Switch>
+                  {routes.map(({ name, path, Component }) => (
+                    <Route path={path} exact key={name}>
+                      <Component pageTitle={name} />
+                    </Route>
+                  ))}
+                  <Redirect to='/' />
+                </Switch>
+              </Page>
+            </Wrapper>
+            <Footer />
+          </div>
+        ) : (
+          <h1>Loading</h1>
+        )}
       </MuiThemeProvider>
     </ThemeProvider>
   );
