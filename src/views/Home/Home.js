@@ -58,7 +58,7 @@ const Home = ({ pageTitle }) => {
   // Page content
   const line1 = `Welcome to my`;
   const line2 = `personal portfolio.`;
-  const paragraph = `My name is Abderraouf. I'm a web developer from Algeria. Sometimes I design, some other times I code them, and I love what I do.`;
+  const paragraph = `My name is Abderraouf. I'm a 21 years old digital nomad. Sometimes I design, some other times I code, in other words, I am a full stack web developer.`;
   // const buttonText = `See some stuff I built`;
 
   useEffect(() => {

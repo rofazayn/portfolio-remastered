@@ -287,9 +287,9 @@ const Resume = ({ pageTitle }) => {
               </div>
             </Title>
             <Paragraph className='text'>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus amet pariatur suscipit voluptatem rerum autem neque
-              voluptates et praesentium doloremque!
+              The projects I am going to show you are not real world
+              applications, they are just personal projects that act like
+              demonstrations of a skill or a certain amount of skills.
             </Paragraph>
             <Button
               variant='outlined'

@@ -24,7 +24,7 @@ const SProjects = styled.main`
 
 const Projects = ({ pageTitle }) => {
   const line1 = `Hmm.. projects?`;
-  const line2 = `I have done plenty!`;
+  const line2 = `I have done some!`;
   const paragraph = `I delivered more than 50 projects to individuals, startups, small businesses and even established companies, below are some personal projects to review.`;
   // const buttonText = `Check out my resume`;
 
@@ -88,9 +88,12 @@ const Projects = ({ pageTitle }) => {
               </div>
             </Title>
             <Paragraph className='text'>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              {/* Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus amet pariatur suscipit voluptatem rerum autem neque
-              voluptates et praesentium doloremque!
+              voluptates et praesentium doloremque! */}
+              You are welcome to contact me by filling a simple email form, I
+              typically reply within a day or two, you can find the form by
+              clicking on the button below.
             </Paragraph>
             <Button
               variant='outlined'

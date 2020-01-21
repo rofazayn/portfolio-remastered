@@ -24,10 +24,10 @@ const SAbout = styled.div`
       img {
         width: 100%;
         max-width: 400px;
-        box-shadow: -18px -18px 0 ${({ theme }) => theme.colors.vein};
+        /* box-shadow: -18px -18px 0 ${({ theme }) => theme.colors.vein}; */
         @media (max-width: 768px) {
           margin-inline-end: 0;
-          box-shadow: -13px -13px 0 ${({ theme }) => theme.colors.vein};
+          /* box-shadow: -13px -13px 0 ${({ theme }) => theme.colors.vein}; */
         }
       }
     }
