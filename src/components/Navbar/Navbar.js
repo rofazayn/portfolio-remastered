@@ -11,11 +11,11 @@ const SNavbar = styled.nav`
   left: 0;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.background};
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
     ${({ theme }) => theme.colors.background} 89%,
     ${({ theme }) => theme.colors.backgroundLowOpacity} 100%
-  );
+  ); */
 
   transition: top ease 400ms;
   .navbar {
@@ -26,6 +26,9 @@ const SNavbar = styled.nav`
     /* max-width: 1500px; */
     margin: 0 auto;
     max-width: 1920px;
+    @media (max-width: 767px) {
+      padding: 1rem;
+    }
   }
 `;
 

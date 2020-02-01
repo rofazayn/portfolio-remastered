@@ -12,6 +12,9 @@ const SFooter = styled.footer`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 767px) {
+      padding: 1rem;
+    }
   }
 `;
 

@@ -52,7 +52,7 @@ const ContactForm = () => {
   };
 
   return (
-    <ContactFormStyled>
+    <ContactFormStyled className='form-wrapper'>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}

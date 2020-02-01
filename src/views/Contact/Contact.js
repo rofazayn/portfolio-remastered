@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 // import Image from '../../components/Image/Image';
 // import contactImage from '../../assets/images/06.png';
-import Container from '../../components/Container/Container';
+// import Container from '../../components/Container/Container';
+import { Container } from '@material-ui/core';
 import Hero from '../../components/Hero/Hero';
 import ContactForm from '../../components/ContactForm/ContactForm';
 
@@ -10,6 +11,14 @@ const SContact = styled.main`
   width: 100%;
   .section {
     display: block !important;
+    .form-wrapper {
+      margin: 0 auto;
+      margin-top: 2rem;
+      @media (max-width: 768px) {
+        margin: 0;
+        margin-top: 2rem;
+      }
+    }
   }
 `;
 
