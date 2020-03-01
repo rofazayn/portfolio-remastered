@@ -37,25 +37,24 @@ const SNavbarStatic = styled.nav`
           font-size: 0.7rem;
           padding: 0.8rem 0.5rem;
         }
-        &::before {
+        /* &::before {
           content: '';
           position: absolute;
           width: 8px;
           height: 3px;
           border-radius: 100%;
           background: transparent;
-          /* background: red; */
           bottom: 0;
           left: 0;
           right: 0;
           margin: 0 auto;
           transition: all ease 400ms;
-        }
+        } */
         &.active {
           color: ${({ theme }) => theme.colors.vein};
-          &::before {
+          /* &::before {
             background: ${({ theme }) => theme.colors.vein};
-          }
+          } */
         }
         &:hover {
           color: ${({ theme }) => theme.colors.vein};

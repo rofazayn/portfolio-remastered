@@ -79,10 +79,24 @@ const Projects = ({ pageTitle }) => {
             </Paragraph>
           </div>
           <div className='section'>
-            <div className='placeholder'>
-              <h4>CharityPal.</h4>
-              <p>COMING SOON</p>
-            </div>
+            <a
+              className='placeholder'
+              href='https://charitypal.rofazayn.me'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <h4>CharityPal</h4>
+              <p>Work ongoing</p>
+            </a>
+            <a
+              className='placeholder'
+              href='https://github.com/rofazayn/socila-client'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <h4>Socila</h4>
+              <p>Work ongoing</p>
+            </a>
             <div className='placeholder'>
               <p>COMING SOON</p>
             </div>
