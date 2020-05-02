@@ -52,7 +52,7 @@ const Social = () => {
       <Divider vertical />
       <div className='icons'>
         <a
-          href='https://github.com/rofazayn/portfolio-remastered'
+          href='https://github.com/rofazayn'
           target='_blank'
           rel='noopener noreferrer'
           className='icon'
