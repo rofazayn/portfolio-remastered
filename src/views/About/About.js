@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Image from '../../components/Image/Image';
 import resumeImage from '../../assets/images/05.png';
-import profileImage from '../../assets/images/profile.jpg';
+// import profileImage from '../../assets/images/profile.jpg';
 // import Container from '../../components/Container/Container';
 import { Container } from '@material-ui/core';
 import Hero from '../../components/Hero/Hero';

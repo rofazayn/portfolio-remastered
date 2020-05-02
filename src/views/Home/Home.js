@@ -59,14 +59,12 @@ const Home = ({ pageTitle }) => {
   // Page content
   const line1 = `Welcome to my`;
   const line2 = `personal portfolio.`;
-  const paragraph = `My name is Abderraouf. I'm a 21 years old digital nomad. Sometimes I design, some other times I code, in other words, I am a full stack web developer.`;
+  const paragraph = `My name is Abderraouf, you can call me Rofa. I am a software developer speliazing in web development.`;
   // const buttonText = `See some stuff I built`;
 
   useEffect(() => {
     document.title = ` ${pageTitle} · Rofazayn`;
   });
-
-  console.log(homeImage);
 
   return (
     <SHome>
@@ -78,7 +76,7 @@ const Home = ({ pageTitle }) => {
               line1={line1}
               line2={line2}
               paragraph={paragraph}
-              buttonText={`Let's start exploring`}
+              buttonText={`Start here!`}
               buttonPath={'/about'}
               buttonIcon={<CoffeeIcon width='18px' />}
             />
