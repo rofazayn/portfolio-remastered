@@ -288,9 +288,9 @@ const Resume = ({ pageTitle }) => {
               </div>
             </Title>
             <Paragraph className='text'>
-              The projects I am going to show you are not real world
-              applications, they are just personal projects that act like
-              demonstrations of a skill or a certain amount of skills.
+              The projects I am going to show you are not real world ones, they
+              are just personal side projects that act as a demonstration of a
+              skill or certain amount of skills.
             </Paragraph>
             <Button
               variant='outlined'

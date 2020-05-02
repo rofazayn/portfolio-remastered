@@ -34,7 +34,7 @@ const SProjects = styled.main`
 const Projects = ({ pageTitle }) => {
   const line1 = `Hmm.. projects?`;
   const line2 = `I have done some!`;
-  const paragraph = `I delivered more than 50 projects to individuals, startups, small businesses and even established companies, below are some personal projects to review.`;
+  const paragraph = `I delivered more than 50 projects to individuals, startups, small businesses and even established companies, below are some of my side projects.`;
   // const buttonText = `Check out my resume`;
 
   useEffect(() => {
@@ -75,7 +75,7 @@ const Projects = ({ pageTitle }) => {
             <Paragraph>
               Each one of the projects listed here is a personal project,
               carefully selected to show certain skills. Feel free to check out
-              the code on GitHub or contact me if you have any inquiries.
+              the code on GitHub or give it a try using the live preview.
             </Paragraph>
           </div>
           <div className='section'>
