@@ -32,7 +32,7 @@ import {
   socketioImage,
   apolloImage,
   npmImage,
-  expressImage
+  expressImage,
 } from './aboutAssets';
 import SAbout from './AboutStyled';
 import { ReactComponent as ExternalLinkIcon } from '../../assets/icons/external-link.svg';
@@ -72,11 +72,11 @@ const Resume = ({ pageTitle }) => {
         </div>
         <div className='mid' id='mid'>
           <div className='rofa'>
-            <div className='item '>
+            {/* <div className='item'>
               <img src={profileImage} alt='Abderraouf Zine' />
-            </div>
+            </div> */}
             <div className='item'>
-              <Title pageTitle>About me.</Title>
+              <Title pageTitle>Brief.</Title>
               <Title sectionTitle>
                 <div className='line-wrapper'>
                   <div className='line'>I'm Abderraouf..</div>
@@ -87,7 +87,7 @@ const Resume = ({ pageTitle }) => {
               </Title>
               <Paragraph>
                 My name is Abderraouf Zine (Phonetic spelling: Abd'Rauf Zayn), I
-                am 21 years old from the Aurès, Algeria. I'm a computer science
+                am 21 years old from the Aurès, Algeria. A computer science
                 sophomore, I started teaching myself how to code years ago and I
                 ended up walking the web development path, I've also worked for
                 a decent amount of time as a freelancer. Lately, I've been
@@ -98,7 +98,7 @@ const Resume = ({ pageTitle }) => {
                 variant='outlined'
                 color='primary'
                 endIcon={<ExternalLinkIcon width='16px' />}
-                href={process.env.PUBLIC_URL + '/docs/resume-not-ready.pdf'}
+                href={process.env.PUBLIC_URL + '/docs/abderraouf-resume.pdf'}
                 target='_blank'
                 size='large'
                 className='custom-button'

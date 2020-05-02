@@ -6,6 +6,7 @@ import { ReactComponent as MoonIcon } from '../../assets/icons/moon.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../../redux/actions/ui.actions';
 import Divider from '../Divider/Divider';
+import { ReactComponent as ExternalLinkIcon } from '../../assets/icons/external-link.svg';
 
 const SNavbarStatic = styled.nav`
   display: flex;
@@ -25,6 +26,9 @@ const SNavbarStatic = styled.nav`
     /* margin-inline-end: 2rem; */
     li {
       a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 1rem;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -36,6 +40,9 @@ const SNavbarStatic = styled.nav`
         @media (max-width: 1366px) {
           font-size: 0.7rem;
           padding: 0.8rem 0.5rem;
+        }
+        svg {
+          margin-inline-start: 8px;
         }
         /* &::before {
           content: '';
@@ -114,7 +121,7 @@ const NavbarStatic = () => {
   const dispatch = useDispatch();
 
   // Check theme
-  const isDarkTheme = useSelector(state => state.ui.isDarkTheme);
+  const isDarkTheme = useSelector((state) => state.ui.isDarkTheme);
 
   // Toggle theme on button click
   const handleThemeToggle = () => {
@@ -130,11 +137,18 @@ const NavbarStatic = () => {
           <NavLink to='/about'>About me</NavLink>
         </li>
         <li>
+          <a
+            href={process.env.PUBLIC_URL + '/docs/abderraouf-resume.pdf'}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Resume <ExternalLinkIcon width='16px' />
+          </a>
+        </li>
+        <li>
           <NavLink to='/projects'>Projects</NavLink>
         </li>
-        {/* <li>
-          <NavLink to='/hire'>Hire me</NavLink>
-        </li> */}
+
         <li>
           <NavLink to='/contact'>Contact</NavLink>
         </li>

@@ -3,8 +3,9 @@ import styled from 'styled-components';
 const SAbout = styled.div`
   width: 100%;
   .rofa {
+    width: 100%;
     display: flex;
-    justify-items: space-between;
+    justify-content: center;
     align-items: center;
     @media (max-width: 768px) {
       align-items: flex-start;
@@ -14,7 +15,7 @@ const SAbout = styled.div`
     .item {
       position: relative;
       &:first-of-type {
-        margin-inline-end: 5rem;
+        /* margin-inline-end: 5rem; */
         @media (max-width: 768px) {
           margin-inline-end: 0;
           margin-block-end: 2rem;
