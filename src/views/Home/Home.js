@@ -59,7 +59,7 @@ const Home = ({ pageTitle }) => {
   // Page content
   const line1 = `Welcome to my`;
   const line2 = `personal portfolio.`;
-  const paragraph = `My name is Abderraouf, you can call me Rofa. I am a software developer speliazing in web development.`;
+  const paragraph = `My name is Abderraouf, you can call me Rofa. I am a software developer specializing in web development.`;
   // const buttonText = `See some stuff I built`;
 
   useEffect(() => {

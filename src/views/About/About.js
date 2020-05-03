@@ -76,7 +76,7 @@ const Resume = ({ pageTitle }) => {
               <img src={profileImage} alt='Abderraouf Zine' />
             </div> */}
             <div className='item'>
-              <Title pageTitle>Brief.</Title>
+              <Title pageTitle>Who am I?</Title>
               <Title sectionTitle>
                 <div className='line-wrapper'>
                   <div className='line'>I'm Abderraouf..</div>
@@ -87,7 +87,7 @@ const Resume = ({ pageTitle }) => {
               </Title>
               <Paragraph>
                 My name is Abderraouf Zine (Phonetic spelling: Abd'Rauf Zayn), I
-                am 21 years old from the Aurès, Algeria. A computer science
+                am 21 years old from Batna, Algeria. A computer science
                 sophomore, I started teaching myself how to code years ago and I
                 ended up walking the web development path, I've also worked for
                 a decent amount of time as a freelancer. Lately, I've been
@@ -103,7 +103,7 @@ const Resume = ({ pageTitle }) => {
                 size='large'
                 className='custom-button'
               >
-                Open resume pdf file
+                Resume pdf file
               </Button>
             </div>
           </div>
@@ -120,7 +120,7 @@ const Resume = ({ pageTitle }) => {
               </Title>
               <Paragraph>
                 Here you will find a showcase of some of the technologies I work
-                with / used before and how good am I with that certain
+                with or I used before and how good am I with that certain
                 technology.
               </Paragraph>
             </div>
