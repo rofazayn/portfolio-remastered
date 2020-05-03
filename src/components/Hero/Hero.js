@@ -4,8 +4,12 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Title from '../Title/Title';
 import Paragraph from '../Paragraph/Paragraph';
-import { Button } from '@material-ui/core';
+import { Button, Tooltip } from '@material-ui/core';
 import { ReactComponent as ArrowDownIcon } from '../../assets/icons/arrow-down.svg';
+import { ReactComponent as GithubIcon } from '../../assets/icons/github.svg';
+import { ReactComponent as LinkedInIcon } from '../../assets/icons/linkedin.svg';
+import { ReactComponent as TwitterIcon } from '../../assets/icons/twitter.svg';
+import { ReactComponent as ResumeIcon } from '../../assets/icons/file-text.svg';
 
 const SHero = styled.div`
   width: 100%;
@@ -41,6 +45,32 @@ const SHero = styled.div`
       margin-top: 1rem;
     }
   }
+  .social {
+    margin-bottom: 32px;
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-inline-end: 8px;
+          padding: 8px;
+          svg {
+            color: ${({ theme }) => theme.colors.secondary};
+            width: 24px;
+            height: 24px;
+          }
+          &:hover {
+            svg {
+              color: ${({ theme }) => theme.colors.vein};
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 const Hero = ({
@@ -51,9 +81,10 @@ const Hero = ({
   buttonText,
   buttonPath,
   buttonIcon,
+  withSocial,
   extra,
   scroller,
-  scrollButtonText
+  scrollButtonText,
 }) => {
   return (
     <SHero>
@@ -72,6 +103,61 @@ const Hero = ({
             <div className='text'>{paragraph && paragraph}</div>
           </div>
         </Paragraph>
+        {withSocial && (
+          <div className='social'>
+            <ul>
+              <li>
+                <Tooltip arrow={true} title='GitHub'>
+                  <a
+                    href='https://github.com/rofazayn'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='icon'
+                  >
+                    <GithubIcon />
+                  </a>
+                </Tooltip>
+              </li>
+              <li>
+                <Tooltip arrow={true} title='Twitter'>
+                  <a
+                    href='https://twitter.com/rofazayn'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='icon'
+                  >
+                    <TwitterIcon />
+                  </a>
+                </Tooltip>
+              </li>
+              <li>
+                <Tooltip arrow={true} title='LinkedIn'>
+                  <a
+                    href='https://www.linkedin.com/in/abderraouf-zine-906642192/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='icon'
+                  >
+                    <LinkedInIcon />
+                  </a>
+                </Tooltip>
+              </li>
+              <li>
+                <Tooltip arrow={true} title='Resume'>
+                  <a
+                    href={
+                      process.env.PUBLIC_URL + '/docs/abderraouf-resume.pdf'
+                    }
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <ResumeIcon />
+                  </a>
+                </Tooltip>
+              </li>
+            </ul>
+          </div>
+        )}
         {buttonText && (
           <>
             <Link to={buttonPath}>

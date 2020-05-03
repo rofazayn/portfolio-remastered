@@ -79,6 +79,7 @@ const Home = ({ pageTitle }) => {
               buttonText={`Start here!`}
               buttonPath={'/about'}
               buttonIcon={<CoffeeIcon width='18px' />}
+              withSocial
             />
           </div>
           <div className='section'>
