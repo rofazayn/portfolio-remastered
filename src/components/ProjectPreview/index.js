@@ -39,9 +39,6 @@ const ProjectPreview = ({
           <Typography variant='body2' className='subtitle'>
             {subtitle}
           </Typography>
-          <Typography variant='body1' className='about'>
-            {about}
-          </Typography>
           <div className='skills'>
             {skills.map((skill) => (
               <Styled.Skill key={skill}>
@@ -49,7 +46,22 @@ const ProjectPreview = ({
               </Styled.Skill>
             ))}
           </div>
+          <Typography variant='body1' className='about'>
+            {about}
+          </Typography>
+
           <div className='links'>
+            <a href={previewUrl} target='_blank' rel='noopener noreferrer'>
+              <Button
+                endIcon={<EyeIconSvg />}
+                variant='contained'
+                color='primary'
+                size='large'
+                className='custom-button'
+              >
+                Live preview
+              </Button>
+            </a>
             <a href={repoUrl} target='_blank' rel='noopener noreferrer'>
               <Button
                 endIcon={<CodeIconSvg />}
@@ -59,17 +71,6 @@ const ProjectPreview = ({
                 className='custom-button'
               >
                 View code
-              </Button>
-            </a>
-            <a href={previewUrl} target='_blank' rel='noopener noreferrer'>
-              <Button
-                endIcon={<EyeIconSvg />}
-                variant='outlined'
-                color='primary'
-                size='large'
-                className='custom-button'
-              >
-                Live preview
               </Button>
             </a>
           </div>
