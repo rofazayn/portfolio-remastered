@@ -9,8 +9,8 @@ export const staggerMenuReveal = (...nodes) => {
     skewY: 2,
     ease: 'power3.inOut',
     stagger: {
-      amount: 0.1
-    }
+      amount: 0.1,
+    },
   });
 };
 
@@ -22,15 +22,15 @@ export const staggerMenuHide = (...nodes) => {
     delay: 0.2,
     ease: 'power3.inOut',
     stagger: {
-      amount: 0.07
-    }
+      amount: 0.07,
+    },
   });
 };
 
 export const staggerTextReveal = (...nodes) => {
   setTimeout(() => {
     gsap.set([...nodes], {
-      visibility: 'visible'
+      visibility: 'visible',
     });
   }, 800);
   gsap.from([...nodes], {
@@ -39,16 +39,16 @@ export const staggerTextReveal = (...nodes) => {
     delay: 0.4,
     ease: 'power3.inOut',
     stagger: {
-      amount: 0.4
-    }
+      amount: 0.4,
+    },
   });
   gsap.to([...nodes], {
     duration: 0.8,
     opacity: 1,
     ease: 'power3.inOut',
     stagger: {
-      amount: 0.1
-    }
+      amount: 0.1,
+    },
   });
 };
 
@@ -58,39 +58,39 @@ export const staggerTextHide = (...nodes) => {
     opacity: 0,
     ease: 'power3.inOut',
     stagger: {
-      amount: 0.3
-    }
+      amount: 0.3,
+    },
   });
   setTimeout(() => {
     gsap.set([...nodes], {
-      visibility: 'hidden'
+      visibility: 'hidden',
     });
   }, 500);
 };
 
 // Hover on the link
-export const handleHover = e => {
+export const handleHover = (e) => {
   gsap.to(e.target, {
     duration: 0.3,
     y: 3,
     skewX: 4,
-    ease: 'power1.inOut'
+    ease: 'power1.inOut',
   });
 };
 
 // Hover off the link
-export const handleHoverExit = e => {
+export const handleHoverExit = (e) => {
   gsap.to(e.target, {
     duration: 0.3,
     y: -3,
     skewX: 0,
-    ease: 'power1.inOut'
+    ease: 'power1.inOut',
   });
 };
 
 export const revealHeadings = (...nodes) => {
   gsap.set([...nodes], {
-    visibility: 'visible'
+    visibility: 'visible',
   });
   gsap.from([...nodes], {
     duration: 1.4,
@@ -98,27 +98,27 @@ export const revealHeadings = (...nodes) => {
     ease: 'power3.out',
     y: 55,
     stagger: {
-      amount: 0.09
-    }
+      amount: 0.09,
+    },
   });
 };
 
-export const revealParagraph = paragraph => {
+export const revealParagraph = (paragraph) => {
   gsap.set(paragraph, {
-    visibility: 'visible'
+    visibility: 'visible',
   });
   gsap.from(paragraph, {
     duration: 1.4,
     delay: 0.5,
     y: '100%',
-    ease: 'power3.out'
+    ease: 'power3.out',
   });
 };
 
 export const revealImage = (background1, background2, image) => {
   gsap.to([background1.parentElement], {
     duration: 1.1,
-    ease: 'power3.inOut'
+    ease: 'power3.inOut',
   });
   gsap.to([background1, background2], {
     duration: 1.4,
@@ -126,22 +126,22 @@ export const revealImage = (background1, background2, image) => {
     ease: 'power3.inOut',
     delay: 0.5,
     stagger: {
-      amount: -0.09
-    }
+      amount: -0.09,
+    },
   });
   gsap.from(image, {
     duration: 1.4,
     scale: 1.6,
     ease: 'power3.inOut',
-    delay: 0.7
+    delay: 0.7,
   });
 };
 
-export const revealButtons = background => {
+export const revealButtons = (background) => {
   if (background) {
     gsap.from([background.parentElement], {
       duration: 1.1,
-      ease: 'power3.inOut'
+      ease: 'power3.inOut',
     });
   }
   gsap.to([background], {
@@ -150,7 +150,7 @@ export const revealButtons = background => {
     ease: 'power3.inOut',
     delay: 0.8,
     stagger: {
-      amount: -0.09
-    }
+      amount: -0.09,
+    },
   });
 };

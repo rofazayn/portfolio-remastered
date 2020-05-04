@@ -19,7 +19,7 @@ function App({ history, location }) {
   // Set my app to visible
   useEffect(() => {
     gsap.set('.App', {
-      visibility: 'visible'
+      visibility: 'visible',
     });
   });
 
@@ -34,7 +34,7 @@ function App({ history, location }) {
     }
   }, [location, history]);
 
-  const isDarkTheme = useSelector(state => state.ui.isDarkTheme);
+  const isDarkTheme = useSelector((state) => state.ui.isDarkTheme);
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>

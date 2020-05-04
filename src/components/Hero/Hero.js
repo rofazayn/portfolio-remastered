@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 // import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
@@ -10,6 +10,8 @@ import { ReactComponent as GithubIcon } from '../../assets/icons/github.svg';
 import { ReactComponent as LinkedInIcon } from '../../assets/icons/linkedin.svg';
 import { ReactComponent as TwitterIcon } from '../../assets/icons/twitter.svg';
 import { ReactComponent as ResumeIcon } from '../../assets/icons/file-text.svg';
+import { revealHeadings } from '../../helpers/Animations';
+import { useRef } from 'react';
 
 const SHero = styled.div`
   width: 100%;
@@ -86,16 +88,27 @@ const Hero = ({
   scroller,
   scrollButtonText,
 }) => {
+  let line1Ref = useRef(null);
+  let line2Ref = useRef(null);
+
+  useEffect(() => {
+    revealHeadings(line1Ref.current, line2Ref.current);
+  }, [line1Ref, line2Ref]);
+
   return (
     <SHero>
       <div className='hero-wrapper'>
         <Title pageTitle>{pageTitle}</Title>
         <Title>
           <div className='line-wrapper'>
-            <div className='line'>{line1 && line1}</div>
+            <div className='line' ref={line1Ref}>
+              {line1 && line1}
+            </div>
           </div>
           <div className='line-wrapper'>
-            <div className='line'>{line2 && line2}</div>
+            <div className='line' ref={line2Ref}>
+              {line2 && line2}
+            </div>
           </div>
         </Title>
         <Paragraph>
@@ -168,7 +181,7 @@ const Hero = ({
                 size='large'
                 className='custom-button'
               >
-                {buttonText ? buttonText : 'Hmm! Smothing went wrong...'}
+                {buttonText ? buttonText : 'Hmm! Something went wrong...'}
               </Button>
             </Link>
           </>

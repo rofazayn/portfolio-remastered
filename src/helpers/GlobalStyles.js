@@ -69,16 +69,32 @@ const GlobalStyle = createGlobalStyle`
   .custom-button {
     font-weight: 700 !important;
     letter-spacing: 1px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
     @media (max-width: 1366px) {
       font-size: 0.8rem !important; 
       padding: .5 .75rem !important;
-      
+      svg {
+        width: 18px;
+        height: 18px;
+      }      
     }
+
     @media (max-width: 768px) {
-    font-size: .75rem;
+      font-size: .75rem;
       font-size: 0.77rem !important; 
       padding: .4 .55rem !important;
-      
+      svg {
+        width: 16px;
+        height: 16px;
+      }      
     }
     
   }

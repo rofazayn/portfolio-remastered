@@ -10,9 +10,15 @@ import Paragraph from '../../components/Paragraph/Paragraph';
 import { ReactComponent as ArrowRightIcon } from '../../assets/icons/arrow-right.svg';
 import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
+import ProjectsList from '../../components/ProjectsList';
 
 const SProjects = styled.main`
   width: 100%;
+
+  .mid {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
   .placeholder {
     width: 100%;
@@ -78,37 +84,8 @@ const Projects = ({ pageTitle }) => {
               the code on GitHub or give it a try using the live preview.
             </Paragraph>
           </div>
-          <div className='section'>
-            <a
-              className='placeholder'
-              href='https://charitypal.rofazayn.me'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <h4>CharityPal</h4>
-              <p>Work ongoing</p>
-            </a>
-            <a
-              className='placeholder'
-              href='https://github.com/rofazayn/socila-client'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <h4>Socila</h4>
-              <p>Work ongoing</p>
-            </a>
-            <div className='placeholder'>
-              <p>COMING SOON</p>
-            </div>
-            <div className='placeholder'>
-              <p>COMING SOON</p>
-            </div>
-            <div className='placeholder'>
-              <p>COMING SOON</p>
-            </div>
-            <div className='placeholder'>
-              <p>COMING SOON</p>
-            </div>
+          <div className='section projects-list'>
+            <ProjectsList />
           </div>
         </div>
         <div className='bot'>
