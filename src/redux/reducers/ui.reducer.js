@@ -2,8 +2,8 @@ import uiTypes from '../types/ui.types';
 
 const initialUiState = {
   isLoading: true,
-  isDarkTheme: true,
-  pageHeight: '1000px'
+  isDarkTheme: false,
+  pageHeight: '1000px',
 };
 
 export const uiReducer = (state = initialUiState, { type, payload }) => {
@@ -11,17 +11,17 @@ export const uiReducer = (state = initialUiState, { type, payload }) => {
     case uiTypes.SET_IS_LOADING:
       return {
         ...state,
-        isLoading: payload
+        isLoading: payload,
       };
     case uiTypes.TOGGLE_THEME:
       return {
         ...state,
-        isDarkTheme: !state.isDarkTheme
+        isDarkTheme: !state.isDarkTheme,
       };
     case uiTypes.SET_WRAPPER_HEIGHT:
       return {
         ...state,
-        pageHeight: payload
+        pageHeight: payload,
       };
     default:
       return state;
