@@ -92,10 +92,10 @@ const Projects = ({ pageTitle }) => {
           <div className='cta'>
             <Title sectionTitle>
               <div className='line-wrapper'>
-                <div className='line'>Looking to reach out?</div>
+                <div className='line'>Are you looking</div>
               </div>
               <div className='line-wrapper'>
-                <div className='line'>I made a page for that!</div>
+                <div className='line'>to reach out to me?</div>
               </div>
             </Title>
             <Paragraph className='text'>
