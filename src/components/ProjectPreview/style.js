@@ -44,7 +44,7 @@ const ProjectPreview = styled.div`
     }
   }
 
-  padding-bottom: 64px;
+  padding-bottom: 128px;
 `;
 
 const Skill = styled.span`
