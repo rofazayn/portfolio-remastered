@@ -7,12 +7,23 @@ const ProjectPreview = styled.div`
     img {
       width: 100%;
       height: auto;
+      border-radius: 16px;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
     }
     .status {
+      padding: 8px 16px;
+      text-transform: uppercase;
+      border-radius: 8px;
+      color: black;
+      /* background-color: ${({ theme }) => theme.colors.artery}; */
       position: absolute;
       top: 32px;
       left: 32px;
       color: white;
+      p {
+        color: ${({ theme }) => theme.colors.primary} !important;
+        font-weight: black;
+      }
     }
   }
 
@@ -31,7 +42,7 @@ const ProjectPreview = styled.div`
       color: ${({ theme }) => theme.colors.primary};
     }
     .skills {
-      margin-bottom: 32px;
+      margin-bottom: 8px;
     }
     .links {
       a {
@@ -53,8 +64,9 @@ const Skill = styled.span`
   border-radius: 8px;
   margin-inline-end: 8px;
   margin-block-end: 8px;
-  background: ${({ theme }) => theme.colors.artery};
-  color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.primary};
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  font-weight: black;
 `;
 
 export const Styled = {
